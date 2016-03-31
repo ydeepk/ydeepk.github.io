@@ -1,0 +1,1 @@
+url for github for remote connection ( https://github.com/ydeepk/ydeepk.github.io.git )

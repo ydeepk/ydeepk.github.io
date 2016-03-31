@@ -1,0 +1,255 @@
+/*
+
+@author: Yadav deepak
+copyright, all rights reserved
+
+built using twitter bootstrap
+
+*/
+
+/*----------------------------
+    common values
+------------------------------*/
+.container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+a, 
+.navbar-brand,
+h1, 
+h2, 
+h4 {
+    font-family: 'Macondo', cursive !important;
+}
+p,
+.text-intro, 
+figcaption {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 300 !important;
+}
+h1 {
+    font-size: 4.6rem !important;
+}
+.margin-top {
+    margin-top: 50px;
+}
+.margin-bottom {
+    margin-bottom: 50px;
+}
+/*common color / background */
+.navbar-brand,
+.navbar-brand:hover,
+.nav li a,
+.sm-menu,
+.full-menu li a,
+.text-white, 
+.social-btn,
+.social-btn:hover,
+figcaption, 
+.mail-link {
+    color:#fff;
+}
+.navbar, 
+.full-menu,
+.social-btn,
+#about, 
+#contacts, 
+figcaption {
+    background-color: #0078D7 !important;
+}
+.navbar-brand, 
+.nav li:hover, 
+.nav li:hover a,
+.sm-menu:hover, 
+.social-btn:hover, 
+figure:hover+figcaption {
+    background-color: #006CC1 !important;
+}
+
+/*
+navbar
+*/
+.navbar {
+    height: 70px;
+    border-radius: 0;
+}
+.navbar-brand {
+    height: 70px;
+    line-height: 4rem;
+    font-size: 2.8rem;
+}
+.nav li {
+    height: 70px;
+    margin: 0 2px 0 2px;
+    border-radius: 0;
+    transition: all 0.6s ease-in-out 100ms;
+}
+.nav-tabs { 
+    border: 0 !important; 
+}
+.nav li a {
+    font-size: 1.6rem;
+    line-height: 4.9rem;
+    letter-spacing: 0.3rem;
+    font-weight: 300 !important;
+    border-radius: 0;
+    border: 0 !important;
+}
+
+/*
+    mobile / tablet pc menu
+*/
+.sm-menu {
+    float: right;
+    margin-top: 15px;
+    font-size: 2.3rem;
+    text-decoration: none !important;
+}
+.full-menu {
+    position: fixed;
+    height: 540px !important;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+}
+.full-menu li {
+    margin-left: -8% !important;
+    line-height: 5rem;
+    text-align: center;
+    list-style: none;
+}
+.full-menu li:nth-child(1) {
+    margin-top: 10rem;
+}
+.full-menu li:nth-child(2), 
+.full-menu li:nth-child(3) {
+    margin-top: 6rem;
+}
+.full-menu li a {
+    font-size: 3rem;
+}
+
+
+
+/*
+    fixed background
+*/
+.background {
+    height: 580px;
+    width: 100%;
+    background-image: url(../img/dark-table.jpg);
+    background-size: 100% 700px;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.text-intro {
+    margin-top: 28rem;
+    font-size: 3.6rem !important;
+    background-color: #000;
+    opacity: 0.9;
+    box-shadow: 3px 3px 12px #000;
+}
+.social-btn-grp {
+    margin-top: 50px;
+}
+.social-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5rem;
+    padding: 20px 15px;
+    letter-spacing: 0.4rem;
+    text-decoration: none !important;
+    box-shadow: 3px 3px 12px #000;
+    transition: all 300ms linear;
+}
+.social-btn:hover {
+   box-shadow: 4px 4px 12px #000;
+}
+.fa {
+    padding-right: 5px;
+}
+
+/*
+portfolio
+*/
+.text-portfolio {
+    color: #0078D7;
+}
+figure {
+    border: 2px solid #0078D7;
+    border-bottom: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in;
+}
+figure>img {
+    cursor: pointer;
+    transition: all 0.6s ease-in;
+}
+figure>img:hover {
+    transform: scale(1.2);
+}
+figcaption {
+    height: 60px;
+    font-size: 2.8rem;
+    transition: all 0.6s ease-in;
+}
+
+
+/*
+    contacts
+*/
+.mail-link {
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+.follow-contact {
+    border-left: 2px solid #fff;
+}
+.follow-contact li a {
+    text-decoration: none !important;
+    letter-spacing: 0.2rem;
+}
+/*
+ footer
+*/
+footer {
+    height: 70px;
+}
+footer .row {
+    margin-top: 20px;
+}
+.fa-heart {
+    color:red;
+}
+.text-name {
+    color: #0078D7;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+    .text-intro {
+        margin-top: 24rem;
+        font-size: 3.5rem !important;
+    }
+    figure {
+        margin-top: 20px;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 768px) { 
+    .navbar-brand {
+        margin-left: -5rem !important;
+    }
+    .text-intro {
+        margin-top: 24rem;
+        font-size: 3rem !important;
+    }
+    .social-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 5rem;
+    padding: 20px 5px;
+}
+    figure {
+        margin-top: 20px;
+    }
+}
