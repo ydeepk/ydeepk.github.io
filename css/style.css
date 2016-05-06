@@ -8,9 +8,11 @@ font-family: 'Nunito', sans-serif;
 font-family: 'Lora', serif;
 
 */
-
 .dark-pink {
     color: #E83944;
+}
+.dark-pink-bg {
+    background-color: #E83944;
 }
 .light-pink {
     color: #EE6D76 !important;
@@ -24,14 +26,9 @@ font-family: 'Lora', serif;
 .container {
     width: 90%;
 }
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  main {
-    flex: 1 0 auto;
-  }
+.absolute {
+    position: absolute;   
+}
 .fixed {
     position: fixed;
     display: block;
@@ -88,7 +85,7 @@ nav {
     width: 100%;
 }
 .menu-mobile li:nth-child(1) {
-    margin-top: 9rem;
+    margin-top: 5rem;
     width: 100%;
 }
 .menu-mobile li a {
@@ -118,9 +115,6 @@ h6 {
     display: inline-block;
     height: 310px;
     width: 340px;
-}
-.card-frame:nth-child(1) {
-
 }
 .card-frame img {
     height: 78%;
@@ -159,7 +153,7 @@ h6 {
 
 /* Footer */
 footer {
-    height: 10% !important;
+    height: 50px !important;
 }
 
 /* Transition and Animation */
@@ -184,5 +178,10 @@ nav,
         margin-left: -50px;
         font-size: 2.8rem !important;
     }
-    
+    .card-frame {
+        margin-left: 5% !important;
+}
+    .s-center {
+        text-align: center;
+    }
 }
