@@ -4,7 +4,7 @@
     *******************************
     
 */
-
+var main = function() {
 //Preloader
 var preloader = $('.preloader');
 	$(window).load(function(){
@@ -70,9 +70,12 @@ $('.scrollspy').scrollSpy(); //scrollspy
 	                                   if (target.length) {
 	                                       $('html,body').animate({
 	                                       scrollTop: target.offset(80).top
-	                                           }, 1000);
+	                                           }, 5000);
 	                                       return false;
 	                                       }
 	                                   }
 	                               });
 	                           });
+}
+
+$(document).ready(main); // loads main document is ready
