@@ -1,0 +1,34 @@
+/*
+font-family: 'Fira Mono', ;
+*/
+header {
+    background-color: #003049;
+}
+.cust-pink-text {
+    color: #D62828;
+}
+.cust-pink-bg {
+    background-color: #D62828;
+}
+nav {
+    background-color: transparent;
+    box-shadow: none !important;
+}
+nav ul li a {
+    font-size: 1.3rem;
+}
+.container {
+    width: 90%;
+}
+h1 {
+    font-size: 5.6rem;
+}
+.btn-floating {
+    position: fixed;
+    z-index: 99999 !important;
+    right: 40px;
+    bottom: 40px;
+}
+.large {
+    font-size: 3rem !important;
+}
