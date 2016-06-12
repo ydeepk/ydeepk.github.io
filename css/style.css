@@ -31,11 +31,16 @@ body {
 h1,h2,h3,h4,h5,h6,a {
     font-family: 'Nunito', sans-serif;
 }
-nav {
-    background-color: transparent;
+.navbar-fixed .brand-logo {
+    margin-left: 70px;
+}
+.navbar-fixed ul {
+    margin-right: 70px;
+}
+.move-navbar {
     box-shadow: none !important;
 }
-nav ul li a {
+nav ul li a, .footer-info {
     font-size: 1.3rem;
 }
 .container {

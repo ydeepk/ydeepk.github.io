@@ -15,7 +15,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-    
+
     <!--  Compiled and minified CSS -->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
@@ -25,6 +25,22 @@
 
     <!-- header -->
     <header class="blue-grey darken-4">
+        <!-- fixed nav bar -->
+        <div class="navbar-fixed  blue-grey darken-4 hide">
+            <nav class="blue-grey darken-4">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo blue-grey-text text-darken-2">ydeepk</a>
+
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="" class="blue-grey-text text-darken-2">about me</a></li>
+                        <li><a href="" class="blue-grey-text text-darken-2">my work</a></li>
+                        <li><a href="" class="blue-grey-text text-darken-2">contact me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- / fixed nav bar -->
+
         <!-- dummy row -->
         <div class="row">
             <div class="col s12">
@@ -33,7 +49,7 @@
         <!-- / dummy row -->
 
         <!-- nav bar -->
-        <nav class="container">
+        <nav class="container blue-grey darken-4 move-navbar">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo blue-grey-text text-darken-2">ydeepk</a>
 
@@ -82,12 +98,11 @@
         </div>
 
         <!-- Scroll btn row -->
-        <div class="row">
-            <div class="col s12">
-                <h6 class="blue-grey-text text-darken-4">d</h6>
-                <!-- dummy row -->
-                <h4 class="center"><a href="" class="blue-grey-text text-darken-2"><i class="material-icons large">keyboard_arrow_down</i></a></h4>
-            </div>
+        <div class="row" <div class="col s12">
+            <h6 class="blue-grey-text text-darken-4">d</h6>
+            <!-- dummy row -->
+            <h4 class="center"><a href="" class="blue-grey-text text-darken-2"><i class="material-icons large">keyboard_arrow_down</i></a></h4>
+        </div>
         </div>
         <!-- / Scroll btn row -->
 
@@ -132,7 +147,7 @@
                     </div>
 
                     <div class="col s12 m10 l10">
-                        <h5 class="blue-grey-text text-darken-3 center josefin"><i class="cust-pink-text material-icons large">format_quote</i> Hello, looking for <span class="cust-pink-text">me ?</span> I am <span class="cust-pink-text">Full Stack Developer</span> with <span>3 Years +</span> experience in the Industry. My hunger &amp; craveness to learn everyday and try something new, fuels  my Creativity &amp; Skills. Over the years I have worked on numerous Front End as well as Back End project's, which opened doors for me to learn many frameworks, libraires, languages, API's etc... inorder to meet the need of that Project. Good for me and you, as now I can use this experience into newer Project's. </h5>
+                        <h5 class="blue-grey-text text-darken-3 center josefin"><i class="cust-pink-text material-icons large">format_quote</i> Hello, looking for <span class="cust-pink-text">me ?</span> <br>I am <span class="cust-pink-text">Full Stack Developer</span> with <span>3 Years +</span> experience in the Industry. My hunger &amp; craveness to learn everyday and try something new, fuels  my Creativity &amp; Skills. Over the years I have worked on numerous Front End as well as Back End project's, which opened doors for me to learn many frameworks, libraires, languages, API's etc... inorder to meet the need of that Project. Good for me and you, as now I can put this experience into newer Project's. </h5>
                     </div>
 
                     <div class="col s12 m1 l1">
@@ -359,7 +374,7 @@
                     <!-- / dummy row -->
                     <div class="row">
                         <div class="col s12 m12 l12">
-                            <h6 class="blue-grey-text text-darken-2 center">&copy; 2016 . Deepak Yadav . All Rights Reserved .</h6>
+                            <h6 class="blue-grey-text text-darken-2 center footer-info">&copy; 2016 . Deepak Yadav . All Rights Reserved .</h6>
                         </div>
                     </div>
                 </div>
@@ -374,11 +389,12 @@
 
     <!--  Import jQuery  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/scrollreveal.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
-   
+
 </body>
 
 </html>
