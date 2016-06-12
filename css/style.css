@@ -1,23 +1,35 @@
 /*
-font-family: 'Fira Mono', ;
+font-family: 'Nunito', sans-serif; 
+
+font-family: 'Josefin Sans', sans-serif; experience
+
+rgb(214,40,40) , #e05959 , #e98b8b, #f3bcbc
 */
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
-
   main {
     flex: 1 0 auto;
   }
-header {
-    background-color: #003049;
-}
 .cust-pink-text {
     color: #D62828;
 }
+.cust-light-pink-text {
+    color: #e05959;
+}
 .cust-pink-bg {
     background-color: #D62828;
+}
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}
+.josefin {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+h1,h2,h3,h4,h5,h6,a {
+    font-family: 'Nunito', sans-serif;
 }
 nav {
     background-color: transparent;
