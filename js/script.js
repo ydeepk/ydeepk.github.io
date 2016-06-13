@@ -13,6 +13,8 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
     
+    $('.close-this').click();
+    
     $('.scrollspy').scrollSpy();    
     
     $('.modal-trigger').leanModal();
