@@ -376,7 +376,7 @@
                                 <div class="col s2 m2 l2"><i class="material-icons large cust-pink-text">location_on</i></div>
                                 <div class="col s10 m10 l10">
                                     <h5>Office:</h5>
-                                    <h6>Gurgaon,India</h6></div>
+                                    <h6 class="cust-pink-text">Gurgaon,India</h6></div>
                             </div>
                         </div>
 
@@ -385,7 +385,7 @@
                                 <div class="col s2 m2 l2"><i class="material-icons large cust-pink-text">mail_outline</i></div>
                                 <div class="col s10 m10 l10">
                                     <h5>Mail:</h5>
-                                    <h6><a href="mailto:ydeepkcs@gmail.com">ydeepkcs@gmail.com</a></h6></div>
+                                    <h6><a href="mailto:ydeepkcs@gmail.com" class="cust-pink-text">ydeepkcs@gmail.com</a></h6></div>
                             </div>
                         </div>
 
@@ -394,7 +394,7 @@
                                 <div class="col s2 m2 l2"><i class="material-icons large cust-pink-text">phone</i></div>
                                 <div class="col s10 m10 l10">
                                     <h5>Call:</h5>
-                                    <h6><a href="tel:+918860665048">+91 8860665048</a></h6></div>
+                                    <h6><a href="tel:+918860665048" class="cust-pink-text">+91 8860665048</a></h6></div>
                             </div>
                         </div>
 
@@ -402,7 +402,7 @@
 
                     <div class="s12 m8 l8">
                         <h4 class="white-text">S</h4>
-                        <h3><i class="material-icons large">arrow_back</i> <span class="first-letter">S</span>ay hello :-&#41; to me, consult me directly if you like. Or you can follow me on Social Media.</h3>
+                        <h3><i class="material-icons large">arrow_back</i> <span class="cust-pink-text">Say hello :-&#41;</span> to me, consult me directly if you like. Or you can <span class="cust-pink-text">follow me</span> on <span class="cust-pink-text">Social Media</span>.</h3>
                     </div>
                 </div>
 
@@ -410,19 +410,19 @@
                     <div class="col s12 m4 l3">
                         <h4 class="white-text">d</h4></div>
                     <div class="col s12 m2 l2">
-                        <a href=""><img src="img/linkedin.png" alt="" class="responsive-img">
+                        <a href="" class="cust-pink-text"><img src="img/linkedin.png" alt="" class="responsive-img">
                             <br>Linkedin</a>
                     </div>
                     <div class="col s12 m2 l2">
-                        <a href=""><img src="img/twitter.png" alt="" class="responsive-img">
+                        <a href="" class="cust-pink-text"><img src="img/twitter.png" alt="" class="responsive-img">
                             <br>Twitter</a>
                     </div>
                     <div class="col s12 m2 l2">
-                        <a href=""><img src="img/github.png" alt="" class="responsive-img">
+                        <a href="" class="cust-pink-text"><img src="img/github.png" alt="" class="responsive-img">
                             <br>Github</a>
                     </div>
                     <div class="col s12 m2 l2">
-                        <a href=""><img src="img/skype.png" alt="" class="responsive-img">
+                        <a href="" class="cust-pink-text"><img src="img/skype.png" alt="" class="responsive-img">
                             <br>Skype</a>
                     </div>
                     <div class="col s12 l1">
@@ -458,10 +458,43 @@
     <!-- / footer -->
 
     <!-- fixed message button -->
-    <a href="" class="btn btn-floating btn-large cust-pink-bg"><i class="material-icons">email</i></a>
+    <a href="#message" class="btn btn-floating btn-large cust-pink-bg modal-trigger"><i class="material-icons">email</i></a>
 
     <!-- message modal window -->
-
+    <div class="row modal" id="message">
+        <div class="col s4 m4 l4 cust-pink-bg center z-depth-1">
+            <aside>
+                <i class="material-icons white-text large">mood</i>
+                <h2 class="thin white-text">Message Me</h2>
+            </aside>
+        </div>
+        <div class="col s8 m8 l8">
+            <h5 class="center">I would be happy to hear from you <span class="close-this"><i class="material-icons medium cust-pink-text">close</i></span></h5>
+            <form class="col l12" method="post" action="">
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="name">Name</label>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Textarea</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <a href="" class="btn btn-large blue darken-1">Send me</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <!-- / message modal window -->
 
     <!--  Import jQuery  -->

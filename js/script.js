@@ -13,7 +13,10 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
     
-    $('.close-this').click();
+    $('.close-this').click(function() {
+        $('#lets-work-together-modal').closeModal();
+        $('#message').closeModal();
+    });
     
     $('.scrollspy').scrollSpy();    
     

@@ -69,11 +69,14 @@ nav ul li a, .footer-info {
 h1 {
     font-size: 5.6rem;
 }
+.btn:hover {
+    background-color: #e05959;
+}
 .btn-floating {
     position: fixed;
-    z-index: 99999 !important;
-    right: 40px;
-    bottom: 40px;
+    z-index: 99 !important;
+    right: 30px;
+    bottom: 30px;
 }
 .large {
     font-size: 3rem !important;
@@ -81,7 +84,7 @@ h1 {
 .quest, .view-all-work {
     font-size: 1.2rem;
 }
-.modal {
+#lets-work-together-modal {
     margin: 0 !important;
     top: 0 !important;
     max-height: 100% !important;
@@ -90,9 +93,10 @@ h1 {
 .title-modal {
     height: 780px !important;
 }
-.modal aside {
+#lets-work-together-modal aside {
     padding-top: 200px;
 }
 .close-this {
     float: right;
+    cursor: pointer;
 }
