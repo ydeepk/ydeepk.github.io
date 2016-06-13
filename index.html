@@ -23,6 +23,12 @@
 
 <body>
 
+    <!-- preloader -->
+    <div class="preloader">
+
+    </div>
+    <!-- / preloader -->
+
     <!-- header -->
     <header class="blue-grey darken-4">
         <!-- fixed nav bar -->
@@ -31,10 +37,10 @@
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo blue-grey-text text-darken-2">ydeepk</a>
 
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="" class="blue-grey-text text-darken-2">about me</a></li>
-                        <li><a href="" class="blue-grey-text text-darken-2">my work</a></li>
-                        <li><a href="" class="blue-grey-text text-darken-2">contact me</a></li>
+                    <ul class="right hide-on-med-and-down section table-of-contents">
+                        <li><a href="#about-me">about me</a></li>
+                        <li><a href="#my-work">my work</a></li>
+                        <li><a href="#contact-me">contact me</a></li>
                     </ul>
                 </div>
             </nav>
@@ -53,10 +59,10 @@
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo blue-grey-text text-darken-2">ydeepk</a>
 
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="" class="blue-grey-text text-darken-2">about me</a></li>
-                    <li><a href="" class="blue-grey-text text-darken-2">my work</a></li>
-                    <li><a href="" class="blue-grey-text text-darken-2">contact me</a></li>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#about-me">about me</a></li>
+                    <li><a href="#my-work">my work</a></li>
+                    <li><a href="#contact-me">contact me</a></li>
                 </ul>
             </div>
         </nav>
@@ -90,18 +96,88 @@
             <!-- Lets Work btn row -->
             <div class="row">
                 <div class="col s12 m12 l12 center">
-                    <a class="btn btn-large cust-pink-bg">Lets work together!</a>
+                    <a href="#lets-work-together-modal" class="btn btn-large cust-pink-bg modal-trigger">Lets work together!</a>
                 </div>
             </div>
             <!-- / Lets Work btn row -->
-
+            
+            <!-- Modal window lets work together -->
+            <!-- Modal Structure -->
+            <div class="modal row" id="lets-work-together-modal">
+                <div class="col s4 m4 l4 blue-grey darken-4 center z-depth-1 title-modal">
+                    <aside>
+                        <i class="material-icons white-text large">mood</i><h2 class="thin blue-grey-text text-darken-2">Lets Work !</h2>
+                    </aside>
+                </div>
+                
+                <div class="col s8 m8 l8 form-content">
+                    <h5 class="center">Tell me everything about your Project.<span><i class="material-icons">close</i></span></h5>
+                    <form class="col l12" method="post" action="">
+                        
+                        <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="name">Name</label>
+                        </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="phone" type="tel" class="validate">
+                                <label for="phone">phone</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="budget" type="number" class="validate">
+                                <label for="budget">Budget</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Textarea</label>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col s12 center">
+                                <a href="" class="btn btn-large blue darken-1">Send me</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Modal window lets work together -->
         </div>
 
         <!-- Scroll btn row -->
-        <div class="row" <div class="col s12">
+        <div class="row">
+            <div class="col s12">
             <h6 class="blue-grey-text text-darken-4">d</h6>
             <!-- dummy row -->
-            <h4 class="center"><a href="" class="blue-grey-text text-darken-2"><i class="material-icons large">keyboard_arrow_down</i></a></h4>
+            <h4 class="center"><a href="#about-me" class="blue-grey-text text-darken-2"><i class="material-icons large">keyboard_arrow_down</i></a></h4>
         </div>
         </div>
         <!-- / Scroll btn row -->
@@ -111,7 +187,7 @@
     <!-- main section -->
     <main>
         <!-- about me section -->
-        <section>
+        <section id="about-me" class="section scrollspy">
             <div class="container">
                 <!-- Heading about me -->
                 <div class="row">
@@ -166,7 +242,7 @@
             <!-- CV DOWNLOAD about me-->
             <div class="row blue-grey darken-4">
                 <div class="col s12 m12 l12 center">
-                    <p><a href="" class="btn btn-large cust-pink-bg">request cv</a></p>
+                    <p class="blue-grey-text text-darken-1"><span class="quest">Would like to <strong>hire me</strong> at your <strong>FIRM</strong> ? </span><a href="" class="btn btn-large cust-pink-bg">request cv<i class="material-icons absolute">description</i></a></p>
                 </div>
             </div>
             <!-- / CV DOWNLOAD about me-->
@@ -176,7 +252,7 @@
         <!-- / about me section -->
 
         <!-- my work section -->
-        <section>
+        <section id="my-work" class="section scrollspy">
             <div class="container">
                 <!-- Heading my work -->
                 <div class="row">
@@ -204,12 +280,12 @@
                                 <img class="activator" src="img/arunPort.jpg">
                             </div>
                             <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                                <p><a href="#" class="cust-pink-text">View</a></p>
+                                <span class="card-title activator cust-pink-text">Card Title<i class="material-icons right">more_vert</i></span>
+                                <p><a href="#" class="cust-light-pink-text">View</a></p>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                                <span class="card-title cust-pink-text">Card Title<i class="material-icons right">close</i></span>
+                                <p class="cust-light-pink-text">Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
                         </div>
                     </div>
@@ -222,12 +298,12 @@
                                 <img class="activator" src="img/deepakport.jpg">
                             </div>
                             <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                                <p><a href="#" class="cust-pink-text">This is a link</a></p>
+                                <span class="card-title activator cust-pink-text">Card Title<i class="material-icons right">more_vert</i></span>
+                                <p><a href="#" class="cust-light-pink-text">View</a></p>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                                <span class="card-title cust-pink-text">Card Title<i class="material-icons right">close</i></span>
+                                <p class="cust-light-pink-text">Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
                         </div>
                     </div>
@@ -240,12 +316,12 @@
                                 <img class="activator" src="img/arunPort.jpg">
                             </div>
                             <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                                <p><a href="#" class="cust-pink-text">This is a link</a></p>
+                                <span class="card-title activator cust-pink-text">Card Title<i class="material-icons right">more_vert</i></span>
+                                <p><a href="#" class="cust-light-pink-text">This is a link</a></p>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                                <span class="card-title cust-pink-text">Card Title<i class="material-icons right">close</i></span>
+                                <p class="cust-light-pink-text">Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
                         </div>
                     </div>
@@ -254,7 +330,7 @@
 
                 <div class="row">
                     <div class="col s12 m12 l12 center">
-                        <h6><a href="" class="cust-pink-text">View all</a></h6>
+                        <h6><a href="" class="cust-light-pink-text view-all-work">View all</a></h6>
                     </div>
                 </div>
             </div>
@@ -262,11 +338,8 @@
 
             <!-- my work -->
             <div class="row blue-grey darken-4">
-                <div class="col s12 m6 l6 center">
-                    <h5 class="cust-pink-text"> Intersting huh..., well then.</h5>
-                </div>
-                <div class="col s12 m6 l6 center">
-                    <a class="btn btn-large cust-pink-bg">Lets work together !</a>
+                <div class="col s12 m12 l12 center">
+                    <p class="blue-grey-text text-darken-2"><span class="quest">Intresting, and awesome right. Well then. </span> <a href="#lets-work-together-modal" class="btn btn-large cust-pink-bg modal-trigger">Lets work together<i class="material-icons absolute">arrow_forward</i></a></p>
                 </div>
             </div>
             <!-- / my work-->
@@ -276,7 +349,7 @@
 
 
         <!-- Contact section -->
-        <section>
+        <section id="contact-me" class="section scrollspy">
             <div class="container">
                 <!-- Heading contact me -->
                 <div class="row">
@@ -385,7 +458,10 @@
 
     <!-- fixed message button -->
     <a href="" class="btn btn-floating btn-large cust-pink-bg"><i class="material-icons">email</i></a>
-
+    
+    <!-- message modal window -->
+    
+    <!-- / message modal window -->
 
     <!--  Import jQuery  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

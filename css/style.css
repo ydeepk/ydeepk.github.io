@@ -14,7 +14,7 @@ body {
     flex: 1 0 auto;
   }
 .cust-pink-text {
-    color: #D62828;
+    color: #D62828 !important;
 }
 .cust-light-pink-text {
     color: #e05959;
@@ -31,6 +31,9 @@ body {
 h1,h2,h3,h4,h5,h6,a {
     font-family: 'Nunito', sans-serif;
 }
+.absolute {
+    position: absolute;
+}
 .navbar-fixed .brand-logo {
     margin-left: 70px;
 }
@@ -42,6 +45,24 @@ h1,h2,h3,h4,h5,h6,a {
 }
 nav ul li a, .footer-info {
     font-size: 1.3rem;
+}
+.move-navbar ul li a {
+    color: #455a64;
+}
+.table-of-contents a {
+    color: #455a64;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.table-of-contents {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+.table-of-contents a.active,
+.table-of-contents a:hover,
+.move-navbar ul li a:hover {
+    border-left-color: transparent !important;
+    color: #D62828 !important;
 }
 .container {
     width: 90%;
@@ -57,4 +78,19 @@ h1 {
 }
 .large {
     font-size: 3rem !important;
+}
+.quest, .view-all-work {
+    font-size: 1.2rem;
+}
+.modal {
+    margin: 0 !important;
+    top:0 !important;
+    max-height: 100% !important;
+    width: 100%;
+}
+.title-modal {
+    height: 780px !important;
+}
+.modal aside {
+    padding-top: 200px;
 }
