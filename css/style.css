@@ -94,3 +94,6 @@ h1 {
 .modal aside {
     padding-top: 200px;
 }
+.close-this {
+    float: right;
+}
