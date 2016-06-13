@@ -3,9 +3,9 @@ $(window).scroll(function() {
         
         if(scroll>=20) {
             $('.move-navbar').addClass('hide');
-            $('.navbar-fixed').removeClass('hide');
+            $('#navbar-fixed').removeClass('hide');
         } else {
-            $('.navbar-fixed').addClass('hide');
+            $('#navbar-fixed').addClass('hide');
             $('.move-navbar').removeClass('hide');
         }
 });
