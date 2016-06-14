@@ -18,7 +18,7 @@ main {
     color: #D62828 !important;
 }
 .cust-light-pink-text {
-    color: #e05959;
+    color: #e36969;
 }
 .cust-pink-bg {
     background-color: #D62828;
@@ -99,4 +99,10 @@ h1 {
 .close-this {
     float: right;
     cursor: pointer;
+}
+.message-aside {
+    height: 450px;
+}
+.message-aside aside {
+    padding-top: 110px;
 }

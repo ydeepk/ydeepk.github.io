@@ -2563,13 +2563,13 @@ nav ul a span.badge {
 
 .no-padding {
   padding: 0 !important; }
-
+/*
 @font-face {
   font-family: "Material-Design-Icons";
   src: url("../font/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../font/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../font/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../font/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../font/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
-
+*/
 [class^="mdi-"], [class*="mdi-"] {
   speak: none;
   display: inline-block;
@@ -5380,7 +5380,7 @@ nav {
     line-height: 64px; }
   .navbar-fixed {
     height: 64px; } }
-
+/*
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.ttf") format("truetype");
@@ -5405,7 +5405,7 @@ nav {
   font-family: "Roboto";
   src: url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700; }
-
+*/
 a {
   text-decoration: none; }
 
