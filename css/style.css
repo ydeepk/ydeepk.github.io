@@ -2,7 +2,7 @@
 font-family: 'Nunito', sans-serif;
 
 font-family: 'Josefin Sans', sans-serif; experience
-
+selfiebritys.com/media/journey-to-butt-paradise
 rgb(214,40,40) , #e05959 , #e98b8b, #f3bcbc
 */
 
@@ -105,4 +105,14 @@ h1 {
 }
 .message-aside aside {
     padding-top: 110px;
+}
+
+/* input */
+
+.input-field input[type=text]:focus + label, .input-field input[type=email]:focus + label, textarea:focus + label, .input-field input[type=tel]:focus + label, .input-field input[type=number]:focus + label {
+    color: #D62828;
+}
+.input-field input[type=text]:focus, .input-field input[type=email]:focus, .input-field textarea:focus, .input-field input[type=tel]:focus, .input-field input[type=number]:focus {
+    border-bottom: 1px solid #e36969 !important;
+    box-shadow: 0 1px 0 0 #e36969 !important;
 }
