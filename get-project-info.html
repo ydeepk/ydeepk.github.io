@@ -29,15 +29,100 @@
     </div>
     <!-- / preloader -->
 
-    <div class="row">
-        <div class="col s12">
-            <div class="center blue-grey darken-4 blue-grey-text text-darken-2">
-                <i class="material-icons large">mood</i>
-                <h2>Let's Work !</h2>
-            </div>
+    <div class="col s12 m12 l12 center blue-grey darken-4 blue-grey-text text-darken-2">
+        <!-- dummy row -->
+        <div class="row">
+            <div class="col s12">
+                <h6 class="blue-grey-text text-darken-4">d</h6></div>
         </div>
+        <!-- / dummy row -->
+        <div class="row">
+            <i class="material-icons large">mood</i>
+            <h2>Let's Work !</h2>
+        </div>
+        <!-- dummy row -->
+        <div class="row">
+            <div class="col s12">
+                <h6 class="blue-grey-text text-darken-4">d</h6></div>
+        </div>
+        <!-- / dummy row -->
     </div>
 
+    <section class="blue-grey lighten-5">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <a href="index.html"><i class="material-icons">arrow_back</i>back to home</a>
+                <h4 class="center blue-grey-text text-darken-2">Tell me everything about your project.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <h6 class="white-text">i</h6>
+            </div>
+
+            <form action="submit/project-info.php" method="" class="col s6 white z-depth-2">
+                <div class="row">
+                    <!-- name row -->
+                    <div class="input-field col s12">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+                <!-- name row -->
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="icon_telephone" type="tel" class="validate">
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="description" class="materialize-textarea"></textarea>
+                        <label for="description">Describe Project</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="budget" type="number" class="validate" min=0>
+                        <label for="budget">Your Budget</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 center">
+                        <input type="button" type="submit" value="send" class="btn btn-large cust-pink-bg cust-light-pink-text">
+                    </div>
+                </div>
+            </form>
+
+            <div class="col s3">
+                <h6 class="white-text">i</h6>
+            </div>
+        </div>
+    </section>
     <!-- footer -->
     <footer class="blue-grey darken-4">
         <div class="row">
@@ -98,7 +183,7 @@
             </form>
         </div>
     </div>
-    <!-- / message modal window -->
+
 
     <!--  Import jQuery  -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
