@@ -12,7 +12,7 @@ FRAMEWORK { MATERIALIZE CSS}
 .hero-background {
     height: 700px;
     width: 100%;
-    background-image: url(../img/sea-sunset-sunny-beach.jpg);
+    background-image: url(../../img/sea-sunset-sunny-beach.jpg);
     background-size: 100% 700px;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ FRAMEWORK { MATERIALIZE CSS}
 .top-nav ul li {
     display: inline-block;
     margin-top: -12px;
-    padding:0 10px; 
+    padding:0 10px;
     cursor: pointer;
 }
 .top-nav ul li:nth-child(1) {
@@ -90,7 +90,7 @@ aside {
 .book-input-color:focus + label  {
      color: yellow !important;
    }
-.premium-section-title, 
+.premium-section-title,
 .premium-services-section .row .col h5 {
     color: #003049 !important;
     font-weight: 900;
@@ -108,7 +108,7 @@ aside {
 .card-action a {
     color:  #D62828 !important;
 }
-.card:hover, 
+.card:hover,
 .card:hover .card-action a {
     background-color:  #D62828;
     color: #fff !important;
