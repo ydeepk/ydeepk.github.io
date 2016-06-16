@@ -20,7 +20,7 @@ function sendMail($name,$email,$message) {
   $subject="Next Project (www.ydeepk.github.io)";
 
   if(mail($to,$subject,$message,$header)) {
-    include '../thanks/';
+    include '../thanks/index.php';
   } else {
     error();
   }
@@ -37,8 +37,8 @@ function acknowledgementMail($name,$email) {
   $message="Thanks for reaching out. Get right back to you soon :-)"."- Deepak Yadav";
   $subject="Thanking you For Reaching out.";
 
-  mail($to,$subject,$message,$header);
-  
+  mail($to,$subject,$message,$headers);
+
 }
 
 

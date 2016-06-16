@@ -6,10 +6,9 @@
 // variables at play
 $error = $name = $email = $message = "";
 
-require "../function/";
+require "../function/index.php";
 
-if($SERVER['REQUEST_METHOD']=='POST') {
-
+if(isset($_POST['submit'])) {
   $name=validateInput($_POST['name']);
   $email=validateInput($_POST['email']);
   $message=validateInput($_POST['message']);

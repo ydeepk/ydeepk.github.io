@@ -1,6 +1,6 @@
 <?php
 
-require "../function/";
+require "../function/index.php";
 
 acknowledgementMail($name,$email);
 
