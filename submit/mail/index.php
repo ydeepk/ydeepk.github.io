@@ -3,10 +3,6 @@
 **MAIL INDEX php**
 *****************/
 
-// some things never change
-
-define(AUTHMAIL,'ydeepkcs@gmail.com');
-
 // variables at play
 $error = $name = $email = $message = "";
 
