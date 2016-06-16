@@ -1,0 +1,195 @@
+/*
+
+AUTHOR { }
+
+COLOR PALLET { #003049, #D62828, #F77F00, #EAE2B7 }
+
+FONTS { , , }
+
+FRAMEWORK { MATERIALIZE CSS}
+
+*/
+.hero-background {
+    height: 700px;
+    width: 100%;
+    background-image: url(../img/sea-sunset-sunny-beach.jpg);
+    background-size: 100% 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btn {
+    background-color: #F77F00 !important;
+}
+.top-nav {
+    height: 40px;
+    width: 100%;
+}
+.top-nav a {
+    position: absolute;
+    margin-top: 10px;
+}
+.top-nav a:nth-child(1) {
+    margin-left: 20px;
+}
+.top-nav a:nth-child(2) {
+    margin-left: 180px;
+}
+.top-nav ul li {
+    display: inline-block;
+    margin-top: -12px;
+    padding:0 10px; 
+    cursor: pointer;
+}
+.top-nav ul li:nth-child(1) {
+    position: absolute;
+    margin-top: -6px;
+    margin-left: -120px;
+    color: dodgerblue;
+}
+nav {
+    box-shadow: none;
+}
+.nav-wrapper ul {
+    margin-right: -100px;
+}
+.nav-wrapper ul li a {
+    color: dodgerblue;
+}
+.nav-wrapper ul li a,
+.nav-wrapper ul li {
+    transition: all .4s linear 0ms;
+}
+.nav-wrapper ul li {
+    border-bottom: 1px solid transparent;
+}
+.nav-wrapper ul li:hover {
+    background-color: transparent !important;
+    border-bottom: 1px solid #D62828;
+}
+.nav-wrapper ul li:hover a {
+    color: #D62828 !important;
+}
+aside {
+    margin-top: 2%;
+    margin-left: 5% !important;
+    background-color: #fff;
+    opacity: 0.9;
+    box-shadow: 1px 1px 5px #263238;
+}
+.check-avail {
+    background-color: #003049;
+}
+.check-avail h6 {
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: 300 !important;
+}
+.book-input-color  {
+     color: dodgerblue;
+   }
+.book-input-color:focus + label  {
+     color: yellow !important;
+   }
+.premium-section-title, 
+.premium-services-section .row .col h5 {
+    color: #003049 !important;
+    font-weight: 900;
+}
+.premium-services-section p {
+    color: dodgerblue;
+}
+.value-for-section {
+    background-color: #003049;
+    color: dodgerblue;
+}
+.card-image {
+    height: 238px !important;
+}
+.card-action a {
+    color:  #D62828 !important;
+}
+.card:hover, 
+.card:hover .card-action a {
+    background-color:  #D62828;
+    color: #fff !important;
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 2px 4px 8px #37474f;
+}
+.guest-speak-section {
+    background-color: #D62828;
+}
+.guest-comment-box {
+    height: 120px;
+    width: auto;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #37474f;
+}
+.guest-comment-box p {
+    height: 70px;
+    width: auto;
+    padding: 5px;
+    overflow: hidden;
+}
+.guest-comment-box h6 {
+    height: 30px;
+    width: auto;
+    padding: 5px;
+    font-weight: bolder;
+}
+.triangle {
+    margin-top: -3px;
+    margin-left: 44.5%;
+    height: 0;
+    width: 0;
+    border-top:18px solid #fff;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+   -webkit-filter: drop-shadow(0 2px 1px #37474f);
+     filter: drop-shadow(0 2px 1px #37474f);
+}
+.guest-image {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+/* label underline focus color */
+.input-field .prefix.active,
+.input-field label:focus {
+    color: dodgerblue;
+}
+.input-field input[type=text] + label,
+.input-field input[type=number] + label,
+.input-field input[type=date],
+.input-field input[type=email] + label {
+    color: #003049;
+}
+.input-field input[type=text],
+.input-field input[type=date],
+.input-field input[type=number],
+.input-field input[type=email] {
+    border-bottom: 1px solid #003049;
+}
+.input-field input[type=text]:focus + label,
+.input-field input[type=number]:focus + label,
+.input-field input[type=date]:focus,
+.input-field input[type=email]:focus + label {
+    color: dodgerblue;
+}
+.input-field input[type=text]:focus,
+.input-field input[type=date]:focus,
+.input-field input[type=number]:focus,
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 1px 0 0 dodgerblue;
+}
+.page-footer {
+    background-color: #003049 !important;
+}
+.footer-copyright {
+    background-color:  #D62828 !important;
+}

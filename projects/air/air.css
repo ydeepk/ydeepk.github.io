@@ -1,0 +1,32 @@
+/* 
+* Custom Stylesheet 
+ * Use this file to override Materialize files
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+#social-group div {
+    display:inline-block !important;
+    width:25%;
+}
+#soical-group div h5 {
+    margin-top:-20px !important;
+}
+#follow-us-section {
+    height:60px !important;
+}
+.small {
+    height: 150px !important;
+    width: 200px !important;
+}
+.connect {
+    height: 30px;
+    width: 30px;
+    background-image: url(../img/description.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
