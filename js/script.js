@@ -13,6 +13,10 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
 
+    $(window).load(function() {
+      $('.preloader').remove();
+    });
+
     $('.close-this').click(function() {
         $('#message').closeModal();
     });
