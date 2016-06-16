@@ -10,13 +10,15 @@ require "../function/";
 
 if($SERVER['REQUEST_METHOD']=='POST') {
 
-  if(validateInput($name,$email,$message)) {
+  $name=validateInput($_POST['name']);
+  $email=validateInput($_POST['email']);
+  $message=validateInput($_POST['message']);
 
-    sendMail($name,$email,$message);
+  sendMail($name,$email,$message);
 
-  } else {
-    error();
-  }
+} else {
+
+  error();
 
 }
 
