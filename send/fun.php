@@ -2,7 +2,6 @@
 /********************
 ****Function PHP*****
 ********************/
-
 function validateInput($input) {
   $input=trim($input);
   $input=stripslashes($input);
@@ -15,10 +14,9 @@ function validateInput($input) {
 function sendMail($name,$email,$message) {
 
   $headers="From:".$name."\r\n"."Reply-to:".$email;
-  $message=wordwrap($message, 70, "\r\n");
+  $message=wordwrap($message, 70, "\r\n")."\r\n\n\n"."Sender:".$name."\r\n\n"."E-mail:".$email;
   $to=AUTHMAIL;
   $subject=SUBJECT;
-
   mail($to,$subject,$message,$headers);
 
   include "msg.php";

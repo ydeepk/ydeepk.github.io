@@ -1,5 +1,5 @@
 <?php
 
-print "Thanks :-)";
+print "Thanks for sending msg. :-)";
 
 ?>
