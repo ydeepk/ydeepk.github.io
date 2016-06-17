@@ -14,12 +14,14 @@ function validateInput($input) {
 
 function sendMail($name,$email,$message) {
 
-  $header="From:".$name."\r\n"."Reply-to:".$email;
+  $headers="From:".$name."\r\n"."Reply-to:".$email;
   $message=wordwrap($message, 70, "\r\n");
   $to=AUTHMAIL;
   $subject=SUBJECT;
 
-  mail($to,$subject,$message,$header);
+  mail($to,$subject,$message,$headers);
+
+  include "msg.php";
 }
 
 function error() {
