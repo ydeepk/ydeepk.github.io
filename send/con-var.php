@@ -5,8 +5,6 @@
 define(AUTHMAIL,"ydeepkcs@gmail.com");
 define(SUBJECT,"New Message");
 
-
-$email= $name = $error ="";
-
+$email= $name = $error = $message ="";
 
 ?>
