@@ -14,8 +14,8 @@ function validateInput($input) {
 
 function sendMail($name,$email,$message) {
 
-  $header="From: ".$name."\r\n"."Reply to: ".$email."Content-type: text/html\r\n";
-  $message=wordwrap($_POST['message'], 70, "\r\n");
+  $header="From: ".$name."\r\n"."Reply to: ".$email;
+  $message=wordwrap($message, 70, "\r\n");
   $to=AUTHMAIL;
   $subject=SUBJECT;
 

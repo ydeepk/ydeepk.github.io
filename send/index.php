@@ -6,9 +6,9 @@ require "con-var.php";
 require "fun.php";
 
 if(isset($_POST["submit"])) {
-  $name=validateInput($_POST['name']);
-  $email=validateInput($_POST['email']);
-  $message=validateInput($_POST['message']);
+  $name=validateInput($_REQUEST["name"]);
+  $email=validateInput($_REQUEST["email"]);
+  $message=validateInput($_REQUEST["message"]);
 
   sendMail($name,$email,$message); // send mail
 
