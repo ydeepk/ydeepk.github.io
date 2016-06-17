@@ -14,7 +14,7 @@ function validateInput($input) {
 
 function sendMail($name,$email,$message) {
 
-  $header="From: ".$name."\r\n"."Reply to: ".$email;
+  $header="From:".$name."\r\n"."Reply-to:".$email;
   $message=wordwrap($message, 70, "\r\n");
   $to=AUTHMAIL;
   $subject=SUBJECT;
@@ -23,7 +23,7 @@ function sendMail($name,$email,$message) {
 }
 
 function error() {
-
+  echo "This Error looks terrible :-()";
 }
 
 ?>
