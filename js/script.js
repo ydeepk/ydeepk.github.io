@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     $('.modal-trigger').leanModal();
 
-    $("#sendMail").submit(sendMail);
+    $("#sendMail").submit(sendMail); // call sendmail function
 
     /* smooth scroll */
     $(function() {
