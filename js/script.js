@@ -10,20 +10,29 @@ $(window).scroll(function() {
     }
 });
 
+// Send Mail using send Grid
+function sendMail() {
+  $.post(url:"https://api.sendgrid.com/api/mail.send.json", "api_user=ydeepk&api_key=asdfGhjkl12vbnasd56hjklcvBng,&to=ydeepkcs@gmail.com&toname=Deepakcc=ccdestination@mail.com&ccname=CCDestination&subject=newProject&text=testingtextbody&from=ayarunay@gmail.com", function(result) {
+    $("#result").html("<h2 class="white">"Message sent succesfully"</h2");
+  });
+}
+
+
+
+
+
 
 $(document).ready(function() {
 
-    $(window).load(function() {
-      $('.preloader').remove();
-    });
+    $(window).load(function() { $('.preloader').remove(); });
 
-    $('.close-this').click(function() {
-        $('#message').closeModal();
-    });
+    $('.close-this').click(function() { $('#message').closeModal(); });
 
     $('.scrollspy').scrollSpy();
 
     $('.modal-trigger').leanModal();
+
+    $("#sendMail").submit(sendMail);
 
     /* smooth scroll */
     $(function() {
