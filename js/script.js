@@ -11,6 +11,22 @@ $(window).scroll(function() {
 });
 
 
+function sendgridMail() {
+  $.ajax({
+  type:"POST",
+  url:"https://api.sendgrid.com/api/mail.send.json",
+  dataType:"JSON",
+  data:"api_user=ydeepk&api_key=asdfGhjkl12vbnasd56hjklcvBng,&to=ydeepkcs@gmail.com&toname=Deepakcc=ccdestination@mail.com&ccname=CCDestination&subject=newProject&text=testingtextbody&from=ayarunay@gmail.com",
+  success: function(result) {
+      $("#result").html("<h2 class="+"white-text"+">"Message sent succesfully"</h2");
+  }
+  });
+}
+
+$('#sendMail').click(function() {
+  sendgridMail();
+});
+
 $(document).ready(function() {
 
     $(window).load(function() {
@@ -42,3 +58,17 @@ $(document).ready(function() {
     });
 
 });
+
+/*
+
+$.ajax({
+type:"POST",
+url:"https://api.sendgrid.com/api/mail.send.json",
+dataType:"JSON",
+data:"api_user=ydeepk&api_key=asdfGhjkl12vbnasd56hjklcvBng,&to=ydeepkcs@gmail.com&toname=Deepakcc=ccdestination@mail.com&ccname=CCDestination&subject=newProject&text=testingtextbody&from=ayarunay@gmail.com",
+success: function(result) {
+    $("#result").html("<h2 class="+"white-text"+">"Message sent succesfully"</h2");
+}
+});
+
+*/
