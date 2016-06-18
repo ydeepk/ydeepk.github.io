@@ -18,7 +18,7 @@ function sendgridMail() {
   dataType:"JSON",
   data:"api_user=ydeepk&api_key=asdfGhjkl12vbnasd56hjklcvBng,&to=ydeepkcs@gmail.com&toname=Deepakcc=ccdestination@mail.com&ccname=CCDestination&subject=newProject&text=testingtextbody&from=ayarunay@gmail.com",
   success: function(result) {
-     // $("#result").append("<h2>"Message sent succesfully"</h2");
+     $("#result").html("<h2>"+"Message sent succesfully"+"</h2");
   }
   });
 }
