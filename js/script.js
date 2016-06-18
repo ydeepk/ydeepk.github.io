@@ -12,7 +12,7 @@ $(window).scroll(function() {
 
 // Send Mail using send Grid
 function sendMail() {
-  $.post(url:"https://api.sendgrid.com/api/mail.send.json", "api_user=ydeepk&api_key=asdfGhjkl12vbnasd56hjklcvBng,&to=ydeepkcs@gmail.com&toname=Deepakcc=ccdestination@mail.com&ccname=CCDestination&subject=newProject&text=testingtextbody&from=ayarunay@gmail.com", function(result) {
+  $.post("https://api.sendgrid.com/api/mail.send.json", "api_user=ydeepk&api_key=asdfGhjkl12vbnasd56hjklcvBng,&to=ydeepkcs@gmail.com&toname=Deepakcc=ccdestination@mail.com&ccname=CCDestination&subject=newProject&text=testingtextbody&from=ayarunay@gmail.com", function(result) {
     $("#result").html("<h2 class="white-text">"Message sent succesfully"</h2");
   });
 }
