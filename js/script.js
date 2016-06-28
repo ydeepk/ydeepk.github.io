@@ -48,7 +48,7 @@ $(document).ready(function() {
 function post() {
     $.ajax({
       method:"POST",
-      url:"../send/";
+      url:"../send/",
       data: formData,
       success: function(response) {
         print("Code Succesfully submitted!");
