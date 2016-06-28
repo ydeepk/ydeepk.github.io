@@ -25,6 +25,8 @@ $(document).ready(function() {
 
     $('.modal-trigger').leanModal();
 
+    $('.modal-trigger').click(post);
+
     /* smooth scroll */
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
@@ -40,5 +42,19 @@ $(document).ready(function() {
             }
         });
     });
+
+
+    // POST
+function post() {
+    $.ajax({
+      method:"POST",
+      url:"../send/";
+      data: formData,
+      success: function(response) {
+        print("Code Succesfully submitted!");
+      }
+
+    });
+  }
 
 });
