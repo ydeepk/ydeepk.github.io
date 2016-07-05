@@ -84,12 +84,21 @@
                 </div>
 
                 <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col s2">
+                        <select class="browser-default">
+                            <option value="dollar">&dollar;</option>
+                            <option value="euro">&euro;</option>
+                            <option value="rupees">Rs.</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s10">
                         <input id="budget" type="number" name="Budget" class="validate" min=0>
                         <label for="budget">Your Budget</label>
                     </div>
                 </div>
-
+                <div class="row">
+                    <input type="hidden" name="_next" value="thanks.html" />
+                </div>
                 <div class="row">
                     <div class="col s12 center">
                         <button class="btn waves-effect waves-light btn-large cust-pink-bg white-text" type="submit" value="send" name="action">Submit
