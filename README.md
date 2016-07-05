@@ -1,3 +1,9 @@
+/* minify link */
+https://kangax.github.io/html-minifier/
+https://marijnhaverbeke.nl/uglifyjs
+http://www.cleancss.com/css-minify/
+
+
 /*
 # headers
 
