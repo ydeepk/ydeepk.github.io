@@ -25,8 +25,8 @@
 
     <!-- preloader -->
     <div class="preloader blue-grey darken-4">
-      <div class="loader">Loading...</div>
-      <h3 class="blue-grey-text text-darken-2 center">Loading Wait . . .</h3>
+        <div class="loader">Loading...</div>
+        <h3 class="blue-grey-text text-darken-2 center">Loading Wait . . .</h3>
     </div>
     <!-- / preloader -->
 
@@ -97,7 +97,7 @@
             <!-- Lets Work btn row -->
             <div class="row">
                 <div class="col s12 m12 l12 center">
-                    <a href="get-info.html" class="btn btn-large cust-pink-bg" target="_blank">Lets work together!</a>
+                    <a href="#lets-work" class="btn btn-large cust-pink-bg modal-trigger" target="_blank">Lets work together!</a>
                 </div>
             </div>
             <!-- / Lets Work btn row -->
@@ -177,7 +177,7 @@
                         <h4 class="blue-grey-text text-darken-1"><span class="quest">Would like to <strong>hire me</strong> at your <strong>FIRM</strong> ? </span></h4>
                     </div>
                     <div class="row">
-                        <a href="" class="btn btn-large cust-pink-bg" target="_blank">request cv<i class="material-icons absolute">description</i></a>
+                        <a href="#request" class="btn btn-large cust-pink-bg modal-trigger" target="_blank">request cv<i class="material-icons absolute">description</i></a>
                     </div>
                 </div>
             </div>
@@ -240,7 +240,8 @@
                                 </div>
                                 <div class="card-reveal">
                                     <span class="card-title cust-pink-text">Wikipedia App<i class="material-icons right">close</i></span>
-                                    <p class="cust-light-pink-text">A pet project to make custom wikipedia app, that fetches random wiki Article with one click. And capable of performing search on any topic and displays result on same page. <a href="projects/wiki/wiki.html" class="cust-light-pink-text" target="_blank">Wikipedia App</a></p>
+                                    <p class="cust-light-pink-text">A pet project to make custom wikipedia app, that fetches random wiki Article with one click. And capable of performing search on any topic and displays result on same page. <a href="projects/wiki/wiki.html" class="cust-light-pink-text"
+                                            target="_blank">Wikipedia App</a></p>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +259,8 @@
                                 </div>
                                 <div class="card-reveal">
                                     <span class="card-title cust-pink-text">Twitch TV App<i class="material-icons right">close</i></span>
-                                    <p class="cust-light-pink-text">Challenge was to display <strong>online / offline Status</strong> of selected group of users, those stream's regularly. Additionaly App sholud be capable to search different Users / channels those are streaming or exists on <a href="https://www.twitch.tv" target="_blank">Twitch Tv</a>.</p>
+                                    <p class="cust-light-pink-text">Challenge was to display <strong>online / offline Status</strong> of selected group of users, those stream's regularly. Additionaly App sholud be capable to search different Users / channels those are streaming or exists
+                                        on <a href="https://www.twitch.tv" target="_blank">Twitch Tv</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -444,7 +446,7 @@ while(x=eval(x));
                     </div>
                 </div>
                 <div class="row">
-                  <input type="hidden" name="_next" value="thanks.html" />
+                    <input type="hidden" name="_next" value="thanks.html" />
                 </div>
                 <div class="row">
                     <div class="col s12 center">
@@ -456,10 +458,116 @@ while(x=eval(x));
     </div>
     <!-- / message modal window -->
 
-    <!--  Import jQuery  -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- request cv modal window -->
+    <div class="row modal" id="request">
+        <div class="row">
+            <div class="col s12 center">
+                <h4 class="cust-pink-text josefin">Tell me where I'm sending my <strong>CV</strong>.</h4>
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <form class="col l12" method="post" action="https://formspree.io/ydeepkcs@gmail.com">
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" name="name" class="validate" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" name="company" class="validate" required>
+                    <label for="company">Company</label>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" name="email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="hidden" name="_next" value="thanks.html" />
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <button type="submit" name="send" value="send" class="btn btn-large cust-pink-bg white-text">send<i class="material-icons absolute">send</i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- / request cv modal window -->
+
+    <!-- lets work together modal window -->
+    <div class="row modal" id="lets-work">
+        <div class="row">
+            <div class="col s12 m12 l12 cust-pink-text">
+                <h4 class="center blue-grey-text text-darken-2">Tell me everything about your project.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <h6 class="white-text">i</h6>
+            </div>
+
+            <form method="post" class="col s6 white z-depth-2" action="https://formspree.io/ydeepkcs@gmail.com">
+                <div class="row">
+                    <!-- name row -->
+                    <div class="input-field col s12">
+                        <input id="name" type="text" name="Name" class="validate">
+                        <label for="name">Name</label>
+                    </div>
+                </div>
+                <!-- name row -->
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" name="Email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="icon_telephone" type="tel" name="Telephone" class="validate">
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="description" name="message" class="materialize-textarea"></textarea>
+                        <label for="description">Describe Project</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s2">
+                        <select class="browser-default">
+                            <option value="dollar">&dollar;</option>
+                            <option value="euro">&euro;</option>
+                            <option value="rupees">Rs.</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s10">
+                        <input id="budget" type="number" name="Budget" class="validate" min=0>
+                        <label for="budget">Your Budget</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="hidden" name="_next" value="thanks.html" />
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <button class="btn waves-effect waves-light btn-large cust-pink-bg white-text" type="submit" value="send" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- / Lets work togehter modal window -->
+
+        <!--  Import jQuery  -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 
 
 </body>
