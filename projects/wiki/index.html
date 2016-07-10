@@ -8,9 +8,152 @@
     <title>Wikipedia App | Search &amp; Random</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="../../css/animate.css" rel="stylesheet">
-    <link href="wiki.css" rel="stylesheet">
+    <style>
+      /* load fonts file raleway, lato (Josefins Sans Montesrat ) */
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+      @import url(https://fonts.googleapis.com/css?family=Lato:300);
+      .raleway {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 300;
+      }
+      .lato {
+        font-family: 'Lato', sans-serif;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .text-blue-grey {
+          color:#263238;
+      }
+      .text-blue {
+          color: rgba(30,136,229,1);
+      }
+      .text-light-blue {
+          color: #64b5f6;
+      }
+      .text-red {
+          color:#d32f2f;
+      }
+      .white-bg {
+          background-color: #fff;
+      }
+      .blue-grey-bg {
+          background-color: #263238;
+      }
+      .light-grey-bg {
+          background-color: #eceff1;
+      }
+      h1 {
+          font-size: 9rem;
+      }
+      .h4-size {
+          font-size: 2rem;
+      }
+
+      /* Input & Placeholder*/
+      input {
+          height: 60px !important;
+          width: 80% !important;
+          border: 1px solid #b0bec5 !important;
+          border-top-color: #fff !important;
+          border-left-color: #fff !important;
+          border-right-color: #fff !important;
+          border-radius: 0 !important;
+          box-shadow: inset 0px 0px 0px #fff !important;
+      }
+      input[type="text"]:focus {
+          border: 4px solid rgba(30,136,229,1) !important;
+          color: #64b5f6 !important;
+          font-size: 2rem;
+          font-family: 'Lato', sans-serif;
+      }
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: #90caf9 !important;
+          font-size: 2rem;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: #90caf9 !important;
+          font-size: 2rem;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: #90caf9 !important;
+          font-size: 2rem;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: #90caf9 !important;
+          font-size: 2rem;
+          text-align: center;
+          font-family: 'Lato', sans-serif;
+      }
+      .search-btn,
+      .random-btn,
+      .read-btn {
+          margin-left: 5px;
+          font-size: 2rem;
+          text-decoration: none !important;
+          padding: 0px 40px;
+          padding-top: 16px;
+          padding-bottom: 21px;
+          color:#fff;
+          background-color:rgba(30,136,229,1);
+          border: 1px solid rgba(30,136,229,1);
+      }
+      .read-btn {
+          margin-bottom: 5px !important;
+          padding: 10px 20px !important;
+          color: #fff;
+          background-color:dodgerblue;
+          border-radius: 0;
+      }
+      .search-btn:hover,
+      .random-btn:hover,
+      .read-btn:hover {
+          color:#fff;
+          background-color:rgba(30,136,229,0.7);
+      }
+      input[type="text"]:focus+.search-btn {
+          position: absolute;
+          margin-top: 0px !important;
+          padding-top: 13px !important;
+          padding-bottom: 18px !important;
+      }
+      .inline input, .inline .search-alert {
+          display: inline-block;
+      }
+      .alert {
+          padding: 10px 30px;
+          box-shadow: 4px 4px 6px #cfd8dc;
+      }
+      .alert-close {
+          position:absolute;
+          margin-top: -30px;
+          margin-left: 80%;
+          cursor: pointer;
+      }
+      .preloader {
+          overflow: hidden;
+      }
+      /* RESULT */
+      .result {
+          height: auto;
+          margin-top: -1px;
+          border: 1px solid #cfd8dc;
+      }
+      .result-container-close {
+          cursor: pointer;
+          padding: 20px 10px;
+          font-size: 2rem;
+      }
+    </style>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -121,8 +264,105 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="wiki.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">// Variables at Play
+    // none
+
+
+    // Give me some Action
+    $('.alert-close').click(function() {    // remove Alert
+        $('.alert').remove();
+    });
+
+    $('.result-container-close').click(function() {    // remove Result
+        $('.result-container').remove();
+        // Refersh Web Page
+        refreshPage();
+    });
+
+    $('.result-container-close').hide(); // hide clear button
+
+
+
+
+    // Need some Functionality
+    function searchWiki() {  // search function
+        var find = $('input[type="text"]').val(); // Hold Search Input
+
+        alertMsg(find);
+
+        var url = 'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch='+find+'&format=json&callback=?'; // WIKI API URL
+
+        $.ajax({  // load Data
+            url: url,
+            dataType: 'json',
+            success: function(json) {
+
+                $('.preloader').remove(); // Remove Preloader
+
+                $('.result-container-close').show(); // Show Clear Result
+
+                $('.result-container').removeClass('hidden'); // display Result Container
+
+                var data = json.query;
+
+                for(var i = 0; i < data.search.length; i++) {
+                    $('.result-container').append('<div class="col-xs-12 result white-bg text-right light-grey-bg"><h3 class="title-wiki text-left text-blue raleway">'+data.search[i].title+'</h3><h4 class="snippet-wiki text-left text-blue-grey lato">'+data.search[i].snippet+'</h4><a href="https://en.wikipedia.org/wiki/'+data.search[i].title+'" class="read-btn btn btn-large" target="_blank">Read This</a></div>');
+
+                }
+            }
+        });
+    }
+
+    function randomWiki() { // Random function
+        window.location.href = "https://en.wikipedia.org/wiki/Special:Random"; // redirect
+    }
+
+    function refreshPage() {
+        window.location.href="index.html"; // Self Redirect
+    }
+
+    function alertMsg(find) {
+        $('.alert').removeClass('hidden'); // Display Search Alert
+        $('.search-value').append(find); // Push Search value in ALert
+        $('.alert').addClass('animated rubberBand');
+    }
+
+    var main = function() { // Main function
+        $('.random-btn').click(randomWiki); //load Random Wikipedia
+
+        $('input[type="text"]').keypress(function(e) { // Submit Search Input value
+            if(e.which==13) {
+                $('input[type="text"]').submit();
+
+                $('.preloader').removeClass('hidden');
+                $('.preloader h3').addClass('animated lightSpeedIn cust-ani infinite');
+
+                searchWiki(); // Call Search wiki
+            }
+        });
+
+        $('.search-btn').click(function() { // Submit input on Click
+            $('input[type="text"]').submit();
+
+            $('.preloader').removeClass('hidden');
+            $('.preloader h3').addClass('animated lightSpeedIn cust-ani infinite');
+
+            searchWiki();
+        });
+    }
+
+
+    // Do it, when Ready
+    $(document).ready(main);
+
+
+    // WIKI API REFERENCE
+
+    // https://en.wikipedia.org/wiki/Special:Random
+    // https://www.mediawiki.org/wiki/API:Main_page
+    // http://en.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&prop=extracts&exchars=500&format=json
+</script>
 
   </body>
 </html>

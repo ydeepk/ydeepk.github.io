@@ -11,9 +11,108 @@
     <link rel="Shortcut icon" href="img/">
 <!-- Import Google Icon Font   -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--  Compiled and minified CSS  -->
-    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="satya.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <style>/*
+        used color : #003049 , #D62828 , #F77F00
+
+        rgb= rgb(0,48,73) , rgb(214,40,40) , rgb(15,119,240), rgb(247,127,0)
+    */
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      main {
+        flex: 1 0 auto;
+      }
+    html {
+        background: url(../../img/satya-cover.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+    .name {
+        margin-top: 2rem;
+    }
+    .social li {
+        display: inline-block;
+        margin-top: 2rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .social li a:nth-child(1) {
+        font-size: 1.8rem;
+    }
+    .social-img {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    /*    SECTION Tiles */
+    .tiles {
+        margin-top: 100px;
+    }
+    .box-height {
+        height: 6rem;
+    }
+    .txt-top-padding {
+        padding-top: 20px;
+    }
+    .margin-top {
+        margin-top: 3.5rem;
+    }
+
+    /*color scheme*/
+    .color-blu {
+        background-color: #003049 !important;
+    }
+    .color-orange {
+        background-color: #F77F00 !important;
+    }
+    .color-red {
+        background-color: #D62828 !important;
+    }
+    .material-icons {
+        margin-right: 10px;
+     }
+    .cursor {
+        cursor: pointer;
+    }
+
+    /* INFO WINDOW */
+    .info-window {
+        position: fixed;
+        top: 0px;
+        height: 700px;
+        width: 100%;
+        z-index: 99 !important;
+        background-color: rgba(0,48,73,0.9) !important;
+        transition: all 1s ease-in-out;
+        visibility: visible !important;
+    }
+    .info-window div h1 i {
+        font-size: 5rem;
+    }
+    .work-info, .present-info {
+        background-color: rgba(214,40,40,0.95) !important;
+    }
+    .contact-info {
+        background-color: rgba(247,127,0, 0.95) !important;
+    }
+    .close-about i, .close-work i, .close-contact i, .close-present i {
+        margin-top: 2rem;
+        font-size: 3rem;
+        color: #fff;
+    }
+    /* FOOTER */
+    .page-footer {
+        background-color: rgba(0,48,73,0.98) !important;
+    }
+    .line-divi {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+    /* ANIAMTION */
+</style>
 </head>
  <body>
 
@@ -159,10 +258,35 @@
 
      <!--       Import jQuery           -->
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-     <script type="text/javascript" src="../../js/materialize.min.js"></script>
-     <script type="text/javascript" src="satya.js"></script>
-
-
-
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+     <script>/* display info window*/
+     $('.about').click(function() {
+         $('.about-info').toggleClass('hide');
+     });
+     $('.work').click(function() {
+         $('.work-info').toggleClass('hide');
+     });
+     $('.contact').click(function() {
+         $('.contact-info').toggleClass('hide');
+     });
+     $('.present').click(function() {
+         $('.present-info').toggleClass('hide');
+     });
+     $('.blog').click(function() {
+         $('.blog[href^="http://"]').attr("target","_blank");
+     });
+     /*close window*/
+     $('.close-about').click(function() {
+         $('.about-info').toggleClass('hide');
+     });
+     $('.close-work').click(function() {
+         $('.work-info').toggleClass('hide');
+     });
+     $('.close-contact').click(function() {
+         $('.contact-info').toggleClass('hide');
+     });
+     $('.close-present').click(function() {
+         $('.present-info').toggleClass('hide');
+     });</script>
 </body>
 </html>
