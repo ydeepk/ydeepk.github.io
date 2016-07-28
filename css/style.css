@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.main-header {
+  height: 680px;
+  width: 100%;
+  background-image: url(../img/macbook-developer.jpg);
+  background-size: 100% 680px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container {
+  width: 90%;
+}
+.absolute {
+  position: absolute;
+}
+.left-margin {
+  margin-left: -30px;
+}
+.inconsolata {
+  font-family: 'Inconsolata', monospace;
+}
+.title {
+  font-size: 7rem;
+}
+/********
+  NAVBAR
+********/
+.nav-wrapper {
+  display: block !important;
+  background-color: #fff;
+  transition: all 1s linear 0.5ms;
+}
+.nav-wrapper ul li a {
+  color: #607d8b;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.4rem;
+  transition: all 500ms linear;
+}
+.nav-wrapper ul {
+  margin-right: 50px;
+}
+.nav-wrapper ul li:hover,
+.nav-wrapper ul li a:hover {
+  background-color: #fff !important;
+}
+.table-of-contents {
+  padding-top: 0px !important;
+  height: 64px;
+  line-height: 56px;
+}
+.table-of-contents a {
+  height: 45px;
+}
+.table-of-contents a.active {
+  height: 45px;
+  border-left: 0;
+  color: #1e88e5 !important;
+}
+.table-of-contents a:hover {
+  height: 45px;
+  color: #1e88e5 !important;
+  border: 0px solid transparent !important;
+  padding-left: 20px;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  display: block;
+  z-index: 9;
+  transition: all 500ms linear;
+}
+.brand-logo {
+  margin-left: 50px;
+}
+.page-footer {
+  background-color: #1e88e5 !important;
+}
+.modal {
+  max-height: 80% !important;
+}
+.close {
+  cursor: pointer;
+}
