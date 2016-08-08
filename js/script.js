@@ -4,12 +4,12 @@ $(document).ready(function() {
       $('.preloader').remove();
 
       // setting animation
-      var delay = 1200;
+      var delay = 1100;
       setTimeout(function() { $('.title').removeClass('hide'); }, delay);
-      setTimeout(function() { $('#desig').removeClass('hide'); }, delay+400);
-      setTimeout(function() { $('#quote').removeClass('hide'); }, delay+800);
-      setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1200);
-      setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+1600);
+      setTimeout(function() { $('#desig').removeClass('hide'); }, delay+500);
+      setTimeout(function() { $('#quote').removeClass('hide'); }, delay+1000);
+      setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1500);
+      setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
     });
 
     $('.close').click(function() {
@@ -26,11 +26,15 @@ $(document).ready(function() {
         if ($(window).scrollTop() > navHeight) {
             $('.fix').addClass('fixed');
             $('.brand-logo').addClass('animated rubberBand');
+            setTimeout(function() { $('.avatar').addClass('animated tada'); }, 1600);
+            setTimeout(function() { $('#about-subHead').addClass('animated pulse'); }, 2600);
+            setTimeout(function() { $('.description').addClass('animated pulse'); }, 3400);
         } else {
             $('.fix').removeClass('fixed');
             $('.brand-logo').removeClass('animated rubberBand');
         }
     });
+
 
     /* smooth scroll */
     $(function() {
