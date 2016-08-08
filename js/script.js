@@ -33,6 +33,11 @@ $(document).ready(function() {
   $('#quote').delay(7000).addClass('animated fadeInLeft');
   $('#hire').delay().addClass('animated bounceIn');
 
+  var delay = 2000;
+  setTimeout(funtion() {
+    $('#hire').addClass('animated bounceIn');
+  }, delay);
+
     /* smooth scroll */
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
