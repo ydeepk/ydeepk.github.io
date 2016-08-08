@@ -1,18 +1,15 @@
-/* Fixed Navbar */
-$(window).bind('scroll', function() {
-    var navHeight = $(window).height() - 70;
-    if ($(window).scrollTop() > navHeight) {
-        $('.fix').addClass('fixed');
-    } else {
-        $('.fix').removeClass('fixed');
-    }
-});
-
-
 $(document).ready(function() {
 
     $(window).load(function() {
       $('.preloader').remove();
+
+      // setting animation
+      var delay = 1200;
+      setTimeout(function() { $('.title').removeClass('hide'); }, delay);
+      setTimeout(function() { $('#desig').removeClass('hide'); }, delay+400);
+      setTimeout(function() { $('#quote').removeClass('hide'); }, delay+800);
+      setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1200);
+      setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+1600);
     });
 
     $('.close').click(function() {
@@ -23,20 +20,17 @@ $(document).ready(function() {
 
     $('.modal-trigger').leanModal();
 
-    /* $().animateCss();
-    $().addClass('animated fadein');
-    */
-
-  /*animation*/
-  $('.title').delay(6000).addClass('animated bounceIn');
-  $('#desig').delay(6400).addClass('animated fadeInRight');
-  $('#quote').delay(7000).addClass('animated fadeInLeft');
-  $('#hire').delay().addClass('animated bounceIn');
-
-  var delay = 2000;
-  setTimeout(funtion() {
-    $('#hire').addClass('animated bounceIn');
-  }, delay);
+    /* Fixed Navbar */
+    $(window).bind('scroll', function() {
+        var navHeight = $(window).height() - 70;
+        if ($(window).scrollTop() > navHeight) {
+            $('.fix').addClass('fixed');
+            $('.brand-logo').addClass('animated rubberBand');
+        } else {
+            $('.fix').removeClass('fixed');
+            $('.brand-logo').removeClass('animated rubberBand');
+        }
+    });
 
     /* smooth scroll */
     $(function() {
