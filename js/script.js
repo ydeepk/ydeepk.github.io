@@ -31,7 +31,6 @@ $(document).ready(function() {
             setTimeout(function() { $('.description').addClass('animated pulse'); }, 3400);
         } else {
             $('.fix').removeClass('fixed');
-            $('.brand-logo').removeClass('animated rubberBand');
         }
     });
 
