@@ -10,6 +10,30 @@
     <!--  Title & Shortcut icon  -->
     <title>Deepak Yadav work | Full Stack Developer portfoilo</title>
     <link rel="Shortcut icon" href="img/deepakYadav.png">
+    <style>
+      .preloader {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #fff;
+        z-index: 999 !important;
+      }
+      .loader {
+          margin-top: 45vh;
+          margin-left: 48%;
+          border: 8px solid #f3f3f3; /* Light grey */
+          border-top: 8px solid #3498db; /* Blue */
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+    </style>
     <!--  Import Google Icon Font  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -22,7 +46,7 @@
 <body>
 
   <!-- preloader -->
-  <div class="preloader"></div><!-- preloader -->
+  <div class="preloader"><div class="loader center"></div><h5 class="blue-text center">Loading ...</h5></div><!-- preloader -->
 
   <!-- fixed nav bar -->
   <div class="navbar-fixed">
@@ -361,10 +385,10 @@ while(x=eval(x));
 
 
     <!--  Import jQuery  -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../../js/materialize.min.js"></script>
-    <script type="text/javascript" src="../../js/scrollreveal.js"></script>
-    <script type="text/javascript" src="../../js/script.js"></script>
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script defer type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script defer type="text/javascript" src="../../js/scrollreveal.js"></script>
+    <script defer type="text/javascript" src="../../js/script.js"></script>
 </body>
 
 </html>
