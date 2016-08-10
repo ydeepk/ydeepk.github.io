@@ -6,11 +6,14 @@
     <!-- Let browser know website is optimized for mobile  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Full Stack Developer, Javascript, JQuery, HTML5, CSS3, Algorithms, Data Visualisation, Database, Mysql, MongoDB, API, SKILLS, KEY Projects, Experience">
-    <meta name="description" content="">
+    <meta name="description" content="Hey, I'm glad you found me. Since, Graduated in B.Tech CSE, I have 2 years + experience in the Web/App Development industry. I've worked across many amazing projects, learned and mastered a great set of Skills & Techniques. I love to code, design on weekdays, and equally spends time Geeking around, understanding and exploring new technology. Apart from these I love to travel and explore from time to time, taste some nasty thrill or adventure along the way. I always belive I'm meant to be something bigger and different. I'm working on it.">
     <!--  Title & Shortcut icon  -->
     <title>Deepak Yadav | Full Stack Developer portfoilo</title>
     <link rel="Shortcut icon" href="img/deepakYadav.png">
     <!--  Import Google Icon Font  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <!--  Compiled and minified CSS -->
     <style>
       .preloader {
         position: fixed;
@@ -19,25 +22,42 @@
         background-color: #fff;
         z-index: 999 !important;
       }
-      .loader {
-          margin-top: 45vh;
-          margin-left: 48%;
-          border: 8px solid #f3f3f3; /* Light grey */
-          border-top: 8px solid #3498db; /* Blue */
-          border-radius: 50%;
-          width: 60px;
-          height: 60px;
-          animation: spin 1s linear infinite;
+      .spinner {
+        margin: 45vh auto 0;
+        width: 70px;
+        text-align: center;
       }
-
-      @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+      .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: #1e88e5;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
       }
+      .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+      @keyframes sk-bouncedelay {
+        0%, 80%, 100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+          } 40% {
+            -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+          }
+        }
     </style>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <!--  Compiled and minified CSS -->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/animate.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
@@ -46,25 +66,25 @@
 <body>
 
   <!-- preloader -->
-  <div class="preloader"><div class="loader center"></div><h5 class="blue-text center">Loading ...</h5></div><!-- preloader -->
+  <div class="preloader"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><h4 class="center blue-text text-darken-1">Loading ...</h4></div><!-- preloader -->
 
   <!-- main header -->
   <header class="main-header overflow">
     <!-- dummy row -->
     <div class="row hide-on-small-only"><h2 class="transparent-text thin center"><strong>yadav deepak</strong> | Full Stack Developer.</h2></div>
     <!-- tile and work designation -->
-    <div class="row"><div class="container"><div class="col s12 m12 l12 center"><h1 class="blue-text text-darken-1 thin title hide animated bounceInDown">Deepak Yadav</h1></div></div></div>
+    <div class="row"><div class="container"><div class="col s12 m12 l12 center"><h1 class="blue-text text-darken-1 thin title hide animated bounceInDown text-shadow">Deepak Yadav</h1></div></div></div>
 
-    <div class="row hide" id="desig"><div class="container"><div class="col s12 m12 l12 center"><h4 class="blue-grey-text text-lighten-2 inconsolata animated bounceInLeft"><span class="blue-grey-text text-lighten-4">&lt;</span> Full Stack Developer | <small class="blue-grey-text text-darken-2">flairBit</small>. <span class="blue-grey-text text-lighten-4">/&gt;</span></h4></div></div></div>
+    <div class="row hide" id="desig"><div class="container"><div class="col s12 m12 l12 center"><h4 class="blue-grey-text text-lighten-2 inconsolata animated bounceInLeft text-shadow"><span class="blue-grey-text text-lighten-4">&lt;</span> Full Stack Developer | <small class="blue-grey-text text-darken-2">flairBit</small>. <span class="blue-grey-text text-lighten-4">/&gt;</span></h4></div></div></div>
 
     <!-- dummy row -->
-    <div class="row hide" id="quote"><div class="container"><h5 class="blue-grey-text center light inconsolata animated bounceInRight"><i class="material-icons">format_quote</i> Algorithm guides me, code defines me.</h5></div></div>
+    <div class="row hide" id="quote"><div class="container"><h5 class="blue-grey-text center light inconsolata animated bounceInRight text-shadow"><i class="material-icons">format_quote</i> Algorithm guides me, code defines me.</h5></div></div>
 
     <!-- hire me button -->
     <div class="row"><div class="container"><div class="col s12 m12 l12 center"><h6><a href="#hire-me-window" class="btn btn-large blue darken-1 modal-trigger waves-effect waves-light hide animated rubberBand" id="hire">hire me</a></h6></div></div></div>
 
     <!-- scroll down -->
-    <div class="row hide" id="scroll"><div class="container"><div class="col s12 m12 l12 center"><a href="#about-me" class="pulse"><i class="material-icons medium animated bounceInUp">expand_more</i></a></div></div></div>
+    <div class="row hide" id="scroll"><div class="container"><div class="col s12 m12 l12 center"><a href="#about-me" class="pulse tooltip" data-position="right" data-delay="50" data-tooltip="scroll down"><i class="material-icons medium animated bounceInUp">expand_more</i></a></div></div></div>
 
   </header><!-- main header -->
 
@@ -99,16 +119,16 @@
       <div class="row">
         <div class="container">
           <div class="col s12 m12 l5 overflow"><img src="img/deepakYadav.png" class="responsive-img avatar" alt="Deepak Yadav Avatar"></div>
-          <div class="col s12 m12 l7"><h2 class="blue-text text-darken-1 thin center" id="about-subHead">What should you know about me.</h2><p class="transparent-text">i</p> <p class="blue-grey-text text-lighten-1 description inconsolata"><i class="material-icons blue-text text-darken-1">format_quote</i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <blockquote>This is an example quotation that uses the blockquote tag.</blockquote><p class="blue-text text-darken-1 right">- <strong>Deepak Yadav</strong></p></div>
+          <div class="col s12 m12 l7"><h2 class="blue-text text-darken-1 thin center" id="about-subHead">What should you know about me.</h2><p class="transparent-text">i</p> <p class="blue-grey-text description inconsolata"><i class="material-icons blue-text text-darken-1">format_quote</i> Hey, I'm glad you found me. Since, Graduated in B.Tech <abbr title="Computer Science Engineering">CSE</abbr>, I have 2 years + experience in the Web/App Development industry. I've worked across many amazing projects, learned and mastered a great set of Skills &amp; Techniques. I love to code, design on weekdays, and equally spends time Geeking around, understanding and exploring new technology. Apart from these I love to travel and explore from time to time, taste some nasty thrill or adventure along the way. I always belive I'm meant to be something bigger and different. I'm working on it. </p> <blockquote class="blue-grey-text inconsolata"> " <strong>Algorithm</strong> guides me, <strong>Code</strong> defines me. "</blockquote><p class="blue-text text-darken-1 right">- <strong>Deepak Yadav</strong></p></div>
         </div>
       </div>
 
       <!-- skills, Total Projects, -->
       <div class="row">
         <div class="container center">
-          <div class="col s12 m4 l4"><h3 class="blue-text text-darken-1 light"><i class="material-icons medium">code</i>Skills</h3><h6 class="blue-grey-text light inconsolata">More than 16 skills<br> &amp; growing every day.</h6><a href="content/skills/" target="_blank">read more</a></div>
-          <div class="col s12 m4 l4"><h3 class="blue-text text-darken-1 light"><i class="material-icons medium">developer_mode</i>Projects</h3><h6 class="blue-grey-text light inconsolata">20 Projects<br> and counting.</h6><a href="content/view/" target="_blank">read more</a></div>
-          <div class="col s12 m4 l4"><h3 class="blue-text text-darken-1 light"><i class="material-icons medium">star</i>Experience</h3><h6 class="blue-grey-text light inconsolata">2 Years + <br> Seasoned with every code.</h6><a href="" target="_blank">read more</a></div>
+          <div class="col s12 m4 l4"><h3 class="blue-text text-darken-1 light"><i class="material-icons medium">code</i>Skills</h3><h6 class="blue-grey-text light inconsolata">More than 16 skills<br> &amp; growing every day.</h6><a class="btn-flat blue-text" href="content/skills/" target="_blank">read more</a></div>
+          <div class="col s12 m4 l4"><h3 class="blue-text text-darken-1 light"><i class="material-icons medium">developer_mode</i>Projects</h3><h6 class="blue-grey-text light inconsolata">20 Projects<br> and counting.</h6><a class="btn-flat blue-text" href="content/view/" target="_blank">read more</a></div>
+          <div class="col s12 m4 l4"><h3 class="blue-text text-darken-1 light"><i class="material-icons medium">star</i>Experience</h3><h6 class="blue-grey-text light inconsolata">2 Years + <br> Seasoned with every code.</h6><a class="btn-flat disabled" href="#" target="_blank">read more</a></div>
         </div>
       </div>
 

@@ -9,7 +9,7 @@ main {
 .main-header {
   height: 680px;
   width: 100%;
-  background-image: url(../img/macbook-developer.jpg);
+  background-image: url(../img/hero1.jpg);
   background-size: 100% 680px;
   background-repeat: no-repeat;
   background-position: center;
@@ -29,8 +29,14 @@ main {
 .title {
   font-size: 7rem;
 }
+.text-shadow {
+  text-shadow: 5px 5px 12px #546e7a;
+}
 .overflow {
   overflow: hidden;
+}
+blockquote {
+  border-left-color: #1e88e5 !important;
 }
 /********
   NAVBAR
@@ -90,4 +96,9 @@ main {
 }
 .close {
   cursor: pointer;
+}
+@media only screen and (max-width : 600px) {
+  .brand-logo {
+    margin-left: 0px !important;
+  }
 }

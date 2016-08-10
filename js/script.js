@@ -10,6 +10,7 @@ $(document).ready(function() {
       setTimeout(function() { $('#quote').removeClass('hide'); }, delay+1000);
       setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1500);
       setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
+
     });
 
     $('.close').click(function() {
@@ -20,15 +21,16 @@ $(document).ready(function() {
 
     $('.modal-trigger').leanModal();
 
+    $('.tooltip').tooltip({delay: 50});
+
     /* Fixed Navbar */
     $(window).bind('scroll', function() {
         var navHeight = $(window).height() - 70;
         if ($(window).scrollTop() > navHeight) {
             $('.fix').addClass('fixed');
-            $('.brand-logo').addClass('animated rubberBand');
             setTimeout(function() { $('.avatar').addClass('animated tada'); }, 1600);
             setTimeout(function() { $('#about-subHead').addClass('animated pulse'); }, 2600);
-            setTimeout(function() { $('.description').addClass('animated pulse'); }, 3400);
+            setTimeout(function() { $('.description').addClass('animated jello'); }, 3400);
         } else {
             $('.fix').removeClass('fixed');
         }

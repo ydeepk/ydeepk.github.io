@@ -13,23 +13,68 @@
     <link rel="Shortcut icon" href="img/">
     <!--  Import Google Icon Font  -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!--  Compiled and minified CSS -->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <style>
-      .four-zero-four {
-        margin-top: 150px;
-        font-size: 10rem;
-      }
-      .page-footer {
-        background-color: #1e88e5 !important;
-      }
-    </style>
+      .preloader {
+          position: fixed;
+          height: 100vh;
+          width: 100%;
+          background-color: #fff;
+          z-index: 999 !important;
+        }
+        .spinner {
+          margin: 45vh auto 0;
+          width: 70px;
+          text-align: center;
+        }
+        .spinner > div {
+          width: 18px;
+          height: 18px;
+          background-color: #1e88e5;
+          border-radius: 100%;
+          display: inline-block;
+          -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+          animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        }
+        .spinner .bounce1 {
+          -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+        }
+        .spinner .bounce2 {
+          -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+        }
+        @-webkit-keyframes sk-bouncedelay {
+          0%, 80%, 100% { -webkit-transform: scale(0) }
+          40% { -webkit-transform: scale(1.0) }
+        }
+        @keyframes sk-bouncedelay {
+          0%, 80%, 100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            } 40% {
+              -webkit-transform: scale(1.0);
+              transform: scale(1.0);
+            }
+          }
+          .four-zero-four {
+            font-size: 10rem;
+          }
+          .page-footer {
+            background-color: #1e88e5 !important;
+          }
+      </style>
+      <!--  Compiled and minified CSS -->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
 </head>
 
 <body>
 
+    <!-- preloader -->
+    <div class="preloader"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div><h4 class="center blue-text text-darken-1">Loading ...</h4></div><!-- preloader -->
+
     <main>
+      <!-- dummy row -->
+      <div class="row hide-on-small-only"><h2 class="transparent-text thin center"><strong>yadav deepak</strong> | Full Stack Developer.</h2></div>
       <div class="row"><div class="container center"><h1 class="thin four-zero-four blue-text text-darken-1">404 <small class="blue-text text-lighten-2">Error</small></h1><h5 class="light blue-text text-darken-2"><i class="material-icons"></i> Sadly :-( <br><strong>Page</strong> you are looking for doesn't Exists.</h5></div></div>
       <div class="row"><div class="container center"><a href="/" class="btn btn-large blue darken-1"><i class="material-icons"></i> Back to Home Page</a></div></div>
       <!-- dummy row -->
