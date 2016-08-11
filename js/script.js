@@ -4,7 +4,7 @@ $(document).ready(function() {
       $('.preloader').remove();
 
       // setting animation
-      var delay = 1100;
+      var delay = 800;
       setTimeout(function() { $('.title').removeClass('hide'); }, delay);
       setTimeout(function() { $('#desig').removeClass('hide'); }, delay+500);
       setTimeout(function() { $('#quote').removeClass('hide'); }, delay+1000);
