@@ -21,21 +21,33 @@ $(document).ready(function() {
 
     $('.modal-trigger').leanModal();
 
-    $('.tooltip').tooltip({delay: 50});
-
     /* Fixed Navbar */
     $(window).bind('scroll', function() {
         var navHeight = $(window).height() - 70;
         if ($(window).scrollTop() > navHeight) {
             $('.fix').addClass('fixed');
-            setTimeout(function() { $('.avatar').addClass('animated tada'); }, 1600);
-            setTimeout(function() { $('#about-subHead').addClass('animated pulse'); }, 2600);
-            setTimeout(function() { $('.description').addClass('animated jello'); }, 3400);
         } else {
             $('.fix').removeClass('fixed');
         }
     });
 
+    // Changing the defaults
+    window.sr = ScrollReveal({
+        duration: 1000,
+        viewFactor: 0.4
+    });
+    sr.reveal('.avatar', {
+        reset: false,
+        origin: 'left',
+        easing: 'ease-in-out',
+        scale: 0.6
+    });
+    sr.reveal('#subHead', {
+        reset: false,
+        afterReveal: function (domEl) {
+          $('#subHead').addClass('animated rubberBand');
+        }
+    });
 
     /* smooth scroll */
     $(function() {

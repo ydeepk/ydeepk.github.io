@@ -88,11 +88,39 @@ blockquote {
 .brand-logo {
   margin-left: 50px;
 }
+/*common hidden for scrollreveal*/
+.avatar,
+#subHead {
+  visibility: hidden;
+}
 .page-footer {
   background-color: #1e88e5 !important;
 }
 .modal {
   max-height: 80% !important;
+  height: 425px !important;
+  width: 650px !important;
+  border-radius: 8px;
+  background-color: #fff;
+  border-color: #fff;
+}
+.modal-aside {
+  height: 425px;
+  width: 200px;
+  border-color: #1e88e5;
+}
+.modal-head {
+  padding-top: 130px !important;
+}
+.form-container {
+  padding-right: 10px;
+  float: right !important;
+  width: 420px;
+  border-color: #fff;
+}
+.modal-aside,
+.form-container {
+  display: inline-block !important;
 }
 .close {
   cursor: pointer;
