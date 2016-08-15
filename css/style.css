@@ -30,13 +30,14 @@ main {
   font-size: 7rem;
 }
 .text-shadow {
-  text-shadow: 5px 5px 12px #546e7a;
+  text-shadow: 3px 3px 8px #546e7a;
 }
 .overflow {
   overflow: hidden;
 }
 .avatar {
   visibility: hidden;
+  perspective: 800px;
 }
 blockquote {
   border-left-color: #1e88e5 !important;
