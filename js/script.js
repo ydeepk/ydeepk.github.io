@@ -13,8 +13,21 @@ $(document).ready(function() {
 
     });
 
+
+    // Button click
+    $('#hire, #hire-me').click(function() {
+        if($('.modal').hasClass('animated fadeOutDownBig')) {
+          $('.modal').removeClass('animated fadeOutDownBig');
+          $('.modal').addClass('animated tada');
+        } else {
+          $('.modal').addClass('animated tada');
+        }
+    });
+
     $('.close').click(function() {
-        $('#hire-me-window').closeModal();
+        $('.modal').closeModal();
+        $('.modal').removeClass('animated tada');
+        $('.modal').addClass('animated fadeOutDownBig');
     });
 
     $('.scrollspy').scrollSpy();
@@ -32,22 +45,16 @@ $(document).ready(function() {
     });
 
     // Changing the defaults
-    window.sr = ScrollReveal({
-        duration: 1000,
-        viewFactor: 0.4
-    });
-    sr.reveal('.avatar', {
-        reset: false,
-        origin: 'left',
-        easing: 'ease-in-out',
-        scale: 0.6
-    });
-    sr.reveal('#subHead', {
-        reset: false,
-        afterReveal: function (domEl) {
-          $('#subHead').addClass('animated rubberBand');
-        }
-    });
+    window.sr = ScrollReveal({reset: true, duration: 1200, viewFactor: 0.5, easing: 'ease-in-out', scale: 0});
+    sr.reveal('.avatar', {delay: 200, origin: 'right', scale: 0.6});
+    sr.reveal('#subHead', {delay: 800, origin: 'left', scale: 0.4});
+    sr.reveal('.description', {delay: 1600, origin: 'left', scale: 0.2});
+    sr.reveal('.quote', {delay: 800});
+    sr.reveal('.author', {delay: 850});
+    sr.reveal('.box', {delay: 200,scale: 0.6});
+    sr.reveal('.box-1', {delay: 800,scale: 0.4});
+    sr.reveal('.box-2', {delay: 1200,scale: 0.2});
+
 
     /* smooth scroll */
     $(function() {
