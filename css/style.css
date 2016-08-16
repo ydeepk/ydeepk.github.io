@@ -35,7 +35,20 @@ main {
 .overflow {
   overflow: hidden;
 }
-.avatar {
+.avatar,
+#subHead,
+.description,
+.quote,
+.author,
+.box,
+.box-1,
+.box-2,
+#interest-head,
+#hire-me,
+#liked-head,
+#view,
+#suggestion,
+#social {
   visibility: hidden;
   perspective: 800px;
 }
