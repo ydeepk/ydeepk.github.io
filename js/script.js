@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('#hire, #hire-me').click(function() {
         if($('.modal').hasClass('animated fadeOutDownBig')) {
           $('.modal').removeClass('animated fadeOutDownBig');
-          $('.modal').addClass('animate pulse');
+          $('.modal').addClass('animated pulse');
           setTimeout(function() { $('#thumbUp').removeClass('hide'); }, 1600);
         } else {
           $('.modal').addClass('animated pulse');
