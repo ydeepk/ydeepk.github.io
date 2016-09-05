@@ -91,7 +91,7 @@
   <!-- fixed nav bar -->
     <nav class="fix">
       <div class="nav-wrapper overflow">
-        <a href="#!" class="brand-logo blue-grey-text text-darken-1 light"><span class="blue-text text-darken-2">;-)</span> ydeepk</a>
+        <a href="#!" class="brand-logo blue-text text-darken-1 light">ydeepk</a>
         <a href="#" class="btn-menu grey-text text-darken-1 right hide-on-large-only"><i class="material-icons">menu</i></a>
         <ul class="right section table-of-contents hide-on-med-and-down" id="nav-mobile">
           <li><a href="#about-me">about me</a></li>
@@ -138,6 +138,41 @@
         <div class="col s12 m12 l12 center"><div class="row"><h2 class="white-text thin" id="interest-head">Interested in working with me?</h2><a href="#hire-me-window" class="btn btn-large white blue-text text-darken-1 modal-trigger waves-effect waves-light hire-me" id="hire-me">Hire me</a></div></div>
        </div>
      </div>
+
+     <!-- hire me modal window -->
+     <div id="hire-me-window" class="modal">
+       <aside class="modal-aside blue darken-1 center">
+         <h2 class="white-text thin modal-head">Hire me <br><i class="material-icons medium hide-on-small-only hide animated rollIn" id="thumbUp">thumb_up</i></h2>
+       </aside>
+       <div class="form-container">
+         <h5 class="blue-text text-darken-1 center">Let me know who is hiring me. <i class="material-icons blue-grey-text right close"> clear</i></h5>
+         <form class="" method="post" action="https://formspree.io/ydeepkcs@gmail.com">
+             <div class="input-field">
+                 <input id="first_name" type="text" name="name" class="validate" required>
+                 <label for="name">Name</label>
+             </div>
+             <div class="row">
+                 <div class="input-field">
+                     <input id="email" type="email" name="email" class="validate" required>
+                     <label for="email">Email</label>
+                 </div>
+             </div>
+             <div class="row">
+                 <input type="hidden" name="_next" value="content/ack/" />
+             </div>
+             <div class="row">
+                 <div class="input-field">
+                     <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Textarea</label>
+                 </div>
+                 <div class="center">
+                     <button type="submit" name="send" value="send" class="btn btn-large white-text blue darken-1">send<i class="material-icons absolute">send</i></button>
+                 </div>
+             </div>
+         </form>
+       </div>
+     </div>
+     <!-- / hire me modal window -->
     </section>
 
     <!-- my work section -->
@@ -344,42 +379,6 @@ while(x=eval(x));
             </div>
           </div>
   </footer><!-- page footer-->
-
-  <!-- hire me modal window -->
-  <div id="hire-me-window" class="modal">
-    <aside class="modal-aside blue darken-1 center">
-      <h2 class="white-text thin modal-head">Hire me <br><i class="material-icons medium hide-on-small-only hide animated rollIn" id="thumbUp">thumb_up</i></h2>
-    </aside>
-    <div class="form-container">
-      <h5 class="blue-text text-darken-1 center">Let me know who is hiring me. <i class="material-icons blue-grey-text right close"> clear</i></h5>
-      <form class="" method="post" action="https://formspree.io/ydeepkcs@gmail.com">
-          <div class="input-field">
-              <input id="first_name" type="text" name="name" class="validate" required>
-              <label for="name">Name</label>
-          </div>
-          <div class="row">
-              <div class="input-field">
-                  <input id="email" type="email" name="email" class="validate" required>
-                  <label for="email">Email</label>
-              </div>
-          </div>
-          <div class="row">
-              <input type="hidden" name="_next" value="content/ack/" />
-          </div>
-          <div class="row">
-              <div class="input-field">
-                  <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
-                  <label for="textarea1">Textarea</label>
-              </div>
-              <div class="center">
-                  <button type="submit" name="send" value="send" class="btn btn-large white-text blue darken-1">send<i class="material-icons absolute">send</i></button>
-              </div>
-          </div>
-      </form>
-    </div>
-  </div>
-  <!-- / hire me modal window -->
-
 
 
     <!--  Import jQuery  -->

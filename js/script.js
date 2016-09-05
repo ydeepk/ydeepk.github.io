@@ -15,26 +15,30 @@ $(document).ready(function() {
 
     // Button click
     $('#hire, #hire-me').click(function() {
-        if($('.modal').hasClass('animated fadeOutDownBig')) {
-          $('.modal').removeClass('animated fadeOutDownBig');
-          $('.modal').addClass('animated pulse');
+        if($('#hire-me-window').hasClass('animated fadeOutDownBig')) {
+          $('#hire-me-window').removeClass('animated fadeOutDownBig');
+          $('#hire-me-window').addClass('animated pulse');
           setTimeout(function() { $('#thumbUp').removeClass('hide'); }, 1600);
         } else {
-          $('.modal').addClass('animated pulse');
+          $('#hire-me-window').addClass('animated pulse');
           setTimeout(function() { $('#thumbUp').removeClass('hide'); }, 1600);
         }
     });
 
     $('.close').click(function() {
         $('.modal').closeModal();
-        $('#thumbUp').addClass('hide');
-        $('.modal').removeClass('animated pulse');
-        $('.modal').addClass('animated fadeOutDownBig');
+        if(('#thumbUp').hasClass('hide')) {
+          $('#thumbUp').addClass('hide');
+        }
+        if(('#hire-me-window').hasClass('animated pulse')) {
+          $('#hire-me-window').removeClass('animated pulse'); $('#hire-me-window').addClass('animated fadeOutDownBig');
+      }
     });
 
     $('.scrollspy').scrollSpy();
 
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal();   
+
 
     /* Fixed Navbar */
     $(window).bind('scroll', function() {
@@ -47,10 +51,10 @@ $(document).ready(function() {
     });
 
     // Changing the defaults
-    window.sr = ScrollReveal({duration: 1200, viewFactor: 0.5, easing: 'ease-in-out', scale: 0});
+    window.sr = ScrollReveal({reset: true, duration: 1200, viewFactor: 0.5, easing: 'ease-in-out', scale: 0});
     sr.reveal('.avatar', {delay: 200, origin: 'right', scale: 0.6});
     sr.reveal('#subHead', {delay: 600, origin: 'left', scale: 0.4});
-    sr.reveal('.description', {delay: 900, origin: 'left', scale: 0.2});
+    sr.reveal('.description', {delay: 800, origin: 'left', scale: 0.2});
     sr.reveal('.quote', {delay: 800});
     sr.reveal('.author', {delay: 850});
     sr.reveal('.box', {viewFactor: 0.7, delay: 200,scale: 0.6});

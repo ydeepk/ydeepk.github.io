@@ -1,3 +1,24 @@
+features:
+1. scroll animation
+2. inspiring, engaging unique, highly functional, focus on brand recognition, project is on till satisfaction, attention grabbing UI
+3. complete task page
+4. Google Analytics
+5. perform SEO
+6. common files ( serrver redirect)
+7. re test for any broken links or Fallbacks
+8. Minimize resource files
+9. copy scripts back on html pages
+
+# Pending
+1.) Bug in skills page For modal window
+2.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
+2.) Fix animation timing
+3.) reduce redirect of http request
+4.) minify the codes.
+
+
+
+
 /*
 # headers
 
@@ -54,19 +75,6 @@ mail($to, $subject, $message, $headers);
 ?>
 
 
-
-
-
-features:
-1. scroll animation
-2. inspiring, engaging unique, highly functional, focus on brand recognition, project is on till satisfaction, attention grabbing UI
-3. complete task page
-4. Google Analytics
-5. perform SEO
-6. common files ( serrver redirect)
-7. re test for any broken links or Fallbacks
-8. Minimize resource files
-9. copy scripts back on html pages
 
 
 ![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)

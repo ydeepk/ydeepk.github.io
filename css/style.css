@@ -105,6 +105,9 @@ blockquote {
 .brand-logo {
   margin-left: 50px;
 }
+.brand-logo i {
+  height: 40px !important;
+}
 .page-footer {
   background-color: #1e88e5 !important;
 }
@@ -136,6 +139,9 @@ blockquote {
 }
 .close {
   cursor: pointer;
+}
+.card {
+  background-color: #fff !important;
 }
 @media only screen and (max-width : 600px) {
   .brand-logo {
