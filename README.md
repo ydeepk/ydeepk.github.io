@@ -10,7 +10,7 @@ features:
 9. copy scripts back on html pages
 
 # Pending
-1.) Bug in skills page For modal window
+1.) Bug in skills page For modal window ( FIXED )
 2.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
 2.) Fix animation timing
 3.) reduce redirect of http request

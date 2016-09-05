@@ -140,6 +140,9 @@ blockquote {
 .close {
   cursor: pointer;
 }
+.close:hover {
+  color: red;
+}
 .card {
   background-color: #fff !important;
 }
