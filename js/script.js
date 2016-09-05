@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     $('.scrollspy').scrollSpy();
 
-    $('.modal-trigger').leanModal();   
+    $('.modal-trigger').leanModal();
 
 
     /* Fixed Navbar */
@@ -51,7 +51,7 @@ $(document).ready(function() {
     });
 
     // Changing the defaults
-    window.sr = ScrollReveal({reset: true, duration: 1200, viewFactor: 0.5, easing: 'ease-in-out', scale: 0});
+    window.sr = ScrollReveal({duration: 1200, viewFactor: 0.5, easing: 'ease-in-out', scale: 0});
     sr.reveal('.avatar', {delay: 200, origin: 'right', scale: 0.6});
     sr.reveal('#subHead', {delay: 600, origin: 'left', scale: 0.4});
     sr.reveal('.description', {delay: 800, origin: 'left', scale: 0.2});

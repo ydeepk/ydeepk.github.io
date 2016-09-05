@@ -139,9 +139,12 @@ blockquote {
 }
 .close {
   cursor: pointer;
+  color: #78909c;
+  transition: all 400ms ease-in-out;
 }
 .close:hover {
-  color: red;
+  color: #e53935;
+  transform: scale(1.4);
 }
 .card {
   background-color: #fff !important;
