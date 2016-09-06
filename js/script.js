@@ -1,8 +1,18 @@
 $(document).ready(function() {
 
+  /* Fixed Navbar */
+  $(window).bind('scroll', function() {
+      var navHeight = $(window).height() - 70;
+      if ($(window).scrollTop() > navHeight) {
+          $('.fix').addClass('fixed');
+      } else {
+          $('.fix').removeClass('fixed');
+      }
+  });
+
+  // upon page load
     $(window).load(function() {
       $('.preloader').remove();
-
       // setting animation
       var delay = 800;
       setTimeout(function() { $('.title').removeClass('hide'); }, delay);
@@ -12,8 +22,19 @@ $(document).ready(function() {
       setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
     });
 
+    // opening small screen menu
+    $('.btn-menu').click(function() {
+          $('#smallScreen-menu').removeClass('hide');
+          $('#smallScreen-menu').addClass('animated rubberBand');
+      });
 
-    // Button click
+    // closing smallScreen-menu
+    $('.smallScreen-close, .insert, .adb, .mail').click(function() {
+      $('#smallScreen-menu').removeClass('animated rubberBand');
+      $('#smallScreen-menu').addClass('hide');
+    });
+
+    // Button click for hire
     $('#hire, #hire-me').click(function() {
         if($('#hire-me-window').hasClass('animated fadeOutDownBig')) {
           $('#hire-me-window').removeClass('animated fadeOutDownBig');
@@ -40,16 +61,6 @@ $(document).ready(function() {
     $('.modal-trigger').leanModal();
 
 
-    /* Fixed Navbar */
-    $(window).bind('scroll', function() {
-        var navHeight = $(window).height() - 70;
-        if ($(window).scrollTop() > navHeight) {
-            $('.fix').addClass('fixed');
-        } else {
-            $('.fix').removeClass('fixed');
-        }
-    });
-
     // Changing the defaults
     window.sr = ScrollReveal({duration: 1200, viewFactor: 0.5, easing: 'ease-in-out', scale: 0});
     sr.reveal('.avatar', {delay: 200, origin: 'right', scale: 0.6});
@@ -60,12 +71,12 @@ $(document).ready(function() {
     sr.reveal('.box', {viewFactor: 0.7, delay: 200,scale: 0.6});
     sr.reveal('.box-1', {viewFactor: 0.7, delay: 800,scale: 0.4});
     sr.reveal('.box-2', {viewFactor: 0.7, delay: 1200,scale: 0.2});
-    sr.reveal('#interest-head', {viewFactor: 0.8, delay: 200, scale: 0});
-    sr.reveal('#hire-me', {viewFactor: 0.8, delay: 800, scale: 0.2});
-    sr.reveal('#liked-head', {viewFactor: 0.8, delay: 600, scale: 0});
-    sr.reveal('#view', {viewFactor: 0.8, delay: 900, scale: 0.2});
-    sr.reveal('#suggestion, #social', {viewFactor: 0.6, delay: 800, scale: 0.4});
-    sr.reveal('#social', {delay: 800});
+    sr.reveal('#interest-head', {viewFactor: 0.9, delay: 400, scale: 0});
+    sr.reveal('#hire-me', {viewFactor: 0.9, delay: 800, scale: 0.2});
+    sr.reveal('#view', {viewFactor: 0.7, delay: 800, scale: 0.2});
+    sr.reveal('#liked-head', {viewFactor: 0.9, delay: 800, scale: 0});
+    sr.reveal('#suggestion', {viewFactor: 0.6, delay: 400, scale: 0.2});
+    sr.reveal('#social', {viewFactor: 0.8, delay: 800, scale: 0});
 
 
     /* smooth scroll */

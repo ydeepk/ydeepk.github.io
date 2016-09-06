@@ -10,11 +10,14 @@ features:
 9. copy scripts back on html pages
 
 # Pending
-1.) Bug in skills page For modal window ( FIXED )
-2.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
-2.) Fix animation timing
-3.) reduce redirect of http request
-4.) minify the codes.
+1.) Bug in skills page For modal window ( FIXED ).
+2.) Small screen Menu (FIXED).
+3.) Fix animation timing
+4.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
+5.) reduce redirect of http request
+6.) remove code js script, css produce bug after minify.
+7.) minify the codes.
+8.) Add the removed code back
 
 
 
