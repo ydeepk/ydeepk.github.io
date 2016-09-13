@@ -20,18 +20,20 @@ $(document).ready(function() {
       setTimeout(function() { $('#quote').removeClass('hide'); }, delay+1000);
       setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1500);
       setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
+
+      $('#smallScreen-menu').addClass('hide');
     });
 
     // opening small screen menu
     $('.btn-menu').click(function() {
-          $('#smallScreen-menu').removeClass('hide');
-          $('#smallScreen-menu').addClass('animated fadeInLeft');
+          $('#smallScreen-menu').removeClass('animated slideOutLeft hide');
+          $('#smallScreen-menu').addClass('animated slideInLeft');
       });
 
     // closing smallScreen-menu
     $('.smallScreen-close, .insert, .adb, .mail').click(function() {
-      $('#smallScreen-menu').removeClass('animated fadeInLeft');
-      $('#smallScreen-menu').addClass('hide');
+      $('#smallScreen-menu').removeClass('animated slideInLeft');
+      $('#smallScreen-menu').addClass('animated slideOutLeft');
     });
 
     // Button click for hire
