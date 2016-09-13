@@ -111,11 +111,12 @@ blockquote {
 #smallScreen-menu {
   position: fixed;
   height: 100vh;
-  width: 100%;
+  width: 40%;
   z-index: 999;
 }
 .smallScreen-close {
   margin-top: 10px;
+  cursor: pointer;
 }
 .page-footer {
   background-color: #1e88e5 !important;
@@ -165,6 +166,16 @@ blockquote {
   }
   .btn-menu {
     margin-top: 15px;
+  }
+  #smallScreen-menu {
+    width: 70%;
+  }
+  .follow-me {
+    position: absolute;
+    bottom: 0% !important;
+  }
+  .follow-me {
+    margin-bottom: 0px !important;
   }
   .modal {
     margin-left: 2%;

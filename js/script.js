@@ -25,12 +25,12 @@ $(document).ready(function() {
     // opening small screen menu
     $('.btn-menu').click(function() {
           $('#smallScreen-menu').removeClass('hide');
-          $('#smallScreen-menu').addClass('animated rubberBand');
+          $('#smallScreen-menu').addClass('animated fadeInLeft');
       });
 
     // closing smallScreen-menu
     $('.smallScreen-close, .insert, .adb, .mail').click(function() {
-      $('#smallScreen-menu').removeClass('animated rubberBand');
+      $('#smallScreen-menu').removeClass('animated fadeInLeft');
       $('#smallScreen-menu').addClass('hide');
     });
 
@@ -57,6 +57,8 @@ $(document).ready(function() {
     });
 
     $('.scrollspy').scrollSpy();
+
+    $(".button-collapse").sideNav();
 
     $('.modal-trigger').leanModal();
 

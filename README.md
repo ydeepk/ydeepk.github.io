@@ -1,26 +1,42 @@
 features:
 1. scroll animation
 2. inspiring, engaging unique, highly functional, focus on brand recognition, project is on till satisfaction, attention grabbing UI
-3. complete task page
 4. Google Analytics
 5. perform SEO
-6. common files ( serrver redirect)
+6. common files ( server redirect)
 7. re test for any broken links or Fallbacks
 8. Minimize resource files
 9. copy scripts back on html pages
 
 # Pending
 1.) Bug in skills page For modal window ( FIXED ).
-2.) Small screen Menu (FIXED).
-3.) Fix animation timing
-4.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
-5.) reduce redirect of http request
-6.) remove code js script, css produce bug after minify.
-7.) minify the codes.
-8.) Add the removed code back
+2.) Small screen Menu.
+3.) Track page and skill page.
+4.) Fix animation timing (FIXED).
+5.) auto zoom background hero + rewirte arrange content over it  + should be more readable + Keywords
+6.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
+7.) reduce redirect of http request
+8.) remove code js script, css produce bug after minify.
+9.) minify the codes.
+10.) Add the removed code back
 
 
+/*
 
+Languages / Script
+{ Javascript, PHP, JAVA, C, SQL, CSS3, SASS, HTML5, JADE, HAML, JSON. }
+Tools / Frameworks
+{ Angular Js, Express JS, Backbone Js, Node Js, Nnpm, CakePHP, Materialize, Twitter Bootstrap, Git, Bash. }
+Databases
+{ MySql, Mongo DB, Redis. }
+Libraries / API
+{ jQuery, Twitter API, Facebook API, SendGrid, Twilio, Paypal, Google Maps, REST, Textmagic. }
+Web Analytics
+{ Goolge Analytics }
+Techniques/ Methods
+{ Agile and Scrum. }
+
+*/
 
 /*
 # headers
