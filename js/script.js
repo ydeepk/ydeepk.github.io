@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
   /* Fixed Navbar */
   $(window).bind('scroll', function() {
@@ -11,7 +11,7 @@ $(document).ready(function() {
   });
 
   // upon page load
-    $(window).load(function() {
+
       $('.preloader').remove();
       // setting animation
       var delay = 800;
@@ -22,7 +22,7 @@ $(document).ready(function() {
       setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
 
       $('#smallScreen-menu').addClass('hide');
-    });
+
 
     // opening small screen menu
     $('.btn-menu').click(function() {
