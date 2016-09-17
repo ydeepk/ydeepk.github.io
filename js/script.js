@@ -2,26 +2,30 @@ $(function() {
 
   /* Fixed Navbar */
   $(window).bind('scroll', function() {
-      var navHeight = $(window).height() - 70;
-      if ($(window).scrollTop() > navHeight) {
-          $('.fix').addClass('fixed');
+      let $fix = $('.fix');
+      let $window = $(window);
+      let navHeight = $window.height() - 70;
+      if ($window.scrollTop() > navHeight) {
+          $fix.addClass('fixed');
       } else {
-          $('.fix').removeClass('fixed');
+          $fix.removeClass('fixed');
       }
   });
 
-  // upon page load
+let $preloader = $('.preloader');
+let delay = 800;
 
-      $('.preloader').remove();
-      // setting animation
-      var delay = 800;
-      setTimeout(function() { $('.title').removeClass('hide'); }, delay);
-      setTimeout(function() { $('#desig').removeClass('hide'); }, delay+500);
-      setTimeout(function() { $('#quote').removeClass('hide'); }, delay+1000);
-      setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1500);
-      setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
+// removing preloader 
+$preloader.remove();
 
-      $('#smallScreen-menu').addClass('hide');
+// setting animation
+setTimeout(function() { $('.title').removeClass('hide'); }, delay);
+setTimeout(function() { $('#desig').removeClass('hide'); }, delay+500);
+setTimeout(function() { $('#quote').removeClass('hide'); }, delay+1000);
+setTimeout(function() { $('#hire').removeClass('hide'); }, delay+1500);
+setTimeout(function() { $('#scroll').removeClass('hide'); }, delay+2000);
+
+$('#smallScreen-menu').addClass('hide');
 
 
     // opening small screen menu
