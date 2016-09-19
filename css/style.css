@@ -10,9 +10,9 @@ main {
   height: 680px;
   width: 100%;
   background-image: url(../img/hero-bg.jpg);
-  background-size: 100% 680px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 .container {
   width: 90%;
@@ -27,10 +27,7 @@ main {
   font-family: 'Inconsolata', monospace;
 }
 .title {
-  font-size: 7rem;
-}
-.text-shadow {
-  text-shadow: 3px 3px 5px #546e7a;
+  font-size: 8rem;
 }
 .overflow {
   overflow: hidden;
