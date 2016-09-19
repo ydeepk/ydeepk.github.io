@@ -9,7 +9,7 @@ main {
 .main-header {
   height: 680px;
   width: 100%;
-  background-image: url(../img/hero1.jpg);
+  background-image: url(../img/hero-bg.jpg);
   background-size: 100% 680px;
   background-repeat: no-repeat;
   background-position: center;
