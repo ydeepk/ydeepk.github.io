@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Twitch.tv App</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/animate.css" rel="stylesheet">
+    <style>/* load fonts file raleway & lato */
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 8.8rem;
+}
+
+h3 {
+  font-size: 4.5rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-dark-blue {
+  color: rgb(0, 48, 73);
+}
+
+.text-blue {
+  color: #006aa3;
+}
+
+.text-light-blue {
+  color: #0077b8;
+}
+
+.text-blue-grey {
+  color: #cfd8dc;
+}
+
+.text-light-grey {
+  color: #546e7a;
+}
+
+.text-green {
+  color: #1b5e20;
+}
+
+.text-red {
+  color: #b71c1c;
+}
+
+.dark-blue-bg {
+  background-color: rgb(0, 48, 73);
+}
+
+.red-bg {
+  background-color: #b71c1c;
+}
+
+.green-bg {
+  background-color: #1b5e20;
+}
+
+.blue-bg {
+  background-color: #0077b8;
+}
+
+.offline {
+  background-color: #ffebee;
+  border: 1px solid #cfd8dc;
+}
+
+.online {
+  background-color: #e8f5e9;
+  border: 1px solid #cfd8dc;
+}
+
+.closed {
+  background-color: #eceff1;
+  border: 1px solid #cfd8dc;
+}
+
+.twitch-container {
+  border-radius: 5px;
+  box-shadow: 10px 9px 30px #000;
+}
+
+.status-item {
+  margin-top: 20px;
+}
+
+.status-item li {
+  display: inline;
+  padding-left: 10px;
+}
+
+.status-item li label {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.status-head {
+  font-size: 2rem;
+}
+
+.fa-search {
+  position: absolute;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 75%;
+}
+
+.fa-play {
+  margin-top: 20px !important;
+  font-size: 4rem;
+}
+
+.fa-eye,
+.fa-eye-slash {
+  margin-top: 20px !important;
+}
+
+.fa-close {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding-left: 10px;
+  margin-top: 2px;
+  margin-left: 90%;
+  height: 50px;
+  width: 0%;
+  border-width: 0 0 1px 0 !important;
+  border-bottom-style: solid;
+  border-color: #0077b8 !important;
+}
+
+input[type="text"]:focus {
+  padding-left: 10px;
+  color: #0077b8;
+  border-width: 0 0 2px 0 !important;
+  border-style: solid;
+  border-color: transparent transparent #0077b8 transparent !important;
+  outline: none !important;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #85d4ff !important;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #85d4ff !important;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #85d4ff !important;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #85d4ff !important;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.img-thumbnail {
+  margin-top: 20px;
+  height: 140px;
+  width: 140px;
+}
+
+.description-container {
+  margin-top: 40px;
+}
+
+.gap {
+  border: 5px solid #fff;
+}
+
+.gap:hover {
+  border: 2px solid #fff;
+  box-shadow: 6px 6px 6px #000;
+  cursor: pointer;
+}
+
+.credit-content {
+  margin-top: 15rem;
+  margin-left: 30%;
+  background-color: #0078D7;
+  height: auto;
+  width: 40%;
+}
+
+.credit-content ul {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.credit-content li {
+  padding: 10px;
+  color: #e3f2fd;
+}
+
+.credit-content li a {
+  color: #fff;
+}</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12">
+    <h4 class="text-white">i</h4></div>
+  <div class="col-xs-12">
+    <h4 class="text-white">i</h4></div>
+
+  <div class="col-xs-2"></div>
+  <div class="col-xs-8 twitch-container">
+    <div class="row">
+      <!-- header title / icon row-->
+      <div class="col-xs-12 title-header dark-blue-bg">
+        <div class="row">
+          <div class="col-xs-12">
+            <h5 class="text-dark-blue">i</h5></div>
+          <div class="col-xs-3"></div>
+          <div class="col-xs-6">
+            <h1 class="text-center"><i class="fa fa-twitch fa-2x text-light-blue"></i></h1>
+            <h3 class="text-center text-light-blue raleway">Twitch.tv</h3>
+          </div>
+          <div class="col-xs-3"></div>
+          <div class="col-xs-12">
+            <h5 class="text-dark-blue">i</h5></div>
+        </div>
+      </div>
+      <!-- /header title / icon row-->
+
+      <!-- toggle status / search row-->
+      <div class="col-xs-12 twitch-status-container">
+        <div class="row">
+          <div class="col-xs-7">
+            <div class="row">
+              <div class="col-xs-12">
+                <form class="lato text-light-grey">
+                  <fieldset>
+                    <ul class="status-item">
+                      <li><span class="status-head text-blue raleway">Status- </span></li>
+                      <li>
+                        <label for="all">All
+                                                          <input type="radio" name="status" id="all" value="all" checked>
+                                                      </label>
+                      </li>
+                      <li>
+                        <label for="all">Online
+                                                          <input type="radio" name="status" id="online" value="online">
+                                                      </label>
+                      </li>
+                      <li>
+                        <label for="all">Offline
+                                                          <input type="radio" name="status" id="offline" value="offline">
+                                                      </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-5">
+            <div class="row search-container">
+              <div class="col-xs-12">
+                <i class="fa fa-search fa-2x text-blue"></i>
+                <input type="text" class="search" placeholder="Search User">
+                <i class="fa fa-close fa-2x text-blue"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / toggle status / search row-->
+
+      <!-- twitch users display -->
+      <div class="col-xs-12 twitch-users-container"></div>
+      <!-- twitch users display -->
+
+    </div>
+  </div>
+  <div class="col-xs-2"></div>
+
+</div>
+</div>
+
+<!-- dummy row -->
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12">
+    <h4 class="text-white">i</h4>
+  </div>
+</div>
+</div>
+
+<!-- / dummy row -->
+
+<!-- footer -->
+<footer>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <h4 class="text-center"> &copy; All Rights Reserved 2016. <i class="fa fa-code fa-2x"></i> with <i class="fa fa-heart fa-2x text-red"></i> by <a href="http://ydeepk.github.io">Deepak</a></h4>
+    </div>
+    <div class="col-xs-12 text-center"><a href="#" data-toggle="modal" data-target="#credits">credits</a></div>
+  </div>
+</div>
+</footer>
+<!-- / footer -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="credits">
+<div class="credit-content text-center">
+  <ul>
+    <li>Built on -> <a href="http://getbootstrap.com/">Twitter Bootstrap framework</a></li>
+    <li>Icons by -> <a href="http://fontawesome.io">Font Awesome</a></li>
+    <li>Fonts by -> <a href="https://www.google.com/fonts
+">Google Fonts</a></li>
+    <li>API -> <a href="http://twitch.tv">Twitch.tv API</a></li>
+    <li>Uploaded @ Imgur -> <a href="http://i.imgur.com/UXhFM1l.png">my Avatar(self Created)</a></li>
+  </ul>
+</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    // variables at play
+var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
+
+// lets be functional.
+function display(data) {
+  return '<div class="row gap"><div class="col-xs-12"><div class="row"><div class="col-xs-3 text-center"><img src="' + data + '" alt="" class="stream-img img-thumbnail"><h4 class="text-white raleway streamer-name">' + data + '</h4></div><div class="col-xs-8 description-container text-center"><h4 class="text-white description">' + data + '</h4><h2 class="text-right"><a href="' + data + '"><i class="fa fa-play fa-2x text-white"></i></a></h2><h5 class="text-white"><i class="fa fa-eye fa-2x"></i> <span class="viewer-number">' + data + '</span></h5></div></div></div>';
+}
+
+function userData(users) { // Bring me status ( online / offline ) & related info about users
+
+  users.forEach(function(user) {
+
+    // gets status of users
+    $.getJSON("https://api.twitch.tv/kraken/streams/" + user, function(data, textStatus, jqXHR) {
+
+      if (data.stream == null) {
+        $('.twitch-users-container').append('<div class="row offline"><div class="col-xs-12"><div class="row"><div class="col-xs-4"><div class="col-xs-12"><h2 class="text-center"><i class="fa fa-eye-slash fa-2x"></i></h2></div><div class="col-xs-12"><h5 class="text-center">' + user + '</h5></div></div><div class="col-xs-8"><div class="col-xs-9"><div class="col-xs-12"><h4 class="text-red text-center">Offline <i class="fa fa-eye-slash fa-2x"></i></h4></div><div class="col-xs-12"><h5 class="text-center">N/A</h5></div></div><div class="col-xs-3"><div class="col-xs-12"><a href="#"><i class="fa fa-play fa-2x text-light-grey"></i></a></div><div class="col-xs-12"><h6 class="text-center">N/A <i class="fa fa-eye"></i></h6></div></div></div></div></div></div>');
+      } else {
+        $('.twitch-users-container').append('<div class="row online"><div class="col-xs-12"><div class="row"><div class="col-xs-4"><div class="col-xs-12"><img src="' + data.stream.channel.logo + '" alt=""  class="img-thumbnail center-block"></div><div class="col-xs-12"><h5 class="text-center">' + data.stream.channel.display_name + '</h5></div></div><div class="col-xs-8"><div class="col-xs-9"><div class="col-xs-12"><h4 class="text-green text-center">Online <i class="fa fa-eye fa-2x"></i></h4></div><div class="col-xs-12"><h5 class="text-center">' + data.stream.game + '</h5></div></div><div class="col-xs-3"><div class="col-xs-12"><a href="' + data.stream.channel.url + '" target="_blank"><i class="fa fa-play fa-2x"></i></a></div><div class="col-xs-12"><h4 class="text-center">' + data.stream.viewers + ' <i class="fa fa-eye"></i></h4></div></div></div></div></div></div>');
+      }
+
+    }).fail(function(jqXHR, errorThrown) {
+      if (jqXHR.status == 422 || 404) {
+        $('.twitch-users-container').append('<div class="row closed"><div class="col-xs-12"><div class="row"><div class="col-xs-4"><div class="col-xs-12"><h2 class="text-center"><i class="fa fa-eye-slash fa-2x"></i></h2></div><div class="col-xs-12"><h5 class="text-center">' + user + '</h5></div></div><div class="col-xs-8"><div class="col-xs-9"><div class="col-xs-12"><h4 class="text-light-grey text-center">Account Closed / Doesnt Exist <i class="fa fa-eye-slash fa-2x"></i></h4></div><div class="col-xs-12"><h5 class="text-center">N/A</h5></div></div><div class="col-xs-3"><div class="col-xs-12"><a href="#""><i class="fa fa-play fa-2x text-light-grey"></i></a></div><div class="col-xs-12"><h4 class="text-center">N/A <i class="fa fa-eye"></i></h4></div></div></div></div></div></div>');
+      }
+
+    });
+  });
+}
+
+function findUser() {
+  $('.twitch-users-offline-container').addClass('hidden');
+  $('.twitch-users-online-container').addClass('hidden');
+  var find = $('input[type="text"]').val();
+
+  // Search users function
+  $.ajax({
+    url: "https://api.twitch.tv/kraken/search/channels?q=" + find,
+    dataType: 'JSON',
+    success: function(data) {
+      for (var i = 0; i < data.channels.length; i++) {
+        $('.twitch-users-container').append('<div class="row gap"><div class="col-xs-12"><div class="row"><div class="col-xs-3 text-center"><img src="' + data.channels[i].logo + '" alt="" class="stream-img img-thumbnail"><h4 class="text-white raleway streamer-name">' + data.channels[i].display_name + '</h4></div><div class="col-xs-8 description-container text-center"><h4 class="text-white description"></h4><h2 class="text-right"><a href="' + data.channels[i].url + '"><i class="fa fa-play fa-2x text-white"></i></a></h2><h5 class="text-white"><i class="fa fa-eye fa-2x"></i> <span class="viewer-number">' + data.channels[i].views + '</span></h5></div></div></div>');
+      }
+    }
+  });
+}
+
+function displayAll() {
+  $('#all').prop('checked', true);
+  $('#online,#offline').removeProp('checked');
+  $(".closed").removeClass('hidden');
+  $(".online").removeClass('hidden');
+  $(".offline").removeClass('hidden');
+}
+
+function displayOnline() {
+  $(".closed").addClass('hidden');
+  $(".offline").addClass('hidden');
+  $(".online").removeClass('hidden');
+}
+
+function displayOffline() {
+  $(".closed").addClass('hidden');
+  $(".online").addClass('hidden');
+  $(".offline").removeClass('hidden');
+}
+
+var main = function() {
+  // give me some action
+  $('.fa-close').hide(); // hides close btn
+
+  $('.fa-search').click(function() { // display search bar
+    $('.search').css({
+      "margin-left": "0%",
+      "width": "80%"
+    });
+    $('.fa-search').css({
+      "position": "relative",
+      "margin-left": "0%",
+      "margin-top": "0px"
+    });
+    $('.fa-close').show();
+    $('.search,.fa-search,.fa-close').addClass('animated fadeIn');
+  });
+
+  $('.fa-close').click(function() { // hide search bar
+    $('.search').css({
+      "margin-left": "90%",
+      "width": "0%"
+    });
+
+    $('.fa-search').css({
+      "position": "absolute",
+      "margin-left": "75%",
+      "margin-top": "15px"
+    });
+    $('.fa-close').hide();
+    $('.search,.fa-search,.fa-close').removeClass('animated wobble');
+  });
+
+  $('input[type="text"]').keypress(function(e) { // Submit Search Input value
+    if (e.which == 13) {
+      $('input[type="text"]').submit();
+      findUser(); // Call Search channels
+    }
+  });
+
+  $('input[type="radio"]').click(function() { // select options b/w all, online, offline.
+    $('input[type="radio"]').change(function(twitchUsers) {
+      var value = $(this).val();
+
+      switch (value) {
+        case 'all':
+          $(this).prop('checked', true);
+          $('#online,#offline').removeProp('checked');
+          displayAll();
+          break;
+
+        case 'online':
+          $(this).prop('checked', true);
+          $('#all, #offline').removeProp('checked');
+          displayOnline();
+          break;
+
+        case 'offline':
+          $(this).prop('checked', true);
+          $('#online,#all').removeProp('checked');
+          displayOffline();
+          break;
+      }
+    });
+  });
+
+  displayAll(); // initial calling
+  userData(users); // Call users data
+
+}
+
+// do it, when ready.
+$(document).ready(main);
+    </script>
+
+</body>
+
+</html>

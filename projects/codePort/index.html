@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Yadav Deepak | Portfolio Template</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="../../css/animate.css" rel="stylesheet">
+    <style>
+.container-fluid {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+a,
+.navbar-brand,
+h1,
+h2,
+h4 {
+    font-family: 'Macondo', cursive !important;
+}
+p,
+.text-intro,
+figcaption {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 300 !important;
+}
+h1 {
+    font-size: 4.6rem !important;
+}
+.text-white,
+.social-btn:hover {
+    color:#fff;
+}
+.margin-top {
+    margin-top: 50px;
+}
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+/*
+navbar
+*/
+
+.navbar {
+    height: 70px;
+    background-color: #0078D7 !important;
+    border-radius: 0;
+}
+.navbar-brand {
+    height: 70px;
+    line-height: 4rem;
+    font-size: 2.8rem;
+    color:#fff;
+    background-color: #006CC1;
+}
+.navbar-brand:hover {
+    color:#fff;
+}
+.nav li {
+    height: 70px;
+    margin: 0 2px 0 2px;
+    border-radius: 0;
+    transition: all 0.6s ease-in-out 100ms;
+}
+.nav-tabs {
+    border: 0 !important;
+}
+.nav li a {
+    font-size: 1.6rem;
+    line-height: 4.9rem;
+    letter-spacing: 0.3rem;
+    color: #fff;
+    font-weight: 300 !important;
+    border-radius: 0;
+    border: 0 !important;
+}
+.nav li:hover,
+.nav li:hover a,
+.sm-menu:hover {
+    background-color: #006CC1;
+}
+
+/*
+    mobile / tablet pc menu
+*/
+.sm-menu {
+    float: right;
+    margin-top: 15px;
+    font-size: 2.3rem;
+    color: #fff;
+    text-decoration: none !important;
+    transition: all 500ms ease-in-out;
+}
+.full-menu {
+    position: fixed;
+    height: 540px !important;
+    width: 100%;
+    background-color: dodgerblue;
+    transition: all 500ms ease-in-out;
+}
+.full-menu li {
+    margin-left: -8% !important;
+    line-height: 5rem;
+    text-align: center;
+    list-style: none;
+}
+.full-menu li:nth-child(1) {
+    margin-top: 10rem;
+}
+.full-menu li:nth-child(2),
+.full-menu li:nth-child(3) {
+    margin-top: 6rem;
+}
+.full-menu li a {
+    color: #fff;
+    font-size: 3rem;
+}
+
+
+
+/*
+    fixed background
+*/
+.background {
+    height: 580px;
+    width: 100%;
+    background-image: url("http://finda.photo/image/16894/thumbnail/original");
+    background-size: 100% 700px;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.text-intro {
+    margin-top: 28rem;
+    font-size: 3.6rem !important;
+    background-color: #000;
+    opacity: 0.9;
+    box-shadow: 3px 3px 12px #000;
+}
+.social-btn-grp {
+    margin-top: 50px;
+}
+.social-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 5rem;
+    padding: 20px 15px;
+    color: #fff;
+    letter-spacing: 0.4rem;
+    text-decoration: none !important;
+    background-color: #0078D7;
+    box-shadow: 3px 3px 12px #000;
+    transition: all 300ms linear;
+}
+.social-btn:hover {
+    background-color: #006CC1;
+    box-shadow: 4px 4px 12px #000;
+}
+.fa {
+    padding-right: 5px;
+}
+
+/*
+    about me
+*/
+#about,
+#contacts {
+    background-color: #0078D7;
+}
+/*
+portfolio
+*/
+.text-portfolio {
+    color: #0078D7;
+}
+figure {
+    border: 2px solid #0078D7;
+    border-bottom: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in;
+}
+figure>img {
+    cursor: pointer;
+    transition: all 0.6s ease-in;
+}
+figure>img:hover {
+    transform: scale(1.2);
+}
+figcaption {
+    height: 60px;
+    font-size: 2.8rem;
+    color: #fff;
+    background-color: #0078D7;
+    transition: all 0.6s ease-in;
+}
+figure:hover+figcaption {
+    background-color: #006CC1;
+}
+
+/*
+    contacts
+*/
+.mail-link {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+.follow-contact {
+    border-left: 2px solid #fff;
+}
+.follow-contact li a {
+    text-decoration: none !important;
+    letter-spacing: 0.2rem;
+}
+/*
+ footer
+*/
+footer {
+    height: 70px;
+}
+footer .row {
+    margin-top: 20px;
+}
+.fa-heart {
+    color:red;
+}
+.text-name {
+    color: #0078D7;
+}
+.credit-content {
+  margin-top: 15rem;
+  margin-left: 30%;
+  background-color: #0078D7;
+  height: auto;
+  width: 40%;
+}
+
+.credit-content ul {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.credit-content li {
+  padding: 10px;
+  color: #e3f2fd;
+}
+
+.credit-content li a {
+  color: #fff;
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .text-intro {
+        margin-top: 24rem;
+        font-size: 3.5rem !important;
+    }
+    figure {
+        margin-top: 20px;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 768px) {
+    .text-intro {
+        margin-top: 24rem;
+        font-size: 3rem !important;
+    }
+    .social-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 5rem;
+    padding: 20px 5px;
+}
+    figure {
+        margin-top: 20px;
+    }
+}</style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+  <header>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <a href="" class="navbar-brand">Yadav Deepak</a>
+        <ul class="nav nav-tabs navbar-right hidden-xs hidden-sm hidden-md">
+          <li><a href="#about">about me</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contacts">contacts</a></li>
+        </ul>
+        <a href="#" class="hidden-lg sm-menu">Menu</a>
+      </div>
+
+      <ul class="full-menu hidden-lg invisible">
+        <li><a href="#about">about me</a></li>
+        <li><a href="#portfolio">portfolio</a></li>
+        <li><a href="#contacts">contact me</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <section class="background">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <h1 class="text-center text-intro text-white">"Hello, there!   Are you looking for me?<br> I'm <strong>Web Developer</strong> with <strong>3 +</strong> years<br> in Development and Design."</h1>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-xs-12">
+          <div class="social-btn-grp">
+            <a href="https://in.linkedin.com/in/yadav-deepak-91925b66" class="social-btn" target="_blank"><i class="fa fa-linkedin fa-2x"></i>Linked in</a>
+            <a href="https://github.com/ydeepk" class="social-btn" target="_blank"><i class="fa fa-github fa-2x"></i>Github</a>
+            <a href="https://twitter.com/ydeepk" class="social-btn" target="_blank"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about">
+    <div class="container-fluid">
+
+      <div class="row margin-top margin-bottom text-center text-white">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <h1>About me</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <img src="http://i.imgur.com/UXhFM1l.png" class="img-responsive" alt="Deepak Yadav photo">
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8">
+          <h2 class="text-white">" Words Too Less, To <strong>Define</strong> Me. "</h2>
+          <p class="text-center text-white">
+            what intersts me most: what do i love and what i hate most who i am? my qualifications? my experience?
+          </p>
+          <h4 class="text-white">Some Qualities of me:</h4>
+          <ul class="text-white">
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <h1 class="text-center text-portfolio margin-top margin-bottom">Portfolio</h1>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row margin-bottom">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <figure>
+              <img src="http://finda.photo/image/16426/thumbnail/original" alt="" class="img-responsive">
+            </figure>
+            <figcaption class="text-center">
+              My pet project
+            </figcaption>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <figure>
+              <img src="http://finda.photo/image/16426/thumbnail/original" alt="" class="img-responsive">
+            </figure>
+            <figcaption class="text-center">
+              My pet project
+            </figcaption>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <figure>
+              <img src="http://finda.photo/image/16426/thumbnail/original" alt="" class="img-responsive">
+            </figure>
+            <figcaption class="text-center">
+              My pet project
+            </figcaption>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contacts">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="text-center text-white margin-top margin-bottom">Contact me</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row margin-bottom text-white text-center">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <h2>Say hello:</h2>
+          <i class="fa fa-envelope fa-2x"></i><a href="#" class="mail-link">hello@deepak.com</a>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 follow-contact">
+          <h2>Follow me:</h2>
+          <ul class="list-inline">
+            <li><a href="" class="text-white"><i class="fa fa-linkedin fa-2x"></i>Linkedin</a></li>
+            <li><a href="" class="text-white"><i class="fa fa-twitter fa-2x"></i>Twitter</a></li>
+            <li><a href="" class="text-white"><i class="fa fa-github fa-2x"></i>Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer container-fluid">
+
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-l-6 text-center">
+        <h4> &copy; All Rights Reserved. 2016</h4>
+      </div>
+      <div class="col-xs-12 col-md-5 col-l-5 text-center">
+        <h4><i class="fa fa-code fa-2x"></i> with <i class="fa fa-heart fa-2x"></i> by <a href="http://ydeepk.github.io" target="_blank">Deepak</a></h4>
+      </div>
+      <div class="col-xs-12 col-md-1 col-l-1 credits">
+        <a href="#" data-toggle="modal" data-target="#credits">credits</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="credits">
+    <div class="credit-content text-center">
+      <ul>
+        <li>Built on -> <a href="http://getbootstrap.com/">Twitter Bootstrap framework</a></li>
+        <li>Icons by -> <a href="http://fontawesome.io">Font Awesome</a></li>
+        <li>Fonts by -> <a href="https://www.google.com/fonts
+  ">Google Fonts</a></li>
+        <li>Hero image &amp; portfolio placeholder -> <a href="http://finda.photo/">Findaphoto</a></li>
+        <li>Uploaded @ Imgur -> <a href="http://i.imgur.com/UXhFM1l.png">my Avatar(self Created)</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() {
+  $(".sm-menu").click(function() {
+    $(".full-menu").toggleClass("invisible");
+    $(".full-menu").css("transform", "scale(1)");
+    event.preventDefault();
+  });
+
+  $('.full-menu>li>a').click(function() {
+    $('.full-menu').toggleClass("invisible");
+    $(".full-menu").css("transform", "scale(0)");
+  });
+
+});</script>
+
+  </body>
+</html>
