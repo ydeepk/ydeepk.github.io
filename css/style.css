@@ -102,6 +102,10 @@ main {
 .menu-options li a:hover {
   color: #455a64;
 }
+.fa:hover {
+  transform: scale(1.3);
+  text-shadow: 3px 3px 16px #607d8b;
+}
 .footer-menu {
   padding: 3px 0;
 }

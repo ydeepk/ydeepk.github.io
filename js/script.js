@@ -15,7 +15,6 @@ let $nothingToShow = $('#nothing-to-show');
 let $window = $(window);
 
 // upon page load
-$preloader.remove();
 $btnCollapse.sideNav();
 $modalTrigger.leanModal();
 
@@ -92,4 +91,7 @@ $(function() {
       });
   });
 
+  // remove proeloader
+  $preloader.remove();
+  
 });
