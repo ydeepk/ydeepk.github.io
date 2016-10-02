@@ -51,7 +51,8 @@ main {
 .main-header,
 #about-me,
 #my-work,
-#contact-me {
+#contact-me,
+#error-bg {
   height: 45rem;
   width: 100%;
   background-image: url(../img/hero-bg-blur.jpg);
@@ -73,6 +74,11 @@ main {
 }
 #contact-me {
   background-image: url(../img/contact-me.jpg);
+}
+#error-bg {
+  height: 100vh;
+  background-size: 100vw 100vh;
+  background-image: url(../img/error-bg.jpg);
 }
 .brand-logo {
   padding: 0 20px 0 20px !important;

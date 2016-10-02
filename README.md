@@ -38,6 +38,28 @@ Techniques/ Methods
 
 */
 
+
+
+
+# CREDITS
+
+[ Special thanks to folks/providing following assets and scripts
+  under GPL/MIT/CC license without this,
+  Project would have been more difficult and less cool. ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 # headers
 
