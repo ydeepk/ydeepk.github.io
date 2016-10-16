@@ -2,13 +2,17 @@ features:
 1. scroll animation
 2. inspiring, engaging unique, highly functional, focus on brand recognition, project is on till satisfaction, attention grabbing UI
 4. Google Analytics
-5. perform SEO
-6. common files ( server redirect)
-7. re test for any broken links or Fallbacks
+5. SEO Optimized
+6. common files ( reduced server redirect)
+7. tested for any broken links or Fallbacks
 8. Minimize resource files
-9. copy scripts back on html pages
+9. copy imp scripts back on html pages
 
-# Pending
+# New pending list:
+1.) overcoming no javascript enabled + page never finishes loading
+
+
+# Pending ( review this again )
 1.) Bug in skills page For modal window ( FIXED ).
 2.) Small screen Menu.
 3.) Track page and skill page.
