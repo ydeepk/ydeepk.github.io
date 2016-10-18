@@ -1,18 +1,18 @@
 $(function() {
 
   // declaration
-let $preloader = $('.preloader');
-let $btnCollapse = $('.button-collapse');
-let $btnMenu = $('.btn-menu');
-let $offscreenMenu = $('.offscreen-menu');
-let $modalTrigger = $('.modal-trigger');
-let $close = $('.close');
-let $btnView = $('.btn-view');
-let $myWork = $('#my-work');
-let $card = $('.card');
-let $cardRow = $('.card-row-1, .card-row-2');
-let $nothingToShow = $('#nothing-to-show');
-let $window = $(window);
+var $preloader = $('.preloader');,
+  $btnCollapse = $('.button-collapse');,
+  $btnMenu = $('.btn-menu');,
+  $offscreenMenu = $('.offscreen-menu');,
+  $modalTrigger = $('.modal-trigger');,
+  $close = $('.close');,
+  $btnView = $('.btn-view');,
+  $myWork = $('#my-work');,
+  $card = $('.card');,
+  $cardRow = $('.card-row-1, .card-row-2');,
+  $nothingToShow = $('#nothing-to-show');,
+  $window = $(window);
 
 // upon page load
 $btnCollapse.sideNav();
@@ -53,7 +53,7 @@ $close.click(function() {
 });
 
 $btnView.click(function() {
-  let $counter = $btnView.val();
+  var $counter = $btnView.val();
     $cardRow.removeClass('hide');
     $card.addClass('animated fadeIn');
     countCLick($counter);
@@ -93,5 +93,5 @@ $(function() {
 
   // remove proeloader
   $preloader.remove();
-  
+
 });
