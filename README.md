@@ -25,6 +25,20 @@ features:
 10.) Add the removed code back
 
 
+
+# Projects List
+1. Calculator
+2. Find location app
+
+
+# Assets
+1. leafletjs [ interactive map ]
+2. lory/owl/ [ slider ]
+3. progressbarjs [ progressbar ] ( https://kimmobrunfeldt.github.io/progressbar.js/ )
+4. gradient animation [ granim js ]
+5. complex css animation [ choreographer js ] ( https://christinecha.github.io/choreographer-js/ )
+6. search library [ fusejs ] ( http://fusejs.io/ )
+
 /*
 
 Languages / Script
