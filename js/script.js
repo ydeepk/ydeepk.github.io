@@ -1,17 +1,17 @@
 $(function() {
 
   // declaration
-var $preloader = $('.preloader');,
-  $btnCollapse = $('.button-collapse');,
-  $btnMenu = $('.btn-menu');,
-  $offscreenMenu = $('.offscreen-menu');,
-  $modalTrigger = $('.modal-trigger');,
-  $close = $('.close');,
-  $btnView = $('.btn-view');,
-  $myWork = $('#my-work');,
-  $card = $('.card');,
-  $cardRow = $('.card-row-1, .card-row-2');,
-  $nothingToShow = $('#nothing-to-show');,
+var $preloader = $('.preloader'),
+  $btnCollapse = $('.button-collapse'),
+  $btnMenu = $('.btn-menu'),
+  $offscreenMenu = $('.offscreen-menu'),
+  $modalTrigger = $('.modal-trigger'),
+  $close = $('.close'),
+  $btnView = $('.btn-view'),
+  $myWork = $('#my-work'),
+  $card = $('.card'),
+  $cardRow = $('.card-row-1, .card-row-2'),
+  $nothingToShow = $('#nothing-to-show'),
   $window = $(window);
 
 // upon page load
