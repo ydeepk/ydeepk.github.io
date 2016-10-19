@@ -12,6 +12,7 @@ var $preloader = $('.preloader'),
   $card = $('.card'),
   $cardRow = $('.card-row-1, .card-row-2'),
   $nothingToShow = $('#nothing-to-show'),
+  $menuIcon = $('.menu-icon'),
   $window = $(window);
 
 // upon page load
@@ -47,7 +48,7 @@ if(!$cardRow.hasClass('hide')) { // if true
 // close
 $close.click(function() {
     $nothingToShow.closeModal();
-    $('.menu-icon').remove();
+    $menuIcon.remove();
     $offscreenMenu.addClass('hide');
     $btnMenu.html('<i class="material-icons blue-grey-text menu-icon">menu</i>');
 });
@@ -58,7 +59,7 @@ $btnView.click(function() {
     $card.addClass('animated fadeIn');
     countCLick($counter);
     if($window.width() <= 601) {
-        $myWork.css({"height":"150rem"},{"background-image":"url(../img/my-work-1400.jpg)"});
+        $myWork.css({"height":"100vh"},{"background-image":"url(../img/my-work-1400.jpg)"});
     } else {
         $myWork.css({"height":"92rem"},{"background-image":"url(../img/my-work-1400.jpg)"});
     }
@@ -72,6 +73,9 @@ function countCLick(counter) {
   $btnView.val(1+counter);
 }
 
+if($window.width() <= 601) {
+    $myWork.css({"height":"100vh"},{"background-image":"url(../img/my-work-1400.jpg)"});
+}
 
 /*
    Smooth scroll

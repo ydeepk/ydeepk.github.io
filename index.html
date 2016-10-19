@@ -9,9 +9,9 @@
     <meta name="msvalidate.01" content="139D1BDCB934B60F599D677C0B1E5682" /><!-- bing webmaster --><!--  Title & Shortcut icon  -->
     <title>Deepak Yadav | App Developer portfoilo</title>
     <link rel="Shortcut icon" href="img/deepakYadav.png"><!--  Compiled and minified CSS -->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/><!-- import icon font google font & fontawesome -->
     <link rel='stylesheet' type='text/css' href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/><!-- import icon font google font & fontawesome -->
     <noscript><link type="text/css" rel="stylesheet" href="css/no-js.css"></noscript>
 </head>
 <body> <!-- preloader -->
@@ -275,9 +275,12 @@
 
       <div class="row"><div class="container center"><button class="btn-view btn-large btn-hire blue-grey darken-4" value="1">view more</button></div></div>
       <!-- modal -->
-      <div id="nothing-to-show" class="modal center">
-        <h2 class="blue-grey-text text-darken-4 light">Thats all <b>Folks</b>!</h2>
-        <a href="resume/">View interactive resume</a>
+      <div id="nothing-to-show" class="modal blue-grey darken-4 center">
+        <a href="javascript: void(0)"><i class="material-icons right white-text close">close</i></a>
+        <div class="modal-content">
+          <h2 class="white-text light">Thats all <b>Folks</b> !</h2>
+          <a href="resume/" class="btn-large blue-grey darken-3">View interactive resume</a>
+        </div>
       </div>
 
       <div class="row"><div class="container"><h3 class="center"><a href="#contact-me"><i class="material-icons medium blue-grey-text text-darken-1">expand_more</i></a></h3></div></div>
@@ -318,7 +321,7 @@
                         <label for="textarea1">Your Message</label>
                     </div>
                     <div class="center">
-                        <button type="submit" name="send" value="send" class="btn btn-large white-text blue-grey darken-4">send <i class="material-icons">send</i></button>
+                        <button type="submit" name="send" value="send" class="btn btn-large white-text blue-grey darken-4">send</button>
                     </div>
                 </div>
             </form>

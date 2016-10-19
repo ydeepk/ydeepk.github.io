@@ -11725,11 +11725,35 @@ main {
   font-size: 18px !important;
   line-height: 25px;
 }
+#nothing-to-show {
+  margin-top: 10%;
+  border: 3px solid #37474f;
+  height: 35vh;
+  width: 45vw;
+}
 form {
   padding: 10px;
 }
 .page-footer {
   background-color: #37474f !important;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:focus+label,
+input[type="text"]:active+label,
+input[type="email"]:focus,
+input[type="email"]:active,
+input[type="email"]:focus+label,
+input[type="email"]:active+label,
+textarea:focus,
+textarea:active,
+textarea:focus+label,
+textarea:active+label,
+.input-field .prefix.active {
+  border-color: #37474f !important;
+  color: #37474f !important;
+  box-shadow: none !important;
 }
 
 @media only screen and (max-width : 600px) {
@@ -11748,6 +11772,12 @@ form {
     height: 1200px;
     background-image: url(../img/my-work-1400.jpg);
     background-size: 100% 1200px;
+  }
+  #nothing-to-show {
+    margin-top: 6%;
+    margin-left: 1% !important;
+    height: 42vh;
+    width: 98vw;
   }
 }
 
