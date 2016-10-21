@@ -53,7 +53,9 @@ features:
 4. gradient animation [ granim js ]
 5. complex css animation [ choreographer js ] ( https://christinecha.github.io/choreographer-js/ )
 6. search library [ fusejs ] ( http://fusejs.io/ )
-
+7. willpeavy minifier
+8. http://www.cleancss.com/css-minify/
+9. https://jscompress.com/
 /*
 
 Languages / Script
