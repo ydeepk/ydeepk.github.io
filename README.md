@@ -1,17 +1,3 @@
-/*
-
-<script defer>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-80368410-1', 'auto');
-ga('send', 'pageview');
-</script>
-
-*/
-
 features:
 1. scroll animation
 2. inspiring, engaging unique, highly functional, focus on brand recognition,
@@ -53,9 +39,7 @@ features:
 4. gradient animation [ granim js ]
 5. complex css animation [ choreographer js ] ( https://christinecha.github.io/choreographer-js/ )
 6. search library [ fusejs ] ( http://fusejs.io/ )
-7. willpeavy minifier
-8. http://www.cleancss.com/css-minify/
-9. https://jscompress.com/
+
 /*
 
 Languages / Script
