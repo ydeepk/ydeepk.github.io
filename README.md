@@ -1,6 +1,21 @@
+/*
+
+<script defer>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80368410-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+*/
+
 features:
 1. scroll animation
-2. inspiring, engaging unique, highly functional, focus on brand recognition, project is on till satisfaction, attention grabbing UI
+2. inspiring, engaging unique, highly functional, focus on brand recognition,
+   project is on till satisfaction, attention grabbing UI
 4. Google Analytics
 5. SEO Optimized
 6. common files ( reduced server redirect)
