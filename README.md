@@ -39,6 +39,12 @@ features:
 4. gradient animation [ granim js ]
 5. complex css animation [ choreographer js ] ( https://christinecha.github.io/choreographer-js/ )
 6. search library [ fusejs ] ( http://fusejs.io/ )
+7. soundkitui
+8. nibbler
+9. laterjs
+10. countdownjs
+11. momentjs
+12. datejs
 
 /*
 
