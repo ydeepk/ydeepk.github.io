@@ -45,6 +45,7 @@ features:
 10. countdownjs
 11. momentjs
 12. datejs
+13. https://htmlcompressor.com/compressor/
 
 /*
 
