@@ -25,7 +25,9 @@ features:
 9.) minify the codes.
 10.) Add the removed code back
 
-
+# header tag (what to put / skip)
+<link rel="icon" href="" type="image/x-icon" />
+<link rel="shortcut icon" href="" type="image/x-icon" />
 
 # Projects List
 1. Calculator
@@ -40,12 +42,16 @@ features:
 5. complex css animation [ choreographer js ] ( https://christinecha.github.io/choreographer-js/ )
 6. search library [ fusejs ] ( http://fusejs.io/ )
 7. soundkitui
-8. nibbler
+8. nibbler  [ Testing tool ]
 9. laterjs
 10. countdownjs
 11. momentjs
 12. datejs
-13. https://htmlcompressor.com/compressor/
+13. bonsaijs [svg animation]
+14. vivus [ svg aniamtion being drawn ] ( https://maxwellito.github.io/vivus/ )
+15. velocityjs [ animation library for svg ]
+16. raphaeljs ( http://raphaeljs.com/ )
+14. https://htmlcompressor.com/compressor/
 
 /*
 
