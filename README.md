@@ -1,18 +1,3 @@
-features:
-1. scroll animation
-2. inspiring, engaging unique, highly functional, focus on brand recognition,
-   project is on till satisfaction, attention grabbing UI
-4. Google Analytics
-5. SEO Optimized
-6. common files ( reduced server redirect)
-7. tested for any broken links or Fallbacks
-8. Minimize resource files
-9. copy imp scripts back on html pages
-
-# New pending list:
-1.) overcoming no javascript enabled + page never finishes loading
-
-
 # Pending ( review this again )
 1.) Bug in skills page For modal window ( FIXED ).
 2.) Small screen Menu.
@@ -25,33 +10,7 @@ features:
 9.) minify the codes.
 10.) Add the removed code back
 
-# header tag (what to put / skip)
-<link rel="icon" href="" type="image/x-icon" />
-<link rel="shortcut icon" href="" type="image/x-icon" />
 
-# Projects List
-1. Calculator
-2. Find location app
-
-
-# Assets
-1. leafletjs [ interactive map ]
-2. lory/owl/ [ slider ]
-3. progressbarjs [ progressbar ] ( https://kimmobrunfeldt.github.io/progressbar.js/ )
-4. gradient animation [ granim js ]
-5. complex css animation [ choreographer js ] ( https://christinecha.github.io/choreographer-js/ )
-6. search library [ fusejs ] ( http://fusejs.io/ )
-7. soundkitui
-8. nibbler  [ Testing tool ]
-9. laterjs
-10. countdownjs
-11. momentjs
-12. datejs
-13. bonsaijs [svg animation]
-14. vivus [ svg aniamtion being drawn ] ( https://maxwellito.github.io/vivus/ )
-15. velocityjs [ animation library for svg ]
-16. raphaeljs ( http://raphaeljs.com/ )
-14. https://htmlcompressor.com/compressor/
 
 /*
 
