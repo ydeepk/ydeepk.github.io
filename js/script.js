@@ -56,7 +56,7 @@ $close.click(function() {
 $btnView.click(function() {
   var $counter = $btnView.val();
     $cardRow.removeClass('hide');
-    $card.addClass('animated fadeIn');
+    $card.addClass('animated fadeInUp');
     countCLick($counter);
     if($window.width() <= 601) {
         $myWork.css({"height":"100vh"},{"background-image":"url(../img/my-work-1400.jpg)"});
@@ -96,6 +96,6 @@ $(function() {
   });
 
   // remove proeloader
-  $preloader.remove();
+  $preloader.delay(350).fadeOut('slow');
 
 });
