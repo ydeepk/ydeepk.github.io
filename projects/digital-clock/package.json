@@ -1,0 +1,21 @@
+{
+  "name": "digital-clock",
+  "version": "1.0.0",
+  "description": "Complete Digital clock A digital clock project with all features of digtal clock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "digital",
+    "clock",
+    "world",
+    "clock",
+    "alarm"
+  ],
+  "author": "ydeepk | ydeepkcs@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.16.0"
+  }
+}
