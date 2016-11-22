@@ -102,6 +102,9 @@ main {
 .menu-options li a:hover {
   color: #455a64;
 }
+.fa {
+  transition: all 0.5s ease-in;
+}
 .fa:hover {
   transform: scale(1.5);
   text-shadow: 3px 3px 16px #607d8b;
@@ -179,6 +182,12 @@ main {
 }
 form {
   padding: 10px;
+}
+.scale {
+  transition: all 0.5s ease-in;
+}
+.scale:hover {
+  transform: scale(1.5);
 }
 .page-footer {
   background-color: #37474f !important;
