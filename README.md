@@ -1,35 +1,5 @@
-# Pending ( review this again )
-1.) Bug in skills page For modal window ( FIXED ).
-2.) Small screen Menu.
-3.) Track page and skill page.
-4.) Fix animation timing (FIXED).
-5.) auto zoom background hero + rewirte arrange content over it  + should be more readable + Keywords
-6.) Description page wise + Basic SEO(Keywords Insertion) + Link Insertion
-7.) reduce redirect of http request
-8.) remove code js script, css produce bug after minify.
-9.) minify the codes.
-10.) Add the removed code back
-
-
-
-/*
-
-Languages / Script
-{ Javascript, PHP, JAVA, C, SQL, CSS3, SASS, HTML5, JADE, HAML, JSON. }
-Tools / Frameworks
-{ Angular Js, Express JS, Backbone Js, Node Js, Nnpm, CakePHP, Materialize, Twitter Bootstrap, Git, Bash. }
-Databases
-{ MySql, Mongo DB, Redis. }
-Libraries / API
-{ jQuery, Twitter API, Facebook API, SendGrid, Twilio, Paypal, Google Maps, REST, Textmagic. }
-Web Analytics
-{ Goolge Analytics }
-Techniques/ Methods
-{ Agile and Scrum. }
 
 */
-
-
 
 
 # CREDITS
@@ -37,75 +7,6 @@ Techniques/ Methods
 [ Special thanks to folks/providing following assets and scripts
   under GPL/MIT/CC license without this,
   Project would have been more difficult and less cool. ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-# headers
-
-'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-*/
-
-
-<?php
-// multiple recipients
-$to  = 'aidan@example.com' . ', '; // note the comma
-$to .= 'wez@example.com';
-
-// subject
-$subject = 'Birthday Reminders for August';
-
-// message
-$message = '
-<html>
-<head>
-  <title>Birthday Reminders for August</title>
-</head>
-<body>
-  <p>Here are the birthdays upcoming in August!</p>
-  <table>
-    <tr>
-      <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
-    </tr>
-    <tr>
-      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
-    </tr>
-    <tr>
-      <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
-    </tr>
-  </table>
-</body>
-</html>
-';
-
-// To send HTML mail, the Content-type header must be set
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-// Additional headers
-$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
-
-// Mail it
-mail($to, $subject, $message, $headers);
-?>
-
 
 
 
