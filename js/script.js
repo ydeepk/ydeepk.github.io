@@ -48,7 +48,7 @@ $btnMenu.click(function() {
                 });
             } else {
                 $('.brand-logo,.btn-menu').css({
-                    "margin-top":"100px"
+                    "margin-top":"0"
                 });
             }
         });
