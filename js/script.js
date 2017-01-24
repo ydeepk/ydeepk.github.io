@@ -43,12 +43,12 @@ $btnMenu.click(function() {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 20) {
-                $('.brand-logo').css({
-                    "margin-top": "0"
+                $('.brand-logo, .btn-menu').css({
+                    "margin-top": "-100"
                 });
             } else {
-                $('.brand-logo').css({
-                    "margin-top":"50px"
+                $('.brand-logo,.btn-menu').css({
+                    "margin-top":"100px"
                 });
             }
         });
