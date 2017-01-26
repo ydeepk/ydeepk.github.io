@@ -44,7 +44,7 @@ $btnMenu.click(function() {
 
             if (scroll >= 20) {
                 $('.brand-logo, .btn-menu').css({
-                    "margin-top": "-200px"
+                    "margin-top": "-100px"
                 });
             } else {
                 $('.brand-logo,.btn-menu').css({
