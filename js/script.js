@@ -44,7 +44,7 @@ $btnMenu.click(function() {
 
             if (scroll >= 20) {
                 $('.brand-logo, .btn-menu').css({
-                    "margin-top": "-100"
+                    "margin-top": "-200px"
                 });
             } else {
                 $('.brand-logo,.btn-menu').css({
@@ -72,7 +72,7 @@ $btnView.click(function() {
     $card.addClass('animated fadeInUp');
     countCLick($counter);
     if($window.width() <= 601) {
-        $myWork.css({"height":"100vh"},{"background-image":"url(../img/my-work-1400.jpg)"});
+        $myWork.css({"height":"auto"},{"background-image":"url(../img/my-work-1400.jpg)"});
     } else {
         $myWork.css({"height":"92rem"},{"background-image":"url(../img/my-work-1400.jpg)"});
     }
