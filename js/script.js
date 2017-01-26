@@ -44,11 +44,17 @@ $btnMenu.click(function() {
 
             if (scroll >= 20) {
                 $('.brand-logo, .btn-menu').css({
-                    "margin-top": "-60px"
+                    "margin-top": "-50px"
+                });
+              $('.btn-menu').css({
+                    "margin-right": "30px"
                 });
             } else {
                 $('.brand-logo,.btn-menu').css({
                     "margin-top":"0"
+                });
+              $('.btn-menu').css({
+                    "margin-right":"0"
                 });
             }
         });
