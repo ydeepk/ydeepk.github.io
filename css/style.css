@@ -68,9 +68,9 @@ main {
   background-image: url(../img/about-me.jpg);
 }
 #my-work {
-  height: 50rem;
+  height: auto;
   background-image: url(../img/my-work.jpg);
-  background-size: 100% 50rem;
+  background-size: 100% auto;
 }
 #contact-me {
   background-image: url(../img/contact-me.jpg);
