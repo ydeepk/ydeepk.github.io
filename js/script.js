@@ -47,14 +47,14 @@ $btnMenu.click(function() {
                     "margin-top": "-50px"
                 });
               $('.btn-menu').css({
-                    "margin-right": "30px"
+                    "margin-left": "30px"
                 });
             } else {
                 $('.brand-logo,.btn-menu').css({
                     "margin-top":"0"
                 });
               $('.btn-menu').css({
-                    "margin-right":"0"
+                    "margin-left":"0"
                 });
             }
         });
@@ -78,7 +78,7 @@ $btnView.click(function() {
     $card.addClass('animated fadeInUp');
     countCLick($counter);
     if($window.width() <= 601) {
-        $myWork.css({"height":"auto"},{"background-image":"url(../img/my-work-1400.jpg)"});
+        $myWork.css({"height":"100vh"},{"background-image":"url(../img/my-work-1400.jpg)"});
     } else {
         $myWork.css({"height":"92rem"},{"background-image":"url(../img/my-work-1400.jpg)"});
     }
