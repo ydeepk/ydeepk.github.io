@@ -4,7 +4,7 @@
 
 2. # FF2D55 ( PINK )
 
-3. # 4ACD964 ( GREEN )
+3. # ACD964 ( GREEN )
 
 4. # FFCC00 ( YELLOW )
 
