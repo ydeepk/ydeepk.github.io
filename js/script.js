@@ -38,7 +38,26 @@ $btnMenu.click(function() {
 
 });
 
+// Fix on scroll brand logo + menu button
+  $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
 
+            if (scroll >= 20) {
+                $('.brand-logo, .btn-menu').css({
+                    "margin-top": "-50px"
+                });
+              $('.btn-menu').css({
+                    "margin-left": "30px"
+                });
+            } else {
+                $('.brand-logo,.btn-menu').css({
+                    "margin-top":"0"
+                });
+              $('.btn-menu').css({
+                    "margin-left":"0"
+                });
+            }
+        });
 
 // for card
 if(!$cardRow.hasClass('hide')) { // if true

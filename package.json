@@ -1,0 +1,24 @@
+{
+    "name": "deepak-yadav-web-portfolio",
+    "version": "1.0.0",
+    "description": "A Web developer Portfolio website showcasing Skills, Latest Projects, ways to contact and following on various social media Platform.",
+    "main": "index.js",
+    "dependencies": {
+        "material-design-lite": "1.2.1",
+        "typeit": ""
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ydeepk/ydeepk.github.io.git"
+    },
+    "author": "ydeepk@gmail.com",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ydeepk/ydeepk.github.io/issues"
+    },
+    "homepage": "https://github.com/ydeepk/ydeepk.github.io#readme"
+}
