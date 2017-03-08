@@ -1,0 +1,170 @@
+.preloader {
+    margin-top: 0;
+    position: relative;
+}
+.spinner {
+    margin: 4vh auto 0;
+    width: 70px;
+    text-align: center;
+}
+.spinner> div {
+    width: 18px;
+    height: 18px;
+    background-color: #0F9D58;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+/**********************
+    Flex BODY & MAIN
+*********************/
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+/***************
+    Customized
+**************/
+
+.custom-green {
+    color: #0F9D58;
+}
+.custom-light-green {
+    color: #11af62 !important;
+}
+.custom-green-bg {
+    background-color: #0F9D58;
+}
+.custom-light-green-bg {
+    background-color: #11af62;
+}
+.custom-container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 95% !important;
+}
+.absolute {
+    position: absolute;
+}
+
+/********************
+    Heading & sections
+********************/
+
+.title {
+    margin-top: 4rem;
+}
+.sub-title {
+    font-size: 1rem !important;
+}
+.quotes-block {
+    margin-top: 6rem;
+    border: 5px solid #fafafa;
+}
+.share {
+    margin-top: 1rem;
+}
+.author::before {
+    content: "-";
+    padding-right: 5px;
+}
+.next {
+    background-color: #11af62;
+}
+.next:hover {
+    background-color: #0F9D58;
+}
+
+/***************
+      FOOTER
+************/
+
+footer {
+    margin-top: 10rem;
+    height: 1rem !important;
+}
+footer .custom-container {
+    border-top: 4px solid #f5f5f5;
+    display: flex;
+    justify-content: space-around;
+}
+.social {
+    padding: 0 5px;
+}
+.fa {
+    font-size: 1.4rem;
+}
+.fa-facebook, .fa-github, .fa-linkedin, .fa-twitter, .fa-instagram {
+    transition: all 100ms ease-in;
+}
+.social:hover .fa-facebook, .social:hover .fa-twitter, .social:hover .fa-github, .social:hover .fa-instagram, .social:hover .fa-linkedin {
+    transform: scale(1.5);
+}
+.social:hover .fa-facebook {
+    color: #3b5998;
+}
+.social:hover .fa-twitter {
+    color: #55acee;
+}
+.social:hover .fa-github {
+    color: #000000;
+}
+.social:hover .fa-instagram {
+    color: #125688;
+}
+.social:hover .fa-linkedin {
+    color: #007bb5;
+}
+
+/******************
+      Media Queries
+******************/
+
+@media only screen and (max-width: 600px) {
+    /*header banner */
+    .title {
+        text-align: center;
+    }
+    /*share*/
+    .share {
+        margin-left: -1rem;
+    }
+    /*footer*/
+    footer .custom-container {
+        display: block;
+    }
+}

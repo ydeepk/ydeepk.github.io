@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]>               <html class="ie8 no-js" lang="en">    <![endif]-->
+<!--[if lte IE 10]>				 <html class="ie10 no-js" lang="en">   <![endif]-->
+<!--[if !IE]>-->
+<html class="not-ie no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- Page Title
+  ================================================== -->
+	<title>Jacal | (Javascript Calcualtor ) Project for www.freecodecamp.com</title>
+
+	<!-- Meta Tags & Favicons
+  ================================================== -->
+	<meta name="description" content="Jacal is a web based Calculator App built using Javascript, Material Design lite Framework, animate.css Library, and jQuery Library for JS for some functionality. Main idea here is to depict Knowledge of JS, basic framework understanding , key concepts of commonly used API's, which is selftaught using freecodecamp.com">
+	<meta name="keywords" content="JavaScript, Jacal, calculator, Deepak Yadav, JS, app, Web, MDL, Material Design Lite, jQuery , library, API, Freecodecamp, https://freecodecamp.com , https://ydeepk.github.io, linkedin profile Deepak Yadav, tweet and follow Deepak Yadav, follow and tag Deepak Yadav on Instagram, Deepak Yadav on medium, gmail">
+	<meta name="author" content="Deepak Yadav | (mail@: ydeepkcs@gmail.com)">
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Web Fonts & icons
+  ================================================== -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link href="https://fonts.googleapis.com/css?family=Iceland|Inconsolata|Rokkitt|Source+Code+Pro" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+
+	<!-- Basic & Main CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/material.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+
+
+	<!-- If JavaScript is Disabled
+  ================================================== -->
+	<noscript>
+		<strong>Warning !</strong> Because your browser does not support HTML5, some elements are simulated using JScript. Unfortunately your browser has disabled scripting. Please enable it in order to display this page.
+	</noscript>
+
+</head>
+
+<!-- Body begins
+================================================== -->
+
+<body>
+
+
+	<!-- Main Section (contains JS Calculator app "the Jacal".)
+	================================================== -->
+	<main>
+		<section>
+			<!-- Intro container
+		========================= -->
+			<div class="mdl-grid intro">
+				<!-- Content Column
+			======================= -->
+				<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+
+					<article>
+
+						<header>
+							<h1 class="title iceland mdl-color-text--blue-grey-700">JaCal</h1>
+							<h6 class="tag-line source-code-pro mdl-color-text--blue-grey-600">" Featherlight, yet a <b>SuperCalculator</b> "</h6>
+						</header>
+
+						<section class="short-intro">
+							<p class="mdl-color-text--blue-grey-500 inconsolota"><b class="iceland">Jacal</b> is a <b>crossplatform</b>, <b>Supercalcualtor</b>, capable of performing standard Mathematical, Scientific, Programmable calculations. Use on web or download for offline usage on any device.</p>
+						</section>
+
+						<footer class="footer-intro">
+							<!-- Raised button with ripple -->
+							<button class="dwn-btn rokkitt">download<i class="material-icons absolute">file_download</i></button>
+							<!-- Raised button with ripple -->
+							<button class="knw-btn btn-flat rokkitt">know more<i class="material-icons absolute">trending_flat</i></button>
+						</footer>
+
+					</article>
+
+
+				</div>
+
+				<!-- Calculator
+			======================= -->
+				<!-- empty column -->
+				<div class="mdl-cell mdl-cell--2-col">
+				</div>
+				<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone calculator">
+					<div class="top-bar"><i class="material-icons mdl-color-text--blue-grey-500">settings</i><span class="iceland mdl-color-text--blue-grey-300">JaCal</span></div>
+					<div class="display">
+						<div class="secondary-disp">
+							<h6 class="mdl-color-text--blue-grey-100 mdl-typography--text-center rokkitt" id="curr-mode"></h6>
+							<h4 class="rokkitt mdl-color-text--blue-grey-300 mdl-typography--text-right"><span id="input-holder"></span></h4>
+						</div>
+						<div class="primary-disp">
+							<h2 class="rokkitt mdl-color-text--blue-grey-600 mdl-typography--text-right" id="cur-ans"></h2>
+						</div>
+					</div>
+					<div class="buttons">
+						<button class="btn-calc margin-left source-code-pro spl-btn" id="%">%</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="pi">&pi;</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="clr">c</button>
+						<button class="btn-calc margin-left-reduce spl-btn" id="bck">bck</button>
+
+						<button class="btn-calc margin-left source-code-pro spl-btn" id="&radic;">&radic;</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="square">x<sup>2</sup></button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="cuberoot">1<sub>/x</sub></button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="/">&divide;</button>
+
+						<button class="btn-calc margin-left source-code-pro" id="7">7</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="8">8</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="9">9</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="*">&times;</button>
+
+						<button class="btn-calc margin-left source-code-pro" id="4">4</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="5">5</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="6">6</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="+">&plus;</button>
+
+						<button class="btn-calc margin-left source-code-pro" id="1">1</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="2">2</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="3">3</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="-">&minus;</button>
+
+						<button class="btn-calc margin-left source-code-pro" id="plusmn">&plusmn;</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id="0">0</button>
+						<button class="btn-calc margin-left-reduce source-code-pro" id=".">.</button>
+						<button class="btn-calc margin-left-reduce source-code-pro spl-btn" id="=">&equals;</button>
+					</div>
+				</div>
+				<!-- empty column -->
+				<div class="mdl-cell mdl-cell--1-col">
+				</div>
+
+				<!-- Scroll dowm
+			======================= -->
+				<div class="mdl-cell mdl-cell--12-col scroll-row">
+					<a href="javascript:void(0)" class="scroll"><i class="material-icons">details</i></a>
+				</div>
+
+			</div>
+		</section>
+
+		<section>
+			<!-- About container
+		========================== -->
+			<div class="mdl-grid mdl-color--blue-600">
+				<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+					<h3 class="">Jacal Features</h3>
+				</div>
+				<div class="mdl-cell mdl-cell--6-col"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<h6 class="">Calculator Features :</h6>
+					<ul class="mdl-list">
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">standard mode</span></li>
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">programmer mode</span></li>
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">scientific mode</span></li>
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">date calculations</span></li>
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">unit conversion</span></li>
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">statistics mode</span></li>
+						<li class="mdl-list__item"><span class="mdl-list__item-primary-content">calculation history</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center">
+					<h3>Play with Jacal</h3></div>
+			</div>
+			<div class="mdl-cell mdl-cell--12-col">
+				<h4>How exactly ?</h4>
+			</div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--6-col">
+					<h6>Use Jacal:</h6>
+					<p>Use Jacal, the online calcualtor, or even better download calculator on your Mac book, IOS, Windows, or Android. Calcualtor works Crossplatform, ie. Jacal, he calculator can work on Mac OS, windows OS, or handheld Dvices like Android and IOS.</p>
+				</div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<h6>Make Jacal Awesome:</h6>
+					<p>Yes dear, if you know coding or expert in certain field using which we can make this project Live and reach billion of devices. Then please contact me <a href="https://ydeepk.github.io">ydeepk.github.io</a> we can be a part of a team, that can do
+						impossible.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="mdl-grid">
+				<div class="mdl-cell  mdl-cell--12-col mdl-typography--text-center">
+					<p>Project hosted on <a href="">GIthub</a></p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="mdl-grid mdl-typography--text-center">
+			<div class="mdl-cell mdl-cell--4-col">&copy; Jacal 2017.</div>
+			<div class="mdl-cell mdl-cell--5-col">
+				<p><i class="material-icons">code</i> with <i class="material-icons">favorite_outline</i> by <a href="https://ydeepk.github.io">deepak yadav</a></p>
+			</div>
+			<div class="mdl-cell mdl-cell--3-col"><a href="">credits</a></div>
+		</div>
+	</footer>
+
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	<script defer src="js/index.js"></script>
+</body>
+
+</html>

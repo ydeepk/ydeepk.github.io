@@ -1,0 +1,64 @@
+/************************
+   Basic configuration
+  *********************/
+
+.material-icons.md-24 {
+    font-size: 36px;
+}
+
+.material-icons.md-36 {
+    font-size: 48px;
+}
+
+.material-icons.md-48 {
+    font-size: 62px;
+}
+
+.material-icons {
+    vertical-align: middle;
+    transition: all 150ms linear;
+}
+
+
+
+/*********************
+  Custom Google Fonts
+**********************/
+
+.rokkitt {
+    font-family: 'Rokkitt', serif;
+}
+
+.iceland {
+    font-family: 'Iceland', cursive;
+}
+
+.inconsolota {
+    font-family: 'Inconsolata', monospace;
+}
+
+.source-code-pro {
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+/**********************
+ Background &  Colors
+*********************/
+
+
+/*------------------
+      Smartphones
+    --------------*/
+@media screen and (max-width: 600px) {
+
+
+}
+
+
+/*----------------
+      Tablets
+  --------------*/
+@media screen and (max-width: 992px) {
+
+}

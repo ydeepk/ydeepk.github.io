@@ -1,0 +1,222 @@
+/*********************
+  Custom Google Fonts
+**********************/
+
+.rokkitt {
+    font-family: 'Rokkitt', serif;
+}
+
+.iceland {
+    font-family: 'Iceland', cursive;
+}
+
+.inconsolota {
+    font-family: 'Inconsolata', monospace;
+}
+
+.source-code-pro {
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+/**********************
+ Background &  Colors
+*********************/
+
+
+/**************
+  Components
+**************/
+
+body {
+    background-color: #ffffff;
+}
+
+.material-icons {
+    vertical-align: middle;
+    transition: all 150ms linear;
+}
+
+
+/****************
+  Intro Section
+****************/
+
+.intro {
+    margin: 2%;
+}
+
+.title {
+    margin-top: 6rem;
+    font-size: 10rem;
+    text-shadow: 3px 3px 4px #cfd8dc;
+}
+
+.title, .tag-line, .short-intro, .footer-intro, .scroll-row {
+    text-align: center;
+}
+
+.short-intro, .footer-intro {
+    margin-top: 3rem;
+}
+
+button, .btn-flat {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #455A64;
+    cursor: pointer;
+    border: 1px solid #455a64;
+    box-shadow: 1px 1px 2px #546e7a;
+    transition: all 150ms linear;
+}
+
+.btn-flat {
+    border: 0;
+    box-shadow: none;
+}
+
+button:hover {
+    color: #FFFFFF;
+    border: 1px solid #64B5F6;
+    background-color: #2196F3;
+    box-shadow: 4px 4px 8px #546e7a;
+}
+
+.btn-flat:hover {
+    border: 0;
+    color: #2196F3;
+    background-color: #FFFFFF;
+    box-shadow: none;
+}
+
+button:hover .material-icons {
+    transform: scale(1.5);
+    color: #64B5F6;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*************
+  Calculator
+**************/
+
+.calculator {
+    margin-top: 5rem;
+    width: 340px;
+    border: 1px solid #263238;
+    box-shadow: 4px 6px 10px #546e7a;
+}
+
+.top-bar, .display, .secondary-disp, .primary-disp, .buttons {
+    width: 100%;
+}
+
+.top-bar {
+    background-color: #263238;
+    box-shadow: 1px 1px 2px #546e7a;
+}
+
+.top-bar>i {
+    padding: 5px;
+}
+
+.top-bar>span {
+    font-size: 18px;
+}
+
+.display {
+    overflow: hidden;
+    background-color: #fbfbfc;
+}
+
+#curr-mode::before {
+    content: 'mode ';
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+#curr-mode {
+    position: absolute;
+    margin-top: -25px;
+}
+
+#input-holder::after {
+    padding: 0 5px;
+    content: "=";
+    color: #ECEFF1;
+    font-size: 1.2em;
+}
+
+#cur-ans {
+    margin: 0 auto;
+    padding: 0 5px;
+    text-shadow: 1px 1px 1px #607d8b;
+}
+
+.buttons {
+    background-color: #263238;
+}
+
+.margin-left {
+    margin-left: 4px !important;
+}
+
+.margin-left-reduce {
+    margin-left: -2px !important;
+}
+
+.btn-calc {
+    display: inline-block;
+    margin: 1px;
+    height: 50px;
+    width: 23.6%;
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: 0;
+    transition: all 150ms linear;
+}
+
+.btn-calc:hover {
+    background-color: transparent;
+    border: 0;
+    box-shadow: inset 0 0 2px #546E7A;
+    color: #607D8B;
+    transform: scale(1.12);
+}
+
+#backspace {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+#backspace>i {
+    transform: scale(1) !important;
+    z-index: -1 !important;
+}
+
+#square, #cuberoot {
+    font-size: 16px;
+}
+
+.spl-btn {
+    color: #607D8B;
+}
+
+.spl-btn:hover {
+    color: #CFD8DC
+}

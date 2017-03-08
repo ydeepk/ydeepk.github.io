@@ -1,0 +1,224 @@
+/************************
+   Basic configuration
+  *********************/
+
+.material-icons.md-24 {
+    font-size: 36px;
+}
+
+.material-icons.md-36 {
+    font-size: 48px;
+}
+
+.material-icons.md-48 {
+    font-size: 62px;
+}
+
+.material-icons {
+    vertical-align: middle;
+    transition: all 150ms linear;
+}
+
+
+
+/*********************
+  Custom Google Fonts
+**********************/
+
+.rokkitt {
+    font-family: 'Rokkitt', serif;
+}
+
+.iceland {
+    font-family: 'Iceland', cursive;
+}
+
+.inconsolota {
+    font-family: 'Inconsolata', monospace;
+}
+
+.source-code-pro {
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+/**********************
+ Background &  Colors
+*********************/
+
+.main-header {
+    height: auto;
+    width: 100%;
+    background-image: url(../img/pomodoro-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 999 !important;
+}
+
+
+/**************
+  Components
+**************/
+
+.title {
+    margin-top: 9.6rem;
+    font-size: 14rem;
+    text-shadow: 1px 2px 3px #1E88E5;
+}
+
+.sub-title {
+  margin-top: -1rem;
+}
+
+.scroll {
+    margin-top: 4.5rem;
+}
+
+.web-foxo {
+  background-color: #f6f7f8;
+  box-shadow: inset 0 6px 6px -6px #607D8B;
+  z-index: -99 !important;
+}
+
+.feature-title {
+    margin-top:4rem;
+}
+
+
+/*******************
+    POMODORO CLOCK
+  ******************/
+
+.pomodoro-container {
+  position: static;
+  margin-top: 5rem;
+}
+
+.pomodoro-box-container {
+    box-shadow: 1px 1px 2px #607D8B;
+    overflow: hidden;
+}
+
+.close-settings,
+.open-settings,
+.volume-on,
+.volume-off,
+.start,
+.stop,
+.reset {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 2rem;
+  transition: all 150ms linear;
+}
+
+.close-settings:hover,
+.open-settings:hover,
+.volume-on:hover,
+.volume-off:hover,
+.start:hover,
+.stop:hover,
+.reset:hover {
+  transform: scale(1.4);
+  font-weight: bold;
+}
+
+.start {
+    text-shadow: 3px 3px 3px #607D8B;
+}
+
+.start:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+.open-settings:hover {
+  transform: rotate(60deg);
+  text-shadow: none;
+}
+
+#pomodoro-session,
+#pomodoro-break,
+#pomodoro-count {
+  font-size: 1.6rem;
+  font-family: 'Iceland', cursive;
+}
+
+.pomodoro-clock {
+  margin-top: 3rem;
+  font-size: 9rem;
+}
+
+.pomodoro-message {
+  margin-top: 3rem;
+}
+
+.pomodoro-button-container {
+    margin: 20px auto 20px -0.566rem !important;
+    box-shadow: 3px 3px 5px #607D8B;
+}
+
+.start {
+  margin-top: 6rem;
+  padding-left: 15px;
+  font-size: 6rem;
+}
+
+.stop,.reset {
+  padding-top:3rem;
+  padding-bottom: 3rem;
+  padding-left: 2.5rem;
+  font-size: 3rem;
+  text-shadow: 3px 3px 4px #607D8B;
+}
+
+.pomodoro-count-container {
+    width: 78%;
+    margin-left: 20px;
+    margin-top: -0.56rem !important;
+    box-shadow: 3px 3px 5px #607D8B;
+}
+
+
+/*------------------
+      Smartphones
+    --------------*/
+@media screen and (max-width: 600px) {
+
+  .pomodoro-clock {
+    margin-top: 3rem;
+    font-size: 5rem;
+  }
+
+  .start {
+    margin-top: 7rem;
+    padding-left: 5px;
+    font-size: 4rem;
+  }
+
+  .stop,.reset {
+    padding-left: 1rem;
+  }
+
+  .pomodoro-count-container {
+      width: 66% !important;
+  }
+
+}
+
+
+/*----------------
+      Tablets
+  --------------*/
+@media screen and (max-width: 992px) {
+
+  .stop,.reset {
+    padding-left: 1.8rem;
+  }
+
+  .pomodoro-count-container {
+      width: 68% !important;
+  }
+}

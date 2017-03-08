@@ -1,0 +1,14 @@
+{
+  "name": "pixezon",
+  "version": "1.0.0",
+  "description": "Technology weekly online mag/website/app, latest, review hands on review, live stream of tech events.",
+  "main": "index.js",
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ydeepk",
+  "license": "ISC"
+}
