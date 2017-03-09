@@ -80,6 +80,7 @@ $(document).ready(function() {
 
     // start the clock
     setTimeout(function() {
+        $('#myclock').addClass('clock-padding');
         startClock('myclock', endDate);
     }, 17400);
 

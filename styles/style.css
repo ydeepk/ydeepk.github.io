@@ -27,22 +27,27 @@ body {
 }
 
 .author {
-    margin-top: 5.5rem;
+    margin-top: 6.5rem;
     font-size: 8rem;
     text-shadow: 3px 3px 4px;
 }
 
 .work {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .statement {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 #myclock {
-    margin-top: 4rem;
-    margin-bottom: 5rem;
-    font-size: 5rem;
-    text-shadow: 4px 4px 5px #546E7A;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    transform: scale(1.2);
+    background-color: black;
+    box-shadow: 3px 3px 5px;
+}
+
+.clock-padding {
+    padding: 10px 5px;
 }
