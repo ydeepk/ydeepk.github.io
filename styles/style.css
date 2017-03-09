@@ -4,36 +4,45 @@
  color : rgb(145,13,13), rgb(168,19,19), rgb (22,22,22), rgb(28,28,28)
  */
 
-.white-text {
-    color: #FFFFFF;
-    font-family: 'Ubuntu';
+
+/*********************
+   Custom Google Fonts
+ **********************/
+
+.inconsolota {
+    font-family: 'Inconsolata', monospace;
 }
-.red-text {
-    color: red;
+
+.source-code-pro {
+    font-family: 'Source Code Pro', monospace;
 }
-#main-background {
-    height: 100vh;
-    width: 100%;
-    background-image: url(../assets/surfer.jpg);
+
+body {
+    height: auto;
+    width: auto;
+    background-image: url(../projects/foxo-pomodoro-clock/img/pomodoro-bg.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100% 100vh;
-    transition: all 0.5 ease-in-out;
+    background-position: center;
 }
-.button {
-    position: absolute;
-    margin: 50px;
-    background-color: rgba(0, 232, 232, 0.8);
-    transition: all 0.5s ease-in-out;
+
+.author {
+    margin-top: 5.5rem;
+    font-size: 8rem;
+    text-shadow: 3px 3px 4px;
 }
-.text {
-    font-size: 32px;
-    padding: 1em 2em;
+
+.work {
+    margin-top: 4rem;
 }
-.button:hover {
-    box-sizing: border-box;
-    box-shadow: 2px 2px 5px #fff;
+
+.statement {
+    margin-top: 4rem;
 }
-.button:hover+#main-background {
-    background-image: url(../assets/debian.png);
-    background-size: 100% 100vh;
+
+#myclock {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    font-size: 5rem;
+    text-shadow: 4px 4px 5px #546E7A;
 }
