@@ -1,0 +1,22 @@
+/* page loader*/
+.system-loader {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #263238; }
+
+.system-window {
+  padding: 1rem; }
+
+p:after {
+  content: "_";
+  padding-left: 5px;
+  animation: blink 1s step-end infinite; }
+
+@keyframes blink {
+  0% {
+    visibility: visible; }
+  50% {
+    visibility: hidden; }
+  100% {
+    visibility: visible; } }

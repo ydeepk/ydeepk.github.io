@@ -4,7 +4,7 @@
 // count down script
 
 // define end date
-var endDate = new Date('March 22 2017 11:59:59  GMT+0530');
+var endDate = new Date('April 7 2017 11:59:59  GMT+0530');
 
 // get me remaining time
 function getRemainingTime(date) {
@@ -51,7 +51,7 @@ function startClock(id, end) {
         myclock.text(show);
 
         // when time will end i.e becomes 0
-        if (d.total <= 0) {
+        if (d.days <= 0) {
 
             // stop the clock by removing timeInterval
             clearInterval(timeInterval);
