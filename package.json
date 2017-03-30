@@ -8,7 +8,12 @@
     "typeit": ""
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/ydeepk/ydeepk.github.io.git"
   },
-  "author": "ydeepk@gmail.com",
+  "author": "ydeepkcs@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ydeepk/ydeepk.github.io/issues"

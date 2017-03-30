@@ -21,3 +21,5 @@
 2. # FF9500 - #FF5E3A
 
 3. # fe8c00 - #f83600 (use this)
+
+Let’s Encrypt is a free, automated, and open Certificate Authority.
