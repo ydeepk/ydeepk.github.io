@@ -8,6 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var eslint = require('gulp-eslint');
 
+
 // Gulp default tasks
 gulp.task('default', ['serve']);
 
@@ -40,13 +41,14 @@ gulp.task('lint', function() {
         .pipe(eslint.failAfterError());
 });
 
+// unit test javascript using jasmine Phantomjs
+
 
 // static server + watchin scss/html files
 gulp.task('serve', ['styles', 'lint'], function() {
 
     browserSync.init({
         server: {
-
             baseDir: './'
         }
     });
