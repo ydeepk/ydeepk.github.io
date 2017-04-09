@@ -4,7 +4,7 @@
 // count down script
 
 // define end date
-var endDate = new Date('April 7 2017 11:59:59  GMT+0530');
+var endDate = new Date('April 20 2017 11:59:59  GMT+0530');
 
 // get me remaining time
 function getRemainingTime(date) {
@@ -20,16 +20,16 @@ function getRemainingTime(date) {
 
     // handle single length caracters,
     // eg. when 9 min = 09, 9 sec = 09
-    hours = (hours < 10) ? ("0" + hours) : hours;
-    minutes = (minutes < 10) ? ("0" + minutes) : minutes;
-    seconds = (seconds < 10) ? ("0" + seconds) : seconds;
+    hours = (hours < 10) ? ('0' + hours) : hours;
+    minutes = (minutes < 10) ? ('0' + minutes) : minutes;
+    seconds = (seconds < 10) ? ('0' + seconds) : seconds;
 
     // send back as an Object
     return {
-        "days": days,
-        "hours": hours,
-        "minutes": minutes,
-        "seconds": seconds
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
     };
 
 }
@@ -57,7 +57,7 @@ function startClock(id, end) {
             clearInterval(timeInterval);
 
             // message when time is 0
-            show = "Launching anytime !";
+            show = "Launching anytime soon !";
             myclock.text(show);
 
         }
