@@ -10,7 +10,8 @@ var eslint = require('gulp-eslint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
-
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 // Gulp default tasks
 gulp.task('default', ['serve']);
@@ -31,9 +32,9 @@ gulp.task('styles', function() {
 
 
 gulp.task('scripts', function() {
-    gulp.src('scripts/**/*.js')
+    gulp.src('scripts/main.js')
         .pipe(sourcemaps.init())
-        .pipe(concat('all.js'))
+        .pipe(concat('index.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('js/'));
@@ -56,6 +57,15 @@ gulp.task('lint', function() {
         // To have the process exit with an error code (1) on
         // lint error, return the stream and pipe to failAfterError last.
         .pipe(eslint.failAfterError());
+});
+
+gulp.task('optimzeimg', function() {
+    return gulp.src('assets/*')
+        .pipe(imagemin({
+            progressive: true,
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('img/'));
 });
 
 // unit test javascript using jasmine Phantomjs
