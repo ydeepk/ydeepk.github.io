@@ -18,20 +18,34 @@ var gulp = require('gulp'),
     eslint = require('gulp-eslint'),
     concat = require('gulp-concat'),
     minify = require('gulp-minify'),
-    uglify = require(''),
+    uglify = require('gulp-uglify'),
+    sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
     cleancss = require(''),
     rev = require('');
 
 
 //  build css form sass
 gulp.task('styles', function() {
-    gulp.src('sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+    gulp.src('build/sass/**/*.scss')
+        .pipe(sass({
+          outputStyle: 'compressed'
+      }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/style/'))
         .pipe(browserSync.stream());
+});
+
+// minify js
+gulp.task('scripts',function(){
+  gulp.src('build/scripts/*.js')
+  .pipe(concat('index.js'))
+  .pipe(uglify())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./dist/scripts/'))
 });
 
 
@@ -41,7 +55,7 @@ gulp.task('lint', function() {
     // So, it's best to have gulp ignore the directory as well.
     // Also, Be sure to return the stream from the task;
     // Otherwise, the task may end before the stream has finished.
-    return gulp.src(['scripts/**/*.js', '!node_modules/**'])
+    return gulp.src(['build/scripts/**/*.js', '!node_modules/**'])
         // eslint() attaches the lint output to the "eslint" property
         // of the file object so it can be used by other modules.
         .pipe(eslint())
@@ -54,18 +68,29 @@ gulp.task('lint', function() {
 });
 
 
+// optimize images
+gulp.task('optimizeimg',function() {
+  return gulp.src('build/assets/*').pipe(
+    imagemin({
+      progressive:true,
+      use:[pngquant()]
+    })
+  ).pipe(gulp.dest('./dist/img/'));
+});
+
+
 // static server + watchin scss/html files
-gulp.task('serve', ['styles', 'lint'], function() {
+gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
 
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './build/'
         }
     });
 
-    gulp.watch('sass/**/*.scss', ['styles']);
-    gulp.watch('scripts/**/*.js', ['lint']);
-    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch('build/sass/**/*.scss', ['styles']);
+    gulp.watch('build/scripts/**/*.js', ['lint']);
+    gulp.watch('build/*.html').on('change', browserSync.reload);
 
     return gulp.log('GULP is Running.');
 });
