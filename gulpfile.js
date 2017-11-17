@@ -24,18 +24,19 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     cleancss = require(''),
     rev = require('');
+    var htmlmin = require('gulp-htmlmin');
 
 
 //  build css form sass
 gulp.task('styles', function() {
-    gulp.src('build/sass/**/*.scss')
+    gulp.src('build/style/**/*.scss')
         .pipe(sass({
           outputStyle: 'compressed'
       }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions']
         }))
-        .pipe(gulp.dest('./dist/style/'))
+        .pipe(gulp.dest('dist/style/'))
         .pipe(browserSync.stream());
 });
 
@@ -45,7 +46,7 @@ gulp.task('scripts',function(){
   .pipe(concat('index.js'))
   .pipe(uglify())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./dist/scripts/'))
+  .pipe(gulp.dest('dist/scripts/'))
 });
 
 
@@ -75,20 +76,26 @@ gulp.task('optimizeimg',function() {
       progressive:true,
       use:[pngquant()]
     })
-  ).pipe(gulp.dest('./dist/img/'));
+  ).pipe(gulp.dest('dist/assets/'));
 });
 
+// compress html
+gulp.task('minify', function() {
+  return gulp.src('build/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist/'));
+});
 
 // static server + watchin scss/html files
-gulp.task('serve', ['styles', 'lint', 'scripts'], function() {
+gulp.task('serve', ['minify','styles', 'lint', 'scripts'], function() {
 
     browserSync.init({
         server: {
-            baseDir: './build/'
+            baseDir: './dist/'
         }
     });
 
-    gulp.watch('build/sass/**/*.scss', ['styles']);
+    gulp.watch('build/style/**/*.scss', ['styles']);
     gulp.watch('build/scripts/**/*.js', ['lint']);
     gulp.watch('build/*.html').on('change', browserSync.reload);
 
