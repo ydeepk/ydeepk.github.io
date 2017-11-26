@@ -23,8 +23,8 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     cleancss = require(''),
-    rev = require('');
-    var htmlmin = require('gulp-htmlmin');
+    rev = require(''),
+    htmlmin = require('gulp-htmlmin');
 
 
 //  build css form sass
