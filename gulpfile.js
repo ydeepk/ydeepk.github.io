@@ -10,7 +10,7 @@
    color #eff4ff,  #2b5797, #da532c
 */
 
-// grab gulp packages
+// load plugins
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -22,8 +22,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    cleancss = require(''),
-    rev = require(''),
+    // cleancss = require(''),
+    // rev = require(''),
     htmlmin = require('gulp-htmlmin');
 
 
@@ -105,62 +105,3 @@ gulp.task('serve', ['minify','styles', 'lint', 'scripts'], function() {
 
 // Gulp default tasks
 gulp.task('default', ['serve']);
-
-/*
-  # using packages
-
-  var concat = require('gulp-concat');
-
-  gulp.task('scripts', function() {
-    return gulp.src('./lib/*.js')
-      .pipe(concat('all.js'))
-      .pipe(gulp.dest('./dist/'));
-  });
-
-
-
-  var gulp = require('gulp');
-var cleanCSS = require('gulp-clean-css');
-
-gulp.task('minify-css', function() {
-  return gulp.src('styles/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist'));
-});
-
-
-
-
-var minify = require('gulp-minify');
-
-gulp.task('compress', function() {
-  gulp.src('lib/*.js')
-    .pipe(minify({
-        ext:{
-            src:'-debug.js',
-            min:'.js'
-        },
-        exclude: ['tasks'],
-        ignoreFiles: ['.combo.js', '-min.js']
-    }))
-    .pipe(gulp.dest('dist'))
-});
-
-
-
-
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var pump = require('pump');
-
-gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('lib/*.js'),
-        uglify(),
-        gulp.dest('dist')
-    ],
-    cb
-  );
-});
-
-*/

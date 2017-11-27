@@ -1,0 +1,42 @@
+// VARIABLES & MIXINS
+
+// background color
+$primary-bg-color: #ECEFF1;
+
+@font-face {
+font-family: 'Samarkan Normal';
+font-style: normal;
+font-weight: normal;
+src: local('Samarkan Normal'), url('../fonts/SAMARN__.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Samarkan Oblique';
+font-style: normal;
+font-weight: normal;
+src: local('Samarkan Oblique'), url('../fonts/SAMARO__.woff') format('woff');
+}
+
+// styles
+body {
+  background-color: $primary-bg-color;
+}
+
+.hero-cover {
+  margin: 10px;
+  height: 96vh;
+  width: auto;
+  background-image: url("../assets/officeWorkspace.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  margin-top: 25vh;
+  font-size: 9rem;
+  font-family: 'Samarkan Normal';
+  color: #36404A;
+  text-shadow: 0 3px 6px;
+}
