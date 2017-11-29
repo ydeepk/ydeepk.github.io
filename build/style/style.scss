@@ -35,10 +35,9 @@ body {
 
 .hero-title {
   margin-top: 24vh;
-  font-size: 8rem;
+  // font-size: 8rem;
   font-family: 'Samarkan Normal';
   color: #36404A;
-  // color: #3F93F0;
   text-shadow: 0 3px 6px #36404A;
 }
 
@@ -46,7 +45,7 @@ body {
   margin-top: 0.5rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  font-size: 2.8rem;
+  // font-size: 2.8rem;
   color: #556980;
   text-shadow: 0 2px 3px;
 }
@@ -59,4 +58,25 @@ body {
   margin-left: 0.4rem;
   font-weight: 300;
   color: #556980;
+}
+
+.hero-mylocation {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  // font-size: 2.2rem;
+  color: #556980;
+  text-shadow: 0 2px 3px;
+}
+
+#country {
+  font-weight: 300 !important;
+}
+
+.talk-btn {
+  height: 50px;
+  width: 200px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #3F93F0;
 }
