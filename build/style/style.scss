@@ -1,6 +1,234 @@
 
+// font family's
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Rokkitt', serif;
+// font-family: 'Source Code Pro', monospace;
+// font-family: 'Ubuntu Mono', monospace;
+// font-family: 'Cousine', monospace;
+// font-family: 'Anonymous Pro', monospace;
+// font-family: 'Space Mono', monospace;
 
-// body background
-body {
-  background-color: #EAEEF1 !important;
+p,h1,h4,h6,button {
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Cousine', monospace;
+  // font-family: 'Ubuntu Mono', monospace;
+  // font-family: 'Anonymous Pro', monospace;
+  // font-family: 'Space Mono', monospace;
+}
+
+// header
+header {
+  margin: 10px;
+  padding: 10px;
+  background-color: #F6F6F6 !important;
+}
+
+.webOf {
+  margin-top: 15rem;
+  margin-left: 3rem;
+  color: #A3ABAF;
+}
+
+.author_title {
+  color: #656C71;
+  font-size: 6rem;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px #333333;
+  margin-left: 1.5rem;
+}
+
+.author_work_title {
+  color: #848C92;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.author_location {
+  color: #8D959B;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.talk {
+  padding: 15px 20px;
+  background-color: transparent;
+  border-color: #848C92 !important;
+  border-right-style: double;
+  border-bottom-style: double;
+  box-shadow: none !important;
+  color: #656C71;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.explore_div {
+  margin-top: 2rem;
+}
+
+.explore {
+  color: #656C71;
+  text-decoration: none !important;
+  margin-left: -2.6rem;
+}
+
+.right_border {
+  border-right-color: #848C92;
+  border-right: 1px solid;
+  height: 3rem;
+}
+
+// media queries
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+
+    .hero-title {
+      margin-top: 16vh !important;
+      font-size: 4rem !important;
+      text-align: center;
+    }
+
+}
+
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+
+/* ----------- Galaxy Tab S ----------- */
+
+/* Portrait and Landscape */
+@media
+  (min-device-width: 800px)
+  and (max-device-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- Nexus 9 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 1536px)
+  and (device-height: 2048px)
+  and (-webkit-min-device-pixel-ratio: 1.331)
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .hero-title {
+      margin-top: 20vh;
+      font-size: 6.5rem;
+      text-align: center;
+    }
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+}
+
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 834px)
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
 }
