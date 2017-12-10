@@ -8,7 +8,7 @@
 // font-family: 'Anonymous Pro', monospace;
 // font-family: 'Space Mono', monospace;
 
-p,h1,h4,h6,button {
+a,p,h1,h4,h6,button {
   font-family: 'Inconsolata', monospace;
   font-family: 'Cousine', monospace;
   // font-family: 'Ubuntu Mono', monospace;
@@ -55,13 +55,11 @@ header {
 .talk {
   padding: 15px 20px;
   background-color: transparent;
-  border-color: #848C92 !important;
-  border-right-style: double;
-  border-bottom-style: double;
-  box-shadow: none !important;
-  color: #656C71;
+  border-color: #0099FF !important;
+  border-style: double !important;
+  color: #0099FF;
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 3.8rem;
 }
 
 .explore_div {
@@ -69,7 +67,7 @@ header {
 }
 
 .explore {
-  color: #656C71;
+  color: #0099FF;
   text-decoration: none !important;
   margin-left: -2.6rem;
 }
