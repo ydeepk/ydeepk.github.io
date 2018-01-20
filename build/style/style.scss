@@ -9,18 +9,20 @@
 // font-family: 'Space Mono', monospace;
 
 a,p,h1,h4,h6,button {
-  font-family: 'Inconsolata', monospace;
   font-family: 'Cousine', monospace;
-  // font-family: 'Ubuntu Mono', monospace;
-  // font-family: 'Anonymous Pro', monospace;
-  // font-family: 'Space Mono', monospace;
 }
 
 // header
 header {
-  margin: 10px;
-  padding: 10px;
   background-color: #F6F6F6 !important;
+  background-image: url('../assets/cover_ydeepk.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: auto;
+  margin: 15px;
+  padding: 10px;
 }
 
 .webOf {
@@ -33,7 +35,7 @@ header {
   color: #656C71;
   font-size: 6rem;
   font-family: 'Anonymous Pro', monospace;
-  font-weight: bold;
+  font-weight: normal;
   text-shadow: 3px 3px 6px #333333;
   margin-left: 1.5rem;
 }
@@ -58,22 +60,23 @@ header {
   border-color: #0099FF !important;
   border-style: double !important;
   color: #0099FF;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-left: 3.8rem;
 }
 
 .explore_div {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
-.explore {
-  color: #0099FF;
+.explore,
+.explore:hover {
+  color: #798791;
   text-decoration: none !important;
   margin-left: -2.6rem;
 }
 
 .right_border {
-  border-right-color: #848C92;
+  border-right-color: #798791;
   border-right: 1px solid;
   height: 3rem;
 }
