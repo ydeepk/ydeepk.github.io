@@ -12,10 +12,13 @@ a,p,h1,h4,h6,button {
   font-family: 'Cousine', monospace;
 }
 
+.margin-btm-zero {
+  margin-bottom: 0;
+}
 // header
 header {
-  background-color: #F6F6F6 !important;
-  background-image: url('../assets/cover_ydeepk.jpg');
+  // background-color: #F6F6F6 !important;
+  background-image: url('../ydeepk_bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,8 +29,7 @@ header {
 }
 
 .webOf {
-  margin-top: 15rem;
-  margin-left: 3rem;
+  margin: 18rem 0 0 2rem;
   color: #A3ABAF;
 }
 
@@ -37,48 +39,51 @@ header {
   font-family: 'Anonymous Pro', monospace;
   font-weight: normal;
   text-shadow: 3px 3px 6px #333333;
-  margin-left: 1.5rem;
+  margin: 0 auto 0 1rem;
 }
 
 .author_work_title {
   color: #848C92;
   font-size: 1.6rem;
-  margin-top: 1rem;
-  margin-left: 2rem;
+  margin: 0 auto 0 2rem;
 }
 
 .author_location {
   color: #8D959B;
   font-size: 1rem;
-  margin-top: 1rem;
-  margin-left: 2rem;
+  margin: 0 auto 0 2rem;
 }
 
 .talk {
-  padding: 15px 20px;
-  background-color: transparent;
+  // background-color: transparent;
+  background-color: #0099FF;
   border-color: #0099FF !important;
-  border-style: double !important;
-  color: #0099FF;
-  margin-top: 1.5rem;
-  margin-left: 3.8rem;
+  border-style: solid;
+  // color: #0099FF;
+  color: #fff;
+  margin: 1rem auto 0 2rem;
   cursor: pointer;
 }
 
-.talk:hover {
+.btn-smile{
+  color: #0099FF;
+}
+
+.talk:hover, .talk:hover .btn-smile {
   background-color: #0099FF !important;
   color: #FFFFFF;
 }
 
+
 .explore_div {
   margin-top: 2.5rem;
+  margin-bottom: 0;
 }
 
 .explore,
 .explore:hover {
   color: #798791;
   text-decoration: none !important;
-  margin-left: -2.6rem;
 }
 
 .right_border {
@@ -88,6 +93,74 @@ header {
 }
 
 // media queries
+
+/* LARGE DESKTOP DEVICES  */
+@media only screen
+  and (min-device-width: 1200px) {
+
+
+
+}
+
+/*  DESKTOP DEVICES  */
+@media only screen
+  and (min-device-width: 993px)
+  and (max-device-width: 1199px) {
+
+
+
+}
+
+/*  Tablet DEVICES  */
+@media only screen
+  and (min-device-width: 599px)
+  and (max-device-width: 992px) {
+
+
+
+}
+
+/*  mobile DEVICES  */
+@media only screen (max-width: 600px) {
+
+  header {
+    // background-color: #F6F6F6 !important;
+    background-image: url('../ydeepk_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: auto;
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .webOf {
+    margin: 18rem 0 0 2rem;
+    color: #A3ABAF;
+  }
+
+  .author_title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .author_work_title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .author_location {
+    text-align: center !important;
+  }
+
+  .talk {
+
+  }
+
+
+
+}
 
 /* ----------- Google Pixel ----------- */
 
@@ -117,7 +190,7 @@ header {
   and (device-height: 640px)
   and (-webkit-device-pixel-ratio: 3) {
 
-    .hero-title {
+    .author-title {
       margin-top: 16vh !important;
       font-size: 4rem !important;
       text-align: center;
@@ -165,7 +238,7 @@ header {
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-    .hero-title {
+    .author-title {
       margin-top: 20vh;
       font-size: 6.5rem;
       text-align: center;
