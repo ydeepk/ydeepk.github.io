@@ -18,7 +18,7 @@ a,p,h1,h4,h6,button {
 // header
 header {
   // background-color: #F6F6F6 !important;
-  background-image: url('../ydeepk_bg.png');
+  background-image: url('../ydeepk_bg2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,228 +87,90 @@ header {
 }
 
 .right_border {
-  border-right-color: #818487;
+  border-right-color: #8b8e91 !important;
   border-right: 1px solid;
   height: 3rem;
 }
 
-// media queries
-
-/* LARGE DESKTOP DEVICES  */
-@media only screen
-  and (min-device-width: 1200px) {
-
-
-
-}
-
-/*  DESKTOP DEVICES  */
-@media only screen
-  and (min-device-width: 993px)
-  and (max-device-width: 1199px) {
-
-
-
-}
-
-/*  Tablet DEVICES  */
-@media only screen
-  and (min-device-width: 599px)
-  and (max-device-width: 992px) {
-
-
-
-}
-
-/*  mobile DEVICES  */
-@media only screen (max-width: 600px) {
-
-  header {
-    // background-color: #F6F6F6 !important;
-    background-image: url('../ydeepk_bg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    width: auto;
-    margin: 15px;
-    padding: 10px;
-  }
-
-  .webOf {
-    margin: 18rem 0 0 2rem;
-    color: #A3ABAF;
-  }
-
-  .author_title {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .author_work_title {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .author_location {
-    text-align: center !important;
-  }
-
-  .talk {
-
-  }
-
-
-
-}
-
-/* ----------- Google Pixel ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 3) {
-
-}
-
-/* ----------- Google Pixel XL ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 4) {
-
-}
-
-/* ----------- Galaxy S4, S5 and Note 3 ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 320px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 3) {
-
-    .author-title {
-      margin-top: 16vh !important;
-      font-size: 4rem !important;
-      text-align: center;
-    }
-
-}
-
-
-/* ----------- Galaxy S6 ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 4) {
-
-}
-
-/* ----------- Galaxy Tab S ----------- */
-
-/* Portrait and Landscape */
-@media
-  (min-device-width: 800px)
-  and (max-device-width: 1280px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- Nexus 9 ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 1536px)
-  and (device-height: 2048px)
-  and (-webkit-min-device-pixel-ratio: 1.331)
-  and (-webkit-max-device-pixel-ratio: 1.332) {
-
-}
+// media queries //
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait and Landscape */
+/* Portrait */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
 
-    .author-title {
-      margin-top: 20vh;
-      font-size: 6.5rem;
+    .author_title {
+      font-size: 3.5rem;
       text-align: center;
+      text-shadow: 2px 2px 4px #333333;
+      margin: 0 auto 0 -8px;
+    }
+
+    .author_work_title {
+      font-size: 1.2rem !important;
+      text-align: center;
+      margin: 0 auto 0 0;
+    }
+
+    .author_location {
+      font-size: 1rem;
+      text-align: center;
+      margin: 0 auto 0 -5px;
+    }
+
+    .talk {
+      margin: 1rem auto 0 4.5rem;
     }
 
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
-
-/* Portrait and Landscape */
+/* Portrait */
 @media only screen
   and (min-device-width: 414px)
   and (max-device-width: 736px)
-  and (-webkit-min-device-pixel-ratio: 3) {
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+
+    .author_title {
+      font-size: 4rem;
+      text-align: center;
+      text-shadow: 2px 2px 4px #333333;
+      margin: 0 auto 0 -8px;
+    }
+
+    .author_work_title {
+      font-size: 1.2rem !important;
+      text-align: center;
+      margin: 0 auto 0 0;
+    }
+
+    .author_location {
+      font-size: 1rem;
+      text-align: center;
+      margin: 0 auto 0 -5px;
+    }
+
+    .talk {
+      margin: 1rem auto 0 6rem;
+    }
 
 }
 
 /* ----------- iPhone X ----------- */
-
-/* Portrait and Landscape */
+/* Portrait */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3) {
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
 
-}
-
-
-/* ----------- iPad 1, 2, Mini and Air ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-}
-
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait and Landscape */
-@media only screen
-  and (min-device-width: 834px)
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) {
+    .author_title {
+      font-size: 3.7rem;
+      text-shadow: 1px 1px 3px #333333;
+      margin: 0 auto 0 -16px;
+    }
 }
