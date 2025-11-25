@@ -1,10 +1,12 @@
 {{ define "main" }}
 
+<!-- Hero / Intro Section -->
 <section class="home-hero">
   <h1 class="title">Break It Better</h1>
   <p class="subtitle">Helping QA upgrade to modern QA engineering and practices.</p>
 </section>
 
+<!-- Latest Posts Section -->
 <section class="home-latest">
   <h2>Latest Posts</h2>
   <ul>
@@ -18,23 +20,39 @@
   </ul>
 </section>
 
+<!-- Popular Posts Section -->
 <section class="home-popular">
   <h2>Popular Posts</h2>
+  {{ if (where .Site.RegularPages ".Params.popular" true) }}
   <ul>
-    {{ partial "home/popular.html" . }}
-  </ul>
-</section>
-
-<section class="home-categories">
-  <h2>Categories</h2>
-  <ul>
-    {{ range .Site.Taxonomies.categories }}
-    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+    {{ range first 5 (where .Site.RegularPages ".Params.popular" true) }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+    </li>
     {{ end }}
   </ul>
+  {{ else }}
+  <p>No popular posts yet.</p>
+  {{ end }}
 </section>
 
+<!-- Categories Section -->
+<section class="home-categories">
+  <h2>Categories</h2>
+  {{ $cats := .Site.Taxonomies.categories }}
+  {{ if gt (len $cats) 0 }}
+  <ul>
+    {{ range $name, $taxonomy := $cats }}
+    <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p>No categories yet.</p>
+  {{ end }}
+</section>
 
+<!-- Newsletter Section -->
 <section class="home-newsletter">
   <h2>Newsletter</h2>
   <p>Stay updated on QA, automation, and engineering practices.</p>
@@ -46,6 +64,7 @@
   </form>
 </section>
 
+<!-- About Section -->
 <section class="home-about">
   <h2>About</h2>
   <p>QA engineer sharing practical insights on automation, API testing, and performance engineering.</p>
