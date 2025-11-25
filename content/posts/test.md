@@ -1,7 +1,8 @@
 ---
 title: "Test Post"
-date: 2025-11-25T21:00:00+05:30
-draft: false
+date: 2025-11-25
+tags: ["test"]
+categories: ["sample"]
 ---
 
-Hello world.
+This is a test.

@@ -1,0 +1,17 @@
+<section class="home-tags">
+  <h2>Tags</h2>
+
+  {{ $tags := .Site.Taxonomies.tags }}
+
+  {{ if $tags }}
+    <ul>
+      {{ range $name, $taxonomy := $tags }}
+        <li>
+          <a href="/tags/{{ $name | urlize }}/">{{ $name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p>No tags yet.</p>
+  {{ end }}
+</section>

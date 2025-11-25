@@ -1,0 +1,17 @@
+<section class="home-categories">
+  <h2>Categories</h2>
+
+  {{ $cats := .Site.Taxonomies.categories }}
+
+  {{ if $cats }}
+    <ul>
+      {{ range $name, $taxonomy := $cats }}
+        <li>
+          <a href="/categories/{{ $name | urlize }}/">{{ $name }} ({{ len $taxonomy }})</a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p>No categories yet.</p>
+  {{ end }}
+</section>
