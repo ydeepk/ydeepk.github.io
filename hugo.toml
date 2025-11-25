@@ -64,7 +64,7 @@ enableRobotsTXT = true
 
 [params.footer]
   enable = true
-  custom = "footer/custom-footer"
+
 
 
 [params.assets]

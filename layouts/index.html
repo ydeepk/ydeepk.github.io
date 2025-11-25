@@ -18,6 +18,23 @@
   </ul>
 </section>
 
+<section class="home-popular">
+  <h2>Popular Posts</h2>
+  <ul>
+    {{ partial "home/popular.html" . }}
+  </ul>
+</section>
+
+<section class="home-categories">
+  <h2>Categories</h2>
+  <ul>
+    {{ range .Site.Taxonomies.categories }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+    {{ end }}
+  </ul>
+</section>
+
+
 <section class="home-newsletter">
   <h2>Newsletter</h2>
   <p>Stay updated on QA, automation, and engineering practices.</p>
