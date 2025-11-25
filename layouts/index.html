@@ -1,7 +1,37 @@
 {{ define "main" }}
-  <main class="container">
-    {{ partial "home/recent.html" . }}
-    {{ partial "home/categories.html" . }}
-    {{ partial "home/tags.html" . }}
-  </main>
+
+<section class="home-hero">
+  <h1 class="title">Break It Better</h1>
+  <p class="subtitle">Helping QA upgrade to modern QA engineering and practices.</p>
+</section>
+
+<section class="home-latest">
+  <h2>Latest Posts</h2>
+  <ul>
+    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+      <p>{{ .Summary }}</p>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+
+<section class="home-newsletter">
+  <h2>Newsletter</h2>
+  <p>Stay updated on QA, automation, and engineering practices.</p>
+
+  <!-- Buttondown form -->
+  <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_ID" method="post" target="_blank">
+    <input type="email" name="email" placeholder="Your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<section class="home-about">
+  <h2>About</h2>
+  <p>QA engineer sharing practical insights on automation, API testing, and performance engineering.</p>
+</section>
+
 {{ end }}

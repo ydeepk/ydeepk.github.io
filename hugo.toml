@@ -58,6 +58,13 @@ pagination.pagerSize = 10
   youtube = "https://youtube.com/@yourchannel"
 
 
+[params.footer]
+  enable = true
+
+[params.assets]
+customCSS = ["css/home.css"]
+
+
 [menu]
 
 [[menu.main]]

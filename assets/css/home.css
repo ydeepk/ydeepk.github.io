@@ -1,0 +1,38 @@
+.home-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-hero .title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.home-hero .subtitle {
+  color: var(--secondary);
+  margin-top: .5rem;
+}
+
+.home-latest {
+  margin-bottom: 3rem;
+}
+
+.home-latest ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-latest li {
+  margin-bottom: 1.5rem;
+}
+
+.home-newsletter {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.home-about {
+  margin-bottom: 4rem;
+}
