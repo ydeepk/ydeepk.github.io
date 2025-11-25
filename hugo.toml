@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = "Break It Better"
 theme = "DoIt-main"
 pagination.pagerSize = 10
+enableRobotsTXT = true
 
 
 [taxonomies]
@@ -16,6 +17,7 @@ pagination.pagerSize = 10
     name = "Deepak Yadav"
     email = "deepakyadav@example.com"
     link = "https://ydeepk.github.io"
+    defaultImage = "/images/default-og.png"
 
   description = "QA Automation, Performance, Tech Notes"
   tagline = "Break It Better. Fix It Smarter."
@@ -64,7 +66,18 @@ pagination.pagerSize = 10
 
 
 [params.assets]
-customCSS = ["css/home.css", "css/post.css", "css/post-extras.css", "css/footer.css"]
+customCSS = [
+    "css/home.css", 
+    "css/post.css", 
+    "css/post-extras.css", 
+    "css/footer.css",
+    "css/taxonomy.css"]
+
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
 
 [menu]
@@ -99,7 +112,7 @@ name = "Tools"
 url = "/tools/"
 weight = 6
 
-[[menu.main]]
-name = "Newsletter"
-url = "/newsletter/"
-weight = 5
+#[[menu.main]]
+#name = "Newsletter"
+#url = "/newsletter/"
+#weight = 7

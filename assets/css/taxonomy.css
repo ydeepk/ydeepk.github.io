@@ -1,0 +1,19 @@
+.tax-list {
+  margin-top: 2rem;
+}
+
+.tax-items {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tax-items li {
+  margin-bottom: .5rem;
+}
+
+.tag-cloud li {
+  display: inline-block;
+  margin-right: .6rem;
+  margin-bottom: .6rem;
+}
