@@ -9,12 +9,18 @@ pagination.pagerSize = 10
   tag = "tags"
 
 [params]
-  author = "Deepak Yadav"
+
+  [params.author]
+    name = "Deepak Yadav"
+    email = "deepakyadav@example.com"
+    link = "https://ydeepk.github.io"
+
   description = "QA Automation, Performance, Tech Notes"
   tagline = "Break It Better. Fix It Smarter."
   ShowReadingTime = true
   ShowPostNavLinks = true
   showCodeCopyButtons = true
+
 
 [menu]
 
