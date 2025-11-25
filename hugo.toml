@@ -21,6 +21,9 @@ pagination.pagerSize = 10
   ShowPostNavLinks = true
   showCodeCopyButtons = true
 
+[params.analytics]
+  googleAnalytics = "G-TJELDPQ9RY"  # replace with your GA4 ID
+
 
 [menu]
 
