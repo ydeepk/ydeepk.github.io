@@ -24,6 +24,8 @@ enableRobotsTXT = true
   ShowReadingTime = true
   ShowPostNavLinks = true
   showCodeCopyButtons = true
+  customHead = ["head/custom-seo"]
+
 
 
 [params.search]
