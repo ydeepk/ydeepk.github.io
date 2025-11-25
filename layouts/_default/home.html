@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<h1>Latest Posts</h1>
+
+{{ range (where .Site.RegularPages "Type" "posts") }}
+  <article>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Summary }}</p>
+  </article>
+  <hr>
+{{ end }}
+
+{{ end }}
