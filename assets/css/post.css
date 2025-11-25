@@ -1,0 +1,30 @@
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-meta {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.post-categories .category,
+.post-tags .tag {
+  margin-right: .5rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--code-bg);
+  font-size: 0.85rem;
+}
+
+.post-toc {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}

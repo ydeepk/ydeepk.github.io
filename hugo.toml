@@ -60,9 +60,11 @@ pagination.pagerSize = 10
 
 [params.footer]
   enable = true
+  custom = ["footer/custom-footer"]
+
 
 [params.assets]
-customCSS = ["css/home.css"]
+customCSS = ["css/home.css", "css/post.css", "css/post-extras.css", "css/footer.css"]
 
 
 [menu]

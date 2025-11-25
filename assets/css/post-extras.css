@@ -1,0 +1,25 @@
+.post-newsletter,
+.post-share,
+.post-related,
+.post-author {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.post-share a {
+  margin-right: 1rem;
+}
+
+.post-author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.post-author .author-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
