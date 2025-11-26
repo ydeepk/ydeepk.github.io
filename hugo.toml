@@ -1,6 +1,6 @@
 baseURL = "https://ydeepk.github.io/"
 languageCode = 'en-us'
-title = "[BreakItBetter.]"
+title = "{BIB - break it better}"
 theme = "DoIt"
 pagination.pagerSize = 10
 enableRobotsTXT = true
@@ -26,6 +26,11 @@ enableRobotsTXT = true
   showCodeCopyButtons = true
   customHead = ["head/custom-seo"]
 
+
+[params.home]
+  enable = true
+  layout = "list"
+  postsPerPage = 10
 
 
 [params.search]
