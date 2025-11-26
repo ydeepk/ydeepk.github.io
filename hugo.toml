@@ -1,6 +1,6 @@
 baseURL = "https://ydeepk.github.io/"
 languageCode = 'en-us'
-title = "BreakItBetter."
+title = "[BreakItBetter.]"
 theme = "DoIt"
 pagination.pagerSize = 10
 enableRobotsTXT = true
