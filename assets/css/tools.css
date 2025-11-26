@@ -1,0 +1,40 @@
+.tools-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.tool-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.tool-card {
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tool-card h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.tool-card .summary {
+  color: var(--secondary-text);
+  margin: 0.5rem 0 1rem;
+}
+
+.view-btn {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--link-color);
+}
