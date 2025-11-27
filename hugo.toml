@@ -1,17 +1,24 @@
 baseURL = "https://ydeepk.github.io/"
-languageCode = 'en-us'
+languageCode = "en-us"
 title = "Break It Better."
 theme = "DoIt"
-pagination.pagerSize = 10
 enableRobotsTXT = true
-
 
 [taxonomies]
   category = "categories"
   tag = "tags"
 
-
 [params]
+  description = "QA Automation, Performance, Tech Notes"
+  tagline = "Break It Better. Fix It Smarter."
+
+  enableDarkMode = true
+  enableReadingTime = true
+  enableShareButtons = true
+  enableBreadcrumb = true
+
+  ShowReadingTime = true
+  ShowPostNavLinks = true
 
   [params.author]
     name = "Deepak Yadav"
@@ -19,33 +26,21 @@ enableRobotsTXT = true
     link = "https://ydeepk.github.io"
     defaultImage = "/images/default-og.png"
 
-  description = "QA Automation, Performance, Tech Notes"
-  tagline = "Break It Better. Fix It Smarter."
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  showCodeCopyButtons = true
-  customHead = ["head/custom-seo"]
-
-
 [params.home]
   enable = true
   layout = "list"
   postsPerPage = 10
 
-
 [params.search]
   enable = true
   engine = "fuse"
 
-
 [params.analytics]
-  googleAnalytics = "G-TJELDPQ9RY"  # replace with your GA4 ID
-
+  googleAnalytics = "G-TJELDPQ9RY"
 
 [params.comments]
   enable = true
   provider = "giscus"
-
 
 [params.giscus]
   repo = "ydeepk/ydeepk.github.io"
@@ -59,34 +54,19 @@ enableRobotsTXT = true
   theme = "preferred_color_scheme"
   lang = "en"
 
-
 [params.social]
   github = "https://github.com/ydeepk"
   instagram = "https://instagram.com/ydeepk"
   linkedin = "https://linkedin.com/in/ydeepk"
   youtube = "https://youtube.com/@yourchannel"
 
-
 [params.footer]
   enable = true
-
-
-
-[params.assets]
-customCSS = [
-    "css/home.css", 
-    "css/post.css", 
-    "css/post-extras.css", 
-    "css/footer.css",
-    "css/taxonomy.css",
-    "css/tools.css"]
-
 
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
-
 
 [menu]
 
@@ -94,6 +74,7 @@ customCSS = [
 name = "Home"
 url = "/"
 weight = 1
+
 
 [[menu.main]]
 name = "Posts"
@@ -114,13 +95,3 @@ weight = 4
 name = "About"
 url = "/about/"
 weight = 5
-
-[[menu.main]]
-name = "Tools"
-url = "/tools/"
-weight = 6
-
-#[[menu.main]]
-#name = "Newsletter"
-#url = "/newsletter/"
-#weight = 7
