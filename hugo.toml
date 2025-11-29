@@ -8,6 +8,9 @@ enableRobotsTXT = true
   category = "categories"
   tag = "tags"
 
+[params.section]
+dateFormat = "Jan 2, 2006"
+
 [params]
   description = "QA Automation, Performance, Tech Notes"
   tagline = "Break It Better. Fix It Smarter."
