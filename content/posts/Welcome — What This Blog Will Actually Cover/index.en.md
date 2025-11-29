@@ -1,17 +1,19 @@
 ---
 title: "Welcome — What This Blog Will Actually Cover"
 description: "A practical, no-nonsense QA and automation engineering blog focused on web automation, API testing, performance engineering, and real testing strategies."
-date: 2025-01-01
+date: 2025-11-26T18:00:00+05:30
+lastmod: 2025-11-26T18:00:00+05:30
 draft: false
 categories: ["QA Engineering"]
 tags: ["automation", "api-testing", "performance", "selenium", "rest-assured", "jmeter"]
 summary: "What you can expect from this blog and how it will help you become a more effective QA engineer."
+featuredImage: "welcome-featured.png"
 ---
 
 Most QA content online is either too theoretical or too shallow. This blog exists to fix that.
 
 The goal here is simple:  
-**share solutions that come from real engineering work, not copy-paste tutorials.**
+**Share solutions that come from real engineering work, not copy-paste tutorials.**
 
 Over time, I’ll document the exact workflows, debugging steps, tools, and strategies that consistently produce better test coverage and faster problem resolution.
 

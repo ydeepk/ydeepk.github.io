@@ -3,7 +3,7 @@ title: "About"
 description: "About Deepak Yadav — QA engineer specializing in automation, API testing, performance engineering, and reliable software delivery."
 slug: "about"
 summary: "Who I am, what I do, and what this blog focuses on."
-featuredImage: "/images/profile.jpg"   # optional — add your image to /static/images/profile.jpg
+featuredImage: "/static/images/profile.jpg"   # optional — add your image to /static/images/profile.jpg
 ---
 
 I'm Deepak Yadav — a QA engineer focused on building reliable, scalable, and testable software systems.
