@@ -2,7 +2,6 @@
 title: "Welcome — What This Blog Will Actually Cover"
 description: "A practical, no-nonsense QA and automation engineering blog focused on web automation, API testing, performance engineering, and real testing strategies."
 date: 2025-11-26T18:00:00+05:30
-lastmod: 2025-11-26T18:00:00+05:30
 draft: false
 categories: ["QA Engineering"]
 tags: ["automation", "api-testing", "performance", "selenium", "rest-assured", "jmeter"]
