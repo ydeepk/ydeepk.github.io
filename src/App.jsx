@@ -1,18 +1,18 @@
+import { useState, useEffect } from 'react';
 import {
-  Check,
-  ChevronUp,
-  Clock,
-  Copy,
-  ExternalLink,
-  FileText,
   Github,
   Linkedin,
   Mail,
-  MapPin,
+  ExternalLink,
+  Check,
+  FileText,
   Menu,
-  X
+  X,
+  MapPin,
+  Clock,
+  ChevronUp,
+  Copy,
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 // Drop the real resume PDF at this path in the deployed site (e.g. /public/Deepak-Yadav-Resume.pdf).
 const RESUME_URL = '/Deepak-Yadav-Resume.pdf';
@@ -32,12 +32,19 @@ const IMPACT_STATS = [
   { value: '~40%', label: 'Regression time cut' },
 ];
 
+// Fully-written class strings so they exist statically in source (required in
+// a no-JIT Tailwind setup -- a template-built class name would not resolve).
 const TONE_STYLES = {
   blue: 'bg-blue-50 border-blue-200 text-blue-700',
   violet: 'bg-violet-50 border-violet-200 text-violet-700',
   emerald: 'bg-emerald-50 border-emerald-200 text-emerald-700',
 };
 
+// Employer names are intentionally anonymized (descriptor instead of the real
+// name, abstract tonal mark instead of a real logo) so this page isn't easily
+// traced back to a specific past employer or client by name. Set `logoUrl`
+// on any entry to swap in a real logo image later -- it falls back to the
+// mark automatically if the image is missing or fails to load.
 const EXPERIENCE = [
   {
     company: 'Independent Practice',
@@ -160,6 +167,9 @@ const SKILL_GROUPS = [
   },
 ];
 
+// Add more posts here -- sorted automatically by date, newest first. Set
+// `url` once the full post has a real home (e.g. on the Jekyll blog) so
+// "Read post" goes live instead of showing "Coming soon".
 const BLOG_POSTS = [
   {
     title: 'How to Learn Test Automation Without Burning Out',
@@ -180,6 +190,8 @@ const CONTACT = {
   location: 'Noida, India',
 };
 
+// Material 3 "emphasized" easing -- a documented M3 motion token, used for
+// the more considered/deliberate transitions (spec: cubic-bezier(0.2,0,0,1)).
 const m3Ease = { transitionTimingFunction: 'cubic-bezier(0.2, 0.0, 0, 1.0)' };
 
 const focusRing =
@@ -189,6 +201,10 @@ function SectionLabel({ children }) {
   return <p className="font-body text-sm font-medium text-blue-600 mb-3 tracking-wide">{children}</p>;
 }
 
+// Tonal mark used instead of a real employer/client logo -- keeps the page
+// from being identifiable at a glance while still reading as professional.
+// Pass logoUrl to swap in a real image; it falls back to the mark
+// automatically on load failure so nothing ever breaks visually.
 function OrgMark({ initials, tone, logoUrl }) {
   const [imgFailed, setImgFailed] = useState(false);
 
@@ -214,6 +230,13 @@ function OrgMark({ initials, tone, logoUrl }) {
   );
 }
 
+// Email + one-time-code gate for the resume and gated repo links. There is
+// no backend behind /api/request-access and /api/verify-access yet -- both
+// calls are wired up correctly but will fail until a real endpoint exists
+// (generate a short-lived code, email it, verify it, and log the request --
+// email, resource, timestamp, and IP-derived location if you want the
+// "who and from where" picture). The UI surfaces that plainly instead of
+// pretending to succeed.
 function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
   const [step, setStep] = useState('email');
   const [email, setEmail] = useState('');
@@ -378,7 +401,7 @@ export default function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('All');
   const [copied, setCopied] = useState(false);
-  const [gate, setGate] = useState(null);
+  const [gate, setGate] = useState(null); // null | { label, targetUrl }
   const [showFab, setShowFab] = useState(false);
 
   const filteredProjects =
@@ -420,7 +443,7 @@ export default function App() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      // Clipboard fallback
+      // Clipboard API unavailable in this context -- email stays visible/selectable.
     }
   };
 
@@ -729,45 +752,38 @@ export default function App() {
             {filteredProjects.map((p) => (
               <div
                 key={p.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col"
               >
-                <div>
-                  <div className="flex items-start justify-between gap-4 mb-3">
-                    <h3 className="font-display text-lg font-bold text-slate-900">{p.title}</h3>
-                    {p.status && (
-                      <span className="text-xs px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-medium flex-none">
-                        {p.status}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-sm text-slate-600 mb-4">{p.description}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {p.tech.map((t) => (
-                      <span key={t} className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono-data">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <h3 className="font-display text-lg font-bold text-slate-900">{p.title}</h3>
+                  <span className="text-xs px-2.5 py-1 rounded-full bg-violet-50 text-violet-700 border border-violet-200 flex-none">
+                    {p.category}
+                  </span>
                 </div>
-
-                <div>
-                  {p.github ? (
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 ${focusRing}`}
+                <p className="text-sm text-slate-600 leading-relaxed mb-5 flex-1">{p.description}</p>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {p.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-xs px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600"
                     >
-                      View on GitHub <ExternalLink size={14} />
-                    </a>
-                  ) : (
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-center gap-4 text-sm pt-4 border-t border-slate-200">
+                  {p.github ? (
                     <button
                       type="button"
-                      onClick={() => requestAccess(`Source repo: ${p.title}`, '#')}
-                      className={`inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 ${focusRing}`}
+                      onClick={() => requestAccess(p.title, p.github)}
+                      className={`inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-medium rounded-md ${focusRing}`}
                     >
-                      Request source access <ExternalLink size={14} />
+                      <Github size={15} /> Request access
                     </button>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 text-slate-500">
+                      <Github size={15} /> {p.status}
+                    </span>
                   )}
                 </div>
               </div>
@@ -778,19 +794,30 @@ export default function App() {
         {/* Skills */}
         <section id="skills" className="scroll-mt-24 max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-24 bg-slate-50">
           <SectionLabel>Skills</SectionLabel>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-12">Core Capabilities</h2>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-12">Core competencies</h2>
+
           <div className="grid md:grid-cols-3 gap-8">
             {SKILL_GROUPS.map((group) => (
-              <div key={group.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h3 className="font-display text-lg font-bold text-slate-900 mb-4">{group.title}</h3>
-                <ul className="space-y-3">
-                  {group.skills.map((s) => (
-                    <li key={s.name} className="text-sm text-slate-600 flex justify-between items-center">
-                      <span>{s.name}</span>
-                      {s.context && <span className="text-xs text-slate-400">{s.context}</span>}
-                    </li>
+              <div key={group.title} className="rounded-2xl border border-slate-200 bg-white p-5">
+                <h3 className="text-sm font-bold text-slate-900 mb-4">{group.title}</h3>
+                <div className="flex flex-col gap-2">
+                  {group.skills.map((skill) => (
+                    <div key={skill.name} className="rounded-xl bg-slate-50 px-3 py-2">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-sm text-slate-700">{skill.name}</span>
+                        <span className="flex gap-0.5 flex-none">
+                          {[1, 2, 3].map((i) => (
+                            <span
+                              key={i}
+                              className={`w-1.5 h-1.5 rounded-full ${i <= skill.level ? 'bg-blue-600' : 'bg-slate-300'}`}
+                            />
+                          ))}
+                        </span>
+                      </div>
+                      {skill.context && <p className="text-xs text-slate-500 mt-1">{skill.context}</p>}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -799,65 +826,121 @@ export default function App() {
         {/* Blog */}
         <section id="blog" className="scroll-mt-24 max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-24 bg-white">
           <SectionLabel>Blog</SectionLabel>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-8">Articles & Insights</h2>
-          <div className="space-y-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-3">From the journal</h2>
+          <p className="text-slate-600 max-w-2xl mb-10">
+            Notes on automation, QA leadership, and the occasional AI experiment.
+          </p>
+
+          <div className="space-y-4">
             {sortedPosts.map((post) => (
-              <div key={post.title} className="rounded-2xl border border-slate-200 p-6">
-                <p className="text-xs text-slate-400 mb-1 font-mono-data">{post.date}</p>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{post.title}</h3>
-                <p className="text-slate-600 mb-4 text-sm">{post.excerpt}</p>
-                <div className="flex gap-2">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">
-                      #{tag}
-                    </span>
-                  ))}
+              <div key={post.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-2">
+                  <time dateTime={post.date} className="font-mono-data">
+                    {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                  </time>
+                  <span className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">
+                        {tag}
+                      </span>
+                    ))}
+                  </span>
                 </div>
+                <h3 className="font-display text-lg font-bold text-slate-900 mb-2">{post.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed mb-4">{post.excerpt}</p>
+                {post.url ? (
+                  <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-1.5 text-sm text-blue-600 hover:text-blue-800 font-medium rounded-md ${focusRing}`}
+                  >
+                    Read post <ExternalLink size={14} />
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 text-sm text-slate-500">Coming soon</span>
+                )}
               </div>
             ))}
           </div>
         </section>
 
         {/* Contact */}
-        <section id="contact" className="scroll-mt-24 max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-24 bg-slate-900 text-white rounded-3xl mb-12">
-          <div className="max-w-2xl">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">Let's Connect</h2>
-            <p className="text-slate-300 mb-8">
-              Open to discussions regarding QA Leadership, Test Automation Framework builds, or SDET consulting.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href={`mailto:${CONTACT.email}`}
-                className="rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 text-sm transition-colors"
-              >
-                Send an Email
-              </a>
-              <button
-                type="button"
-                onClick={handleCopyEmail}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-700 hover:bg-slate-800 text-slate-200 font-medium px-6 py-3 text-sm transition-colors"
-              >
-                {copied ? <Check size={16} /> : <Copy size={16} />}
-                {copied ? 'Copied!' : 'Copy Email'}
-              </button>
+        <section id="contact" className="scroll-mt-24 max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-24 bg-slate-50">
+          <SectionLabel>Contact</SectionLabel>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4 leading-tight">
+                Let's talk about your test coverage
+              </h2>
+              <p className="text-slate-600 max-w-md leading-relaxed">
+                Whether it's a QE Lead role, an SDET seat, or a contract engagement — if your team needs test
+                coverage that actually holds up, say hello.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+              <div className="flex items-center justify-between gap-3 mb-6 pb-6 border-b border-slate-200">
+                <div className="min-w-0">
+                  <p className="text-xs text-slate-500 mb-1">Email</p>
+                  <p className="text-slate-900 font-medium break-all">{CONTACT.email}</p>
+                </div>
+                <button
+                  onClick={handleCopyEmail}
+                  aria-label="Copy email address"
+                  className={`flex-none w-9 h-9 inline-flex items-center justify-center rounded-full border border-slate-300 text-slate-600 hover:text-blue-600 hover:border-blue-300 hover:bg-blue-50 transition-colors ${focusRing}`}
+                >
+                  {copied ? <Check size={16} className="text-blue-600" /> : <Copy size={16} />}
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                <a
+                  href={CONTACT.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors rounded-md ${focusRing}`}
+                >
+                  <Linkedin size={18} className="text-slate-500 flex-none" />
+                  <span className="text-sm break-all">{CONTACT.linkedinLabel}</span>
+                </a>
+                <a
+                  href={CONTACT.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-3 text-slate-700 hover:text-blue-600 transition-colors rounded-md ${focusRing}`}
+                >
+                  <Github size={18} className="text-slate-500 flex-none" />
+                  <span className="text-sm">{CONTACT.githubLabel}</span>
+                </a>
+                <div className="flex items-center gap-3 text-slate-700">
+                  <MapPin size={18} className="text-slate-500 flex-none" />
+                  <span className="text-sm">{CONTACT.location}</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Floating Action Button */}
+      <footer className="bg-white border-t border-slate-200">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10">
+          <p className="text-sm text-slate-500">© {new Date().getFullYear()} Deepak Yadav. All rights reserved.</p>
+        </div>
+      </footer>
+
       {showFab && (
         <button
           type="button"
           onClick={scrollToTop}
-          aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors z-40"
+          aria-label="Back to top"
+          style={m3Ease}
+          className={`fixed bottom-6 right-6 z-30 w-14 h-14 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl flex items-center justify-center transition-all ${focusRing}`}
         >
-          <ChevronUp size={20} />
+          <ChevronUp size={24} />
         </button>
       )}
 
-      {/* Access Gate Modal */}
       <AccessGate
         open={Boolean(gate)}
         resourceLabel={gate ? gate.label : ''}
