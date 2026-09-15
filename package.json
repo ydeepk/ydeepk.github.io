@@ -1,4 +1,4 @@
- {
+{
   "name": "ydeepk.github.io",
   "version": "1.0.0",
   "description": "https://ydeepk.github.io",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://ydeepk.github.io",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "lucide-react": "^0.469.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"

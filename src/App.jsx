@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react';
 import {
+  Check,
+  ChevronUp,
+  Clock,
+  Copy,
+  ExternalLink,
+  FileText,
   Github,
   Linkedin,
   Mail,
-  ExternalLink,
-  Check,
-  FileText,
+  MapPin,
   Menu,
   X,
-  MapPin,
-  Clock,
-  ChevronUp,
-  Copy,
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+import emailjs from '@emailjs/browser';
 
 // Drop the real resume PDF at this path in the deployed site (e.g. /public/Deepak-Yadav-Resume.pdf).
 const RESUME_URL = '/Deepak-Yadav-Resume.pdf';
@@ -237,10 +239,12 @@ function OrgMark({ initials, tone, logoUrl }) {
 // email, resource, timestamp, and IP-derived location if you want the
 // "who and from where" picture). The UI surfaces that plainly instead of
 // pretending to succeed.
+
 function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
   const [step, setStep] = useState('email');
   const [email, setEmail] = useState('');
   const [code, setCode] = useState('');
+  const [generatedCode, setGeneratedCode] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
@@ -248,6 +252,7 @@ function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
       setStep('email');
       setEmail('');
       setCode('');
+      setGeneratedCode('');
       setErrorMsg('');
     }
   }, [open]);
@@ -255,38 +260,43 @@ function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
   if (!open) return null;
 
   const handleSendCode = async () => {
-    if (!email.trim()) return;
+    if (!email.trim() || !email.includes('@')) {
+      setErrorMsg('Please enter a valid email address.');
+      setStep('error');
+      return;
+    }
+
     setStep('sending');
     setErrorMsg('');
+
+    // Generate a random 6-digit OTP code
+    const pin = Math.floor(100000 + Math.random() * 900000).toString();
+    setGeneratedCode(pin);
+
     try {
-      const res = await fetch('/api/request-access', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, resource: resourceLabel }),
-      });
-      if (!res.ok) throw new Error('no backend');
+      // Replace these credentials with your EmailJS keys
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  {
+    to_email: email,
+    resource: resourceLabel,
+    passcode: pin,
+  },
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
       setStep('code');
     } catch (err) {
-      setErrorMsg("Access requests aren't wired up yet — this needs a backend at /api/request-access (see code comments).");
+      setErrorMsg('Failed to send email. Please check your network or try again.');
       setStep('error');
     }
   };
 
-  const handleVerifyCode = async () => {
-    if (!code.trim()) return;
-    setStep('verifying');
-    setErrorMsg('');
-    try {
-      const res = await fetch('/api/verify-access', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, code, resource: resourceLabel }),
-      });
-      if (!res.ok) throw new Error('no backend');
-      const data = await res.json();
-      onSuccess(data.url);
-    } catch (err) {
-      setErrorMsg("Verification isn't wired up yet — this needs a backend at /api/verify-access (see code comments).");
+  const handleVerifyCode = () => {
+    if (code.trim() === generatedCode) {
+      onSuccess();
+    } else {
+      setErrorMsg('Invalid code. Please double-check the email sent to you.');
       setStep('error');
     }
   };
@@ -294,12 +304,11 @@ function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-sm rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl" style={m3Ease}>
+      <div className="relative w-full max-w-sm rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl">
         <button
           type="button"
           onClick={onClose}
-          aria-label="Close"
-          className={`absolute top-4 right-4 w-8 h-8 inline-flex items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 ${focusRing}`}
+          className="absolute top-4 right-4 w-8 h-8 inline-flex items-center justify-center rounded-full text-slate-500 hover:bg-slate-100"
         >
           <X size={18} />
         </button>
@@ -320,19 +329,16 @@ function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') handleSendCode();
-                }}
+                onKeyDown={(e) => e.key === 'Enter' && handleSendCode()}
                 placeholder="you@company.com"
-                className="w-full rounded-t-lg bg-slate-100 border-b-2 border-slate-400 focus:border-blue-600 px-4 py-3 text-sm text-slate-900 placeholder-slate-500 outline-none transition-colors"
+                className="w-full rounded-t-lg bg-slate-100 border-b-2 border-slate-400 focus:border-blue-600 px-4 py-3 text-sm text-slate-900 placeholder-slate-500 outline-none"
               />
             </div>
             <button
               type="button"
               onClick={handleSendCode}
               disabled={step === 'sending'}
-              style={m3Ease}
-              className={`w-full rounded-full bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white text-sm font-medium px-4 py-3 transition-colors ${focusRing}`}
+              className="w-full rounded-full bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white text-sm font-medium px-4 py-3 transition-colors"
             >
               {step === 'sending' ? 'Sending code…' : 'Send code'}
             </button>
@@ -354,28 +360,17 @@ function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
                 required
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') handleVerifyCode();
-                }}
+                onKeyDown={(e) => e.key === 'Enter' && handleVerifyCode()}
                 placeholder="000000"
-                className="w-full rounded-t-lg bg-slate-100 border-b-2 border-slate-400 focus:border-blue-600 px-4 py-3 text-sm text-slate-900 placeholder-slate-500 tracking-widest outline-none transition-colors"
+                className="w-full rounded-t-lg bg-slate-100 border-b-2 border-slate-400 focus:border-blue-600 px-4 py-3 text-sm text-slate-900 placeholder-slate-500 tracking-widest outline-none"
               />
             </div>
             <button
               type="button"
               onClick={handleVerifyCode}
-              disabled={step === 'verifying'}
-              style={m3Ease}
-              className={`w-full rounded-full bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white text-sm font-medium px-4 py-3 transition-colors ${focusRing}`}
+              className="w-full rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-3 transition-colors"
             >
-              {step === 'verifying' ? 'Verifying…' : 'Verify & continue'}
-            </button>
-            <button
-              type="button"
-              onClick={() => setStep('email')}
-              className={`w-full text-xs text-slate-500 hover:text-slate-700 rounded-md ${focusRing}`}
-            >
-              Use a different email
+              Verify & continue
             </button>
           </div>
         )}
@@ -386,7 +381,7 @@ function AccessGate({ open, resourceLabel, onClose, onSuccess }) {
             <button
               type="button"
               onClick={() => setStep('email')}
-              className={`w-full rounded-full border border-slate-300 text-slate-700 hover:bg-slate-100 text-sm font-medium px-4 py-3 ${focusRing}`}
+              className="w-full rounded-full border border-slate-300 text-slate-700 hover:bg-slate-100 text-sm font-medium px-4 py-3"
             >
               Try again
             </button>
