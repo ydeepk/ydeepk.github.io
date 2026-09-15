@@ -5,13 +5,13 @@ import {
   Copy,
   ExternalLink,
   FileText,
+  Github, // <-- Added here
   Linkedin,
   Mail,
   MapPin,
   Menu,
   X
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
 
 // Drop the real resume PDF at this path in the deployed site (e.g. /public/Deepak-Yadav-Resume.pdf).
 const RESUME_URL = '/Deepak-Yadav-Resume.pdf';
